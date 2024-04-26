@@ -25,7 +25,7 @@
         <section class="py-5 text-center inicio">
             <div>
                 <div class="col-lg-6 col-md-8 mx-auto informa">
-                    <img style="height: 180px; width: 180px; margin: 10px" src="https://cdn.discordapp.com/attachments/1225891660987371672/1232107890534514779/Radio_1-removebg-preview.png?ex=66284164&is=6626efe4&hm=fd2b4db38674a175ef0c04642f91fe32a017126f83624a1aa65f7d232b6df33a&">
+                    <img style="height: 180px; width: 180px; margin: 10px" src="fts/empresa_sin_fondo.png">
                     <h1 class="fw-light">Radio París</h1>
                     <h3 class="fw-light">¿Qué somos?</h3>
                     <p style="color: #000; font-size: 20px">Radio Paris es un subgrupo de la casa desarrolladora "Typhoon Interactive" conformada por Matias Portero, Lautaro Rodriguez y Axel Matanza la cual tiene como objetivo el desarrollo de videojuegos de estilo Arcade, mientras que a su vez aprenden de programacion en equipo.

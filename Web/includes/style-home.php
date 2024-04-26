@@ -131,17 +131,9 @@
         display: block;
     }
 
-
-    
-    /* fondo degradadado */
     .inicio {
-        background: linear-gradient(to bottom, #1014c5, #ffffff);
+        background-color: #a5bef7;
         color: #000;
-    }
-
-    /*futer*/
-    .futer {
-        background: linear-gradient(to bottom, #ffffff, #1014c5);
     }
 
     /*infor*/

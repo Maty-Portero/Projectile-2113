@@ -5,12 +5,11 @@
         font-family: 'Instrument Sans', sans-serif;
     }
 
-    body {
-        background-color: #ffffff;
+    main {
+        background-color: #a5bef7;
         color: #000;
-        opacity: 0;
-        animation: fadeIn 1s ease-in forwards;
     }
+
 
     @keyframes fadeIn {
         0% {
@@ -131,16 +130,9 @@
         display: block;
     }
 
-
-
-    /* fondo degradadado */
     .inicio {
-        background: linear-gradient(to bottom, #1014c5, #ffffff);
+        background-color: #a5bef7;
         color: #000;
     }
 
-    /*futer*/
-    .futer {
-        background: linear-gradient(to bottom, #ffffff, #1014c5);
-    }
 </style>

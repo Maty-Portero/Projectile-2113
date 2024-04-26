@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="https://media.discordapp.net/attachments/1225891660987371672/1225906673982378084/Radio_1.png?ex=662c100f&is=66199b0f&hm=3dfc65682784797c37d9565e8867695ab980b0ed338803c2a1a65089db531085&=&format=webp&quality=lossless" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
+        <img src="https://media.discordapp.net/attachments/1225891660987371672/1225906673982378084/Radio_1.png?ex=662c100f&is=66199b0f&hm=3dfc65682784797c37d9565e8867695ab980b0ed338803c2a1a65089db531085&=&format=webp&quality=lossless" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
             <strong style="font-size: 25px;">Radio París</strong>
         </div>
         <div class="header-right">
@@ -24,7 +24,7 @@
         <section class="py-5 text-center inicio">
             <div>
                 <div class="col-lg-6 col-md-8 mx-auto informa">
-                    <img style="height: 180px; width: 180px; margin: 10px" src="https://cdn.discordapp.com/attachments/1225891660987371672/1232107890534514779/Radio_1-removebg-preview.png?ex=66284164&is=6626efe4&hm=fd2b4db38674a175ef0c04642f91fe32a017126f83624a1aa65f7d232b6df33a&">
+                <img style="height: 180px; width: 180px; margin: 8px" src="fts/empresa_sin_fondo.png">
                     <h1 class="fw-light">Sobre Nosotros</h1>
                 </div>
             </div>
