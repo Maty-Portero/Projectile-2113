@@ -5,7 +5,7 @@
         </figure>
         <div>
             <h4 style="color: #000000;">Radio París</h4>
-            <p style="color: #000000;">© 2023 Typhoon Interactive. All rights reserved.</p>
+            <p style="color: #000000;">© 2024 Typhoon Interactive. All rights reserved.</p>
             <p class="mb-0"><a href="">Terms of Service</a> • <a href="">Privacy Policy</a></p>
         </div>
     </div>
