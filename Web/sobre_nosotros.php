@@ -36,13 +36,13 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col" style="width: 400px;">
                         <div class="card shadow-sm">
-                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhEkCkJzFpjWZJcbiyABuAP7mYye0rUFlbhc96k1akxwrq3nxzv4dsWJTfTMAN_OkH&usqp=CAU">
+                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="fts/porter.png">
                             <div class="card-body">
                                 <p class="card-text" style="color: black;"><b>Matías Portero</b></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p>
                                         <b>Scrum Master y Analista de Sistemas</b> <br>
-                                        - Jugador de F1.<br>
+                                        - Jugar F1.<br>
                                         - Fanático YSY A, Trueno y Neo Pistea. <br>
                                         - Es el Smooth Operator.<br>
                                         - Le gusta el HTML, C#, PHP Y JS.

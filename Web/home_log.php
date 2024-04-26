@@ -19,7 +19,7 @@ if (isset($_SESSION['usuario'])) {
 <body>
     <header>
         <div class="logo">
-            <img src="https://media.discordapp.net/attachments/1225891660987371672/1225906673982378084/Radio_1.png?ex=662c100f&is=66199b0f&hm=3dfc65682784797c37d9565e8867695ab980b0ed338803c2a1a65089db531085&=&format=webp&quality=lossless" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
+        <img src="https://media.discordapp.net/attachments/1225891660987371672/1225906673982378084/Radio_1.png?ex=662c100f&is=66199b0f&hm=3dfc65682784797c37d9565e8867695ab980b0ed338803c2a1a65089db531085&=&format=webp&quality=lossless" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
             <strong style="font-size: 25px;">Radio París</strong>
         </div>
         <div class="header-right">
