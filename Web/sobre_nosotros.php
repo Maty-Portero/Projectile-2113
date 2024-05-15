@@ -41,9 +41,9 @@
                                 <p class="card-text" style="color: black;"><b>Matías Portero</b></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p>
-                                        <b>Scrum Master y Analista de Sistemas</b> <br>
+                                        <b>Programador y Especialista en Sonido</b> <br>
                                         - Jugar F1.<br>
-                                        - Fanático YSY A, Trueno y Neo Pistea. <br>
+                                        - Fanático YSY A, Trueno y el Duko. <br>
                                         - Es el Smooth Operator.<br>
                                         - Le gusta el HTML, C#, PHP Y JS.
                                     </p>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col" style="width: 400px;">
                         <div class="card shadow-sm">
-                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="https://media.discordapp.net/attachments/1225891660987371672/1231640392450183320/Untitled148_20230723163622.png?ex=6637b180&is=66253c80&hm=4afe417d8055efbb0538ab67531cc75b685787564046fb8f727a791bd289abb9&=&format=webp&quality=lossless&width=676&height=676">
+                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="fts/rodra.png">
                             <div class="card-body">
                                 <p class="card-text" style="color: black;"><b>Lautaro Rodríguez</b></p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -72,13 +72,13 @@
                     </div>
                     <div class="col" style="width: 400px;">
                         <div class="card shadow-sm">
-                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="https://media.discordapp.net/attachments/1225891660987371672/1231641211417268306/K2_defeat.webp?ex=6637b243&is=66253d43&hm=ceaab96a310dfb3baf83b18979ad5e9ded8df3e47397b5865f428bddb91a8b93&=&format=webp">
+                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="fts/choko.png">
                             <div class="card-body">
                                 <p class="card-text" style="color: black;"><b>Axel Matanza</b></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <p>
-                                            <b>Programador y Especialista en Sonido</b> <br>
+                                            <b>Scrum Master y Analista de Sistemas</b> <br>
                                             - Investigar e indagar sobre hardware <br>
                                             - Escuchar música underground <br>
                                             - Videojuegar <br>

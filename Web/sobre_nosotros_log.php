@@ -88,7 +88,7 @@ if (isset($_SESSION['usuario'])) {
                     </div>
                     <div class="col" style="width: 400px;">
                         <div class="card shadow-sm">
-                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="https://media.discordapp.net/attachments/1225891660987371672/1231641211417268306/K2_defeat.webp?ex=6637b243&is=66253d43&hm=ceaab96a310dfb3baf83b18979ad5e9ded8df3e47397b5865f428bddb91a8b93&=&format=webp">
+                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="fts/choko.png">
                             <div class="card-body">
                                 <p class="card-text" style="color: black;"><b>Axel Matanza</b></p>
                                 <div class="d-flex justify-content-between align-items-center">
