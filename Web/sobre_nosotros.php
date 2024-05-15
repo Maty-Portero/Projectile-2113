@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-        <img src="https://media.discordapp.net/attachments/1225891660987371672/1225906673982378084/Radio_1.png?ex=662c100f&is=66199b0f&hm=3dfc65682784797c37d9565e8867695ab980b0ed338803c2a1a65089db531085&=&format=webp&quality=lossless" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
+            <img src="fts/logo_claro_negro.png" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
             <strong style="font-size: 25px;">Radio París</strong>
         </div>
         <div class="header-right">
@@ -24,7 +24,7 @@
         <section class="py-5 text-center inicio">
             <div>
                 <div class="col-lg-6 col-md-8 mx-auto informa">
-                <img style="height: 180px; width: 180px; margin: 8px" src="fts/empresa_sin_fondo.png">
+                    <img style="height: 180px; width: 180px; margin: 8px" src="fts/logo_claro_negro.png">
                     <h1 class="fw-light">Sobre Nosotros</h1>
                 </div>
             </div>
@@ -95,7 +95,7 @@
         </div>
     </main>
 
-    <footer  class="futer py-5">
+    <footer class="futer py-5">
         <?php require_once "includes/footer.php"; ?>
     </footer>
 

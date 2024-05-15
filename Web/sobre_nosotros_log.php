@@ -20,7 +20,7 @@ if (isset($_SESSION['usuario'])) {
 <body>
     <header>
         <div class="logo">
-        <img src="https://media.discordapp.net/attachments/1225891660987371672/1225906673982378084/Radio_1.png?ex=662c100f&is=66199b0f&hm=3dfc65682784797c37d9565e8867695ab980b0ed338803c2a1a65089db531085&=&format=webp&quality=lossless" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
+            <img src="fts/logo_claro_negro.png" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
             <strong style="font-size: 25px;">Radio París</strong>
         </div>
         <div class="header-right">
@@ -40,7 +40,7 @@ if (isset($_SESSION['usuario'])) {
         <section class="py-5 text-center inicio">
             <div>
                 <div class="col-lg-6 col-md-8 mx-auto informa">
-                <img style="height: 180px; width: 180px; margin: 8px" src="fts/empresa_sin_fondo.png">
+                    <img style="height: 180px; width: 180px; margin: 8px" src="fts/logo_claro_negro.png">
                     <h1 class="fw-light">Sobre Nosotros</h1>
                 </div>
             </div>
@@ -69,7 +69,7 @@ if (isset($_SESSION['usuario'])) {
                     </div>
                     <div class="col" style="width: 400px;">
                         <div class="card shadow-sm">
-                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="https://media.discordapp.net/attachments/1225891660987371672/1231640392450183320/Untitled148_20230723163622.png?ex=6637b180&is=66253c80&hm=4afe417d8055efbb0538ab67531cc75b685787564046fb8f727a791bd289abb9&=&format=webp&quality=lossless&width=676&height=676">
+                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="fts/rodra.png">
                             <div class="card-body">
                                 <p class="card-text" style="color: black;"><b>Lautaro Rodríguez</b></p>
                                 <div class="d-flex justify-content-between align-items-center">
