@@ -101,7 +101,8 @@
     }
 
     #nombreUsuario {
-        background-color: #B6CBE5;
+        background-color: #802fde;
+        color: #ffffff;
         padding: 10px 16px ;
         border: 2px solid #B6CBE5;
         border-radius: 15px;
@@ -132,8 +133,8 @@
     }
 
     .inicio {
-        background-color: #a5bef7;
-        color: #000;
+        background-color: #802fde;
+        color: #ffffff;
     }
 
     /*infor*/

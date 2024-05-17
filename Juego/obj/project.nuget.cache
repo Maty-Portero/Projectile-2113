@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4s/bnLVQ78W85yDaGH6lAjdUF5SYR+LrFwEUMWSb2KWzWHca/i4VcYM5bASPQsboUP7FBgiHfV6hPm5YGsaDpA==",
+  "dgSpecHash": "1rkz5kQR2u9SFz5eN+5VqmGPzbzzZDrIL6/9Gl5rz4r8lesmkmma28mTGMW+HHTJ6HSGF35YXdAhUCcM9U0e2A==",
   "success": true,
-  "projectFilePath": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Project-Projectile-2113\\Juego\\Juego.csproj",
+  "projectFilePath": "C:\\xampp\\htdocs\\Portero\\Project-Projectile-2113\\Juego\\Juego.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+    "C:\\Users\\Alumno\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Alumno\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
   ],
   "logs": []
 }

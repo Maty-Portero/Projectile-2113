@@ -6,7 +6,7 @@
     }
 
     main {
-        background-color: #a5bef7;
+        background-color: #802fde;
         color: #000;
     }
 
