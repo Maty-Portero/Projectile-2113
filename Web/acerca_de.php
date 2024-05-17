@@ -8,7 +8,11 @@
 <body>
     <header>
         <div class="logo">
+<<<<<<< HEAD
             <img style="height: 75px; width: 75px; margin: 8px" src="fts/empresa_sin_fondo.png">
+=======
+            <img src="fts/logo_claro_negro.png" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
+>>>>>>> 64410bb10f68de57fd0a12c587a561c744c120aa
             <strong style="font-size: 25px;">Radio París</strong>
         </div>
         <div class="header-right">

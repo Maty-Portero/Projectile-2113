@@ -19,7 +19,11 @@ if (isset($_SESSION['usuario'])) {
 <body>
     <header>
         <div class="logo">
+<<<<<<< HEAD
             <img style="height: 75px; width: 75px; margin: 8px" src="fts/empresa_sin_fondo.png">
+=======
+            <img src="fts/logo_claro_negro.png" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
+>>>>>>> 64410bb10f68de57fd0a12c587a561c744c120aa
             <strong style="font-size: 25px;">Radio París</strong>
         </div>
         <div class="header-right">
@@ -40,7 +44,11 @@ if (isset($_SESSION['usuario'])) {
         <section class="py-5 text-center inicio">
             <div>
                 <div class="col-lg-6 col-md-8 mx-auto informa">
+<<<<<<< HEAD
                     <img style="height: 180px; width: 180px; margin: 10px" src="fts/">
+=======
+                    <img style="height: 180px; width: 180px; margin: 10px" src="fts/logo_claro_negro.png">
+>>>>>>> 64410bb10f68de57fd0a12c587a561c744c120aa
                     <h1 class="fw-light">Radio París</h1>
                     <h3 class="fw-light">¿Qué somos?</h3>
                     <p style="color: #ffffff; font-size: 20px">Radio Paris es un subgrupo de la casa desarrolladora "Typhoon Interactive" conformada por Matias Portero, Lautaro Rodriguez y Axel Matanza la cual tiene como objetivo el desarrollo de videojuegos de estilo Arcade, mientras que a su vez aprenden de programacion en equipo.</p>

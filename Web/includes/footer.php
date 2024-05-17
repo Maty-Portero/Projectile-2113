@@ -1,7 +1,7 @@
 <div class="container">
     <div style="display: flex">
         <figure>
-            <img style="height: 100px; width: 100px; margin: 8px" src="fts/empresa_sin_fondo.png">
+            <img style="height: 100px; width: 100px; margin: 8px" src="fts/logo_claro_negro.png">
         </figure>
         <div>
             <h4 style="color: #000000;">Radio París</h4>

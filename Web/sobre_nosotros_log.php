@@ -20,7 +20,11 @@ if (isset($_SESSION['usuario'])) {
 <body>
     <header>
         <div class="logo">
+<<<<<<< HEAD
             <img style="height: 75px; width: 75px; margin: 8px" src="fts/empresa_sin_fondo.png">
+=======
+            <img src="fts/logo_claro_negro.png" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
+>>>>>>> 64410bb10f68de57fd0a12c587a561c744c120aa
             <strong style="font-size: 25px;">Radio París</strong>
         </div>
         <div class="header-right">
@@ -40,7 +44,11 @@ if (isset($_SESSION['usuario'])) {
         <section class="py-5 text-center inicio">
             <div>
                 <div class="col-lg-6 col-md-8 mx-auto informa">
+<<<<<<< HEAD
                     <img style="height: 180px; width: 180px; margin: 8px" src="fts/empresa_sin_fondo.png">
+=======
+                    <img style="height: 180px; width: 180px; margin: 8px" src="fts/logo_claro_negro.png">
+>>>>>>> 64410bb10f68de57fd0a12c587a561c744c120aa
                     <h1 class="fw-light">Sobre Nosotros</h1>
                 </div>
             </div>
@@ -69,7 +77,11 @@ if (isset($_SESSION['usuario'])) {
                     </div>
                     <div class="col" style="width: 400px;">
                         <div class="card shadow-sm">
+<<<<<<< HEAD
                             <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="fts/rs.png">
+=======
+                            <img style="height: 200px; width: 200px; margin-bottom: 20px; padding-left: 20px; padding-top: 20px;" src="fts/rodra.png">
+>>>>>>> 64410bb10f68de57fd0a12c587a561c744c120aa
                             <div class="card-body">
                                 <p class="card-text" style="color: black;"><b>Lautaro Rodríguez</b></p>
                                 <div class="d-flex justify-content-between align-items-center">
