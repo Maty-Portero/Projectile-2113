@@ -1,3 +1,14 @@
+<?php
+session_start(); // Iniciar la sesión al principio del archivo
+
+// Verificar si hay un nombre de usuario en la sesión
+if (isset($_SESSION['usuario'])) {
+    $usuario = $_SESSION['usuario'];
+} else {
+    $usuario = "Invitado "; // o cualquier valor predeterminado si no hay un usuario registrado
+}
+?>
+
 <!DOCTYPE html>
 
 <head>
@@ -8,11 +19,7 @@
 <body>
     <header>
         <div class="logo">
-<<<<<<< HEAD
-            <img style="height: 75px; width: 75px; margin: 8px" src="fts/empresa_sin_fondo.png">
-=======
             <img src="fts/logo_claro_negro.png" style="height: 80px; width: 80px; padding: 5px; margin: 5px;">
->>>>>>> 64410bb10f68de57fd0a12c587a561c744c120aa
             <strong style="font-size: 25px;">Radio París</strong>
         </div>
         <div class="header-right">
@@ -20,7 +27,12 @@
                 <a href="home_log.php">Inicio</a>
                 <a href="sobre_nosotros_log.php">Sobre Nosotros</a>
             </nav>
-            <button class="btnlogin"><a href="login_register/index.php">Login</a></button>
+            <div id="nombreUsuarioContainer">
+                <span id="nombreUsuario" style="font-size: 20px;"><?php echo $usuario; ?></span>
+                <div id="opcionesUsuario">
+                    <a href="">Cerrar sesión</a>
+                </div>
+            </div>
         </div>
 
     </header>
@@ -32,7 +44,7 @@
                     <img style="height: 180px; width: 180px; margin: 10px" src="fts/juego.png">
                     <h1 class="fw-light">Project Projectile 2113</h1>
                     <h3 class="fw-light">¿Qué es?</h3><br>
-                    <p style="color: #000; font-size: 20px; text-align: left;">“Project Projectile 2113” es un juego Bullet Hell al estilo Arkanoid donde el jugador controla una vehículo de guerra o un soldado cuya estadísticas varían según los niveles en donde se encuentra cada uno, el cual debe atravesar distintos niveles con grandes cantidades de enemigos que disparan proyectiles y el jugador debe esquivarlas y derribar a sus oponentes. <br><br>
+                    <p style="color: #ffffff; font-size: 20px; text-align: left;">“Project Projectile 2113” es un juego Bullet Hell al estilo Arkanoid donde el jugador controla una vehículo de guerra o un soldado cuya estadísticas varían según los niveles en donde se encuentra cada uno, el cual debe atravesar distintos niveles con grandes cantidades de enemigos que disparan proyectiles y el jugador debe esquivarlas y derribar a sus oponentes. <br><br>
 
                         Será un juego un solo jugador. Donde habrá 5 escenarios con 5 stages cada uno, con un total de 25 niveles. Al final de cada escenario habrá un jefe que será de mayor dificultad.<br><br>
 

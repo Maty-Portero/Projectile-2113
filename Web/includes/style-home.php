@@ -104,7 +104,7 @@
         background-color: #802fde;
         color: #ffffff;
         padding: 10px 16px ;
-        border: 2px solid #B6CBE5;
+        border: 2px solid #802fde;
         border-radius: 15px;
     }
 

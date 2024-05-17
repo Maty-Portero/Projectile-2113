@@ -10,6 +10,7 @@ if(isset($_SESSION['usuario'])){
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="fts/logo_oscuro_blanco.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login y Register</title>
@@ -17,7 +18,7 @@ if(isset($_SESSION['usuario'])){
     <link href="">
 
 
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
 </head>
 
 <body>
@@ -56,7 +57,7 @@ if(isset($_SESSION['usuario'])){
                     <input type="text" placeholder="Usuario" name="usuario" required>
                     <input type="password" placeholder="Contraseña" name="contrasena" required>
                     <button>Regístrarse</button>
-                    
+
                 </form>
             </div>
         </div>
