@@ -41,12 +41,12 @@ if (isset($_SESSION['usuario'])) {
         <section class="py-5 text-center inicio">
             <div>
                 <div class="col-lg-6 col-md-8 mx-auto informa">
-                    <img style="height: 180px; width: 180px; margin: 10px" src="fts/juego.png">
+                    <img style="height: 180px; width: 180px; margin: 10px" src="fts/Projectile_2113_Logo_2.png">
                     <h1 class="fw-light">Projectile 2113</h1>
                     <h3 class="fw-light">¿Qué es?</h3><br>
                     <p style="color: #ffffff; font-size: 20px; text-align: left;">“Project Projectile 2113” es un juego Bullet Hell al estilo Arkanoid donde el jugador controla una vehículo de guerra o un soldado cuya estadísticas varían según los niveles en donde se encuentra cada uno, el cual debe atravesar distintos niveles con grandes cantidades de enemigos que disparan proyectiles y el jugador debe esquivarlas y derribar a sus oponentes. <br><br>
 
-                        Será un juego un solo jugador. Donde habrá 5 escenarios con 5 stages cada uno, con un total de 25 niveles. Al final de cada escenario habrá un jefe que será de mayor dificultad.<br><br>
+                        Será un juego single player. Donde habrá 5 escenarios con 5 stages cada uno, con un total de 25 niveles. Al final de cada escenario habrá un jefe que será de mayor dificultad.<br><br>
 
                         La temática de este videojuego estará basada en una Guerra Futurista en el año 2113.<br><br>
 
