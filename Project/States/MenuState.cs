@@ -30,18 +30,10 @@ namespace Project.States
 
             playButton.Click += playButton_Click;
 
-            var loadButton = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(300, 250),
-                Text = "Load Game",
-            };
-
-            loadButton.Click += loadButton_Click;
-
             //creamos el boton de exit
             var exitButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300, 300),
+                Position = new Vector2(300, 250),
                 Text = "Exit",
             };
 
@@ -50,7 +42,6 @@ namespace Project.States
             _components = new List<Component>() 
             {
                 playButton,
-                loadButton,
                 exitButton
             };
         }
@@ -63,11 +54,6 @@ namespace Project.States
                 component.Draw(gameTime, spriteBatch);
 
             spriteBatch.End();
-        }
-
-        private void loadButton_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("load Game");
         }
 
         private void playButton_Click(object sender, EventArgs e)
