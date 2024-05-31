@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Projectile-2113\\Project\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Projectile-2113\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mi-pc\\mati\\projectile-2113\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\projectile-2113\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mi-pc\\mati\\projectile-2113\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\projectile-2113\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\projectile-2113\\project\\content\\player_sprite.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:content\\player_sprite.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\projectile-2113\\project\\content\\player_bulletone.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:content\\player_bulletone.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\projectile-2113\\project\\content\\player_bullettwo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:content\\player_bullettwo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +30,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "player_bullettwo.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Content\\player_bullettwo.png",
+              "RelativeDocumentMoniker": "Content\\player_bullettwo.png",
+              "ToolTip": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Content\\player_bullettwo.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "RelativeToolTip": "Content\\player_bullettwo.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-05-31T19:40:14.357Z",
+              "EditorCaption": " -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "player_bulletone.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Content\\player_bulletone.png",
+              "RelativeDocumentMoniker": "Content\\player_bulletone.png",
+              "ToolTip": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Content\\player_bulletone.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "RelativeToolTip": "Content\\player_bulletone.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-05-31T19:40:12.095Z",
+              "EditorCaption": " -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player_Sprite.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Content\\Player_Sprite.png",
+              "RelativeDocumentMoniker": "Content\\Player_Sprite.png",
+              "ToolTip": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Content\\Player_Sprite.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "RelativeToolTip": "Content\\Player_Sprite.png -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-05-31T19:25:13.978Z",
+              "EditorCaption": " -  [Espa\u00F1ol (Espa\u00F1a, alfabetizaci\u00F3n internacional)] - PNG [32x32, 32 bits, PNG]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Projectile-2113\\Project\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Projectile-2113\\Project\\Program.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T17:13:18.428Z",
               "EditorCaption": ""
@@ -37,11 +93,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Projectile-2113\\Project\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Projectile-2113\\Project\\Game1.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Projectile-2113\\Project\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAQwFcAAABWAAAA",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAvwGoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T17:10:40.516Z",
               "EditorCaption": ""
