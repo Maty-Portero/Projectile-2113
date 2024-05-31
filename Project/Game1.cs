@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 
 namespace Project
@@ -39,6 +40,33 @@ namespace Project
         {
             spriteBatch.Draw(textures[currentFrame], Position, Color.White);
         }
+
+        public Rectangle GetBounds()
+        {
+            return new Rectangle((int)Position.X, (int)Position.Y, textures[0].Width, textures[0].Height);
+        }
+    }
+
+    public class Enemy
+    {
+        public Vector2 Position;
+        private Texture2D texture;
+
+        public Enemy(Texture2D texture, Vector2 position)
+        {
+            this.texture = texture;
+            Position = position;
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(texture, Position, Color.White);
+        }
+
+        public Rectangle GetBounds()
+        {
+            return new Rectangle((int)Position.X, (int)Position.Y, texture.Width, texture.Height);
+        }
     }
 
     public class Game1 : Game
@@ -58,6 +86,11 @@ namespace Project
         List<Bullet> bullets;
         float shootCooldown;
         float shootTimer;
+
+        // Enemy variables
+        Texture2D enemyTexture;
+        Enemy enemy;
+        Random random;
 
         public Game1()
         {
@@ -79,6 +112,8 @@ namespace Project
             shootCooldown = 0.2f;
             shootTimer = 0;
 
+            random = new Random();
+
             base.Initialize();
         }
 
@@ -91,6 +126,17 @@ namespace Project
             bulletTextures = new Texture2D[2];
             bulletTextures[0] = Content.Load<Texture2D>("player_bulletone"); // Reemplaza con el nombre correcto
             bulletTextures[1] = Content.Load<Texture2D>("player_bullettwo"); // Reemplaza con el nombre correcto
+
+            // Load enemy texture and create an enemy
+            enemyTexture = Content.Load<Texture2D>("enemy_helicopter"); // Reemplaza con el nombre correcto
+            CreateEnemy();
+        }
+
+        private void CreateEnemy()
+        {
+            int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture.Width);
+            int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4); // Limitar a la parte superior
+            enemy = new Enemy(enemyTexture, new Vector2(xPosition, yPosition));
         }
 
         protected override void Update(GameTime gameTime)
@@ -164,6 +210,12 @@ namespace Project
                 {
                     bullets.RemoveAt(i);
                 }
+                else if (enemy != null && bullets[i].GetBounds().Intersects(enemy.GetBounds()))
+                {
+                    bullets.RemoveAt(i);
+                    enemy = null; // Elimina al enemigo
+                    CreateEnemy(); // Crea un nuevo enemigo
+                }
             }
 
             base.Update(gameTime);
@@ -187,6 +239,12 @@ namespace Project
             foreach (var bullet in bullets)
             {
                 bullet.Draw(_spriteBatch);
+            }
+
+            // Dibujar enemigo
+            if (enemy != null)
+            {
+                enemy.Draw(_spriteBatch);
             }
 
             _spriteBatch.End();

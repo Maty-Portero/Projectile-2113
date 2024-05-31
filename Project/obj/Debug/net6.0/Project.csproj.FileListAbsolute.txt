@@ -54,3 +54,4 @@ C:\Users\Alumno\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfi
 C:\Users\Alumno\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
 C:\Users\Alumno\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bulletone.xnb
 C:\Users\Alumno\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bullettwo.xnb
+C:\Users\Alumno\Projectile-2113\Project\bin\Debug\net6.0\Content\enemy_helicopter.xnb

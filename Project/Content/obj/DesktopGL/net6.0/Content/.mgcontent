@@ -4,11 +4,13 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Alumno/Projectile-2113/Project/Content/enemy_helicopter.png</File>
     <File>C:/Users/Alumno/Projectile-2113/Project/Content/player_bulletone.png</File>
     <File>C:/Users/Alumno/Projectile-2113/Project/Content/player_bullettwo.png</File>
     <File>C:/Users/Alumno/Projectile-2113/Project/Content/Player_Sprite.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
