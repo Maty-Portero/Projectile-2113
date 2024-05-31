@@ -25,5 +25,3 @@ C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite.xnb
-C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Button.xnb
-C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\Font.xnb
