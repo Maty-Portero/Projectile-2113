@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Project.States;
 
 namespace Project
 {
@@ -16,6 +17,15 @@ namespace Project
         private SpriteBatch _spriteBatch;
 
 
+        private State _currentState;
+
+        private State _nextState;
+
+        public void ChangeState(State state)
+        {
+            _nextState = state;
+        }
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -26,6 +36,9 @@ namespace Project
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+
+            IsMouseVisible = true;
+
             playerPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2,
                 _graphics.PreferredBackBufferHeight / 2);
             playerSpeed = 100f;
@@ -42,12 +55,22 @@ namespace Project
 
             // TODO: use this.Content to load your game content here
             playerTexture = Content.Load<Texture2D>("Player_Sprite");
+
+            _currentState = new MenuState(this, _graphics.GraphicsDevice, Content);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            if (_nextState != null)
+            {
+                _currentState = _nextState;
+
+                _nextState = null;
+            }
+                        
+            _currentState.Update(gameTime);
+
+            _currentState.PostUpdate(gameTime);
 
             // TODO: Add your update logic here
             
@@ -124,6 +147,8 @@ namespace Project
         protected override void Draw(GameTime gameTime)
         {
             _graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            _currentState.Draw(gameTime, _spriteBatch);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
