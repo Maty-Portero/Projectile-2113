@@ -59,7 +59,7 @@ if (isset($_SESSION['usuario'])) {
                                     <p>
                                         <b>Scrum Master y Analista de Sistemas</b> <br>
                                         - Jugar F1.<br>
-                                        - Fanático YSY A, Trueno y Neo Pistea. <br>
+                                        - Fanático Neo Pistea, Trueno, YSY A y el Duko. <br>
                                         - Es el Smooth Operator.<br>
                                         - Le gusta el HTML, C#, PHP Y JS.
                                     </p>

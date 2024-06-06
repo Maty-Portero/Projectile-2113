@@ -43,7 +43,7 @@
                                     <p>
                                         <b>Programador y Especialista en Sonido</b> <br>
                                         - Jugar F1.<br>
-                                        - Fanático YSY A, Trueno y el Duko. <br>
+                                        - Fanático Neo Pistea, Trueno, YSY A y el Duko. <br>
                                         - Es el Smooth Operator.<br>
                                         - Le gusta el HTML, C#, PHP Y JS.
                                     </p>
