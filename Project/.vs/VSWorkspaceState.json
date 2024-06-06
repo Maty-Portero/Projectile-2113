@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
   "SelectedNode": "\\Game1.cs",
+=======
+    "",
+    "\\Controls"
+  ],
+  "SelectedNode": "\\Controls",
+>>>>>>> 404c80effc63574ecb59d65151d014eacce45095
   "PreviewInSolutionExplorer": false
 }
