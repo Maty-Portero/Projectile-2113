@@ -25,8 +25,14 @@ C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite.xnb
+<<<<<<< HEAD
+C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\Project.dll
+C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\refint\Project.dll
+C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
+=======
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Button.xnb
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\enemy_helicopter.xnb
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\Font.xnb
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bulletone.xnb
 C:\xampp\htdocs\mi-pc\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bullettwo.xnb
+>>>>>>> 404c80effc63574ecb59d65151d014eacce45095

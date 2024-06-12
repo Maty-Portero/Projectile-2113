@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/xampp/htdocs/mi-pc/Mati/Projectile-2113/Project/Content/Player_Sprite.png</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Player_Sprite.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
