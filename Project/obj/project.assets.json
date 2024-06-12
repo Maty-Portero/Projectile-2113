@@ -108,11 +108,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Projectile-2113\\Project\\Project.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Projectile-2113\\Project\\Project.csproj",
+      "projectPath": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\xampp\\htdocs\\mi-pc\\Mati\\Projectile-2113\\Project\\obj\\",
+      "outputPath": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
