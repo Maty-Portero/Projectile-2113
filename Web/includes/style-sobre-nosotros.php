@@ -6,7 +6,7 @@
     }
 
     main {
-        background-color: #802fde;
+        background-color: #331173;
         color: #000;
     }
 
@@ -100,10 +100,10 @@
     }
 
     #nombreUsuario {
-        background-color: #802fde;
+        background-color: #331173;
         color: #ffffff;
         padding: 10px 16px;
-        border: 2px solid #802fde;
+        border: 2px solid #331173;
         border-radius: 15px;
     }
 

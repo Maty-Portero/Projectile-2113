@@ -133,7 +133,7 @@
     }
 
     .inicio {
-        background-color: #802fde;
+        background-color: #331173;
         color: #ffffff;
     }
 

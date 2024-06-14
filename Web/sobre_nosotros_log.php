@@ -40,7 +40,7 @@ if (isset($_SESSION['usuario'])) {
         <section class="py-5 text-center inicio" style="background-color: #802fde;">
             <div>
                 <div class="col-lg-6 col-md-8 mx-auto informa">
-                    <img style="height: 180px; width: 180px; margin: 8px" src="fts/logo_oscuro_blanco.png">
+                    <img style="height: 180px; width: 180px; margin: 8px" src="fts/logo_oscuro_morado.png">
                     <h1 class="fw-light">Sobre Nosotros</h1>
                 </div>
             </div>
