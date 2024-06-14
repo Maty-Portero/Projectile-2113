@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.States
 {
@@ -15,7 +16,7 @@ namespace Project.States
     {
         private GraphicsDeviceManager _graphics;
         private List<Component> _components;
-        
+
         public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
 
@@ -23,6 +24,7 @@ namespace Project.States
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
+
 
             //creamos el boton de play
             var playButton = new Button(buttonTexture, buttonFont)
@@ -33,10 +35,28 @@ namespace Project.States
 
             playButton.Click += playButton_Click;
 
+            //creamos el boton de how to play
+            var helpButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(300, 250),
+                Text = "How To Play",
+            };
+
+            helpButton.Click += helpButton_Click;
+
+            //creamos el boton de options
+            var optionsButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(300, 300),
+                Text = "Settings",
+            };
+
+            optionsButton.Click += optionsButton_Click;
+
             //creamos el boton de exit
             var exitButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300, 250),
+                Position = new Vector2(300, 350),
                 Text = "Exit",
             };
 
@@ -45,6 +65,8 @@ namespace Project.States
             _components = new List<Component>() 
             {
                 playButton,
+                helpButton,
+                optionsButton,
                 exitButton
             };
         }
@@ -62,6 +84,15 @@ namespace Project.States
         private void playButton_Click(object sender, EventArgs e)
         {
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
+        }
+        private void optionsButton_Click(object sender, EventArgs e)
+        {
+            _game.ChangeState(new OptionState(_game, _graphicsDevice, _content, _graphics));
+        }
+
+        private void helpButton_Click(Object sender, EventArgs e)
+        {
+            _game.ChangeState(new HelpState(_game, _graphicsDevice, _content, _graphics));
         }
 
         public override void PostUpdate(GameTime gameTime)
