@@ -4,9 +4,27 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Player_Sprite.png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyBullet (1).png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyBullet (2).png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyBullet (3).png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyV5 (1).png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyV5 (2).png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyV5.png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/HeartEmpty.png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/HeartFull.png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/Player_Sprite_Damaged.png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/Player_Sprite.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
