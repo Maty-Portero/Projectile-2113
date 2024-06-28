@@ -17,14 +17,28 @@ namespace Project.States
         private GraphicsDeviceManager _graphics;
         private List<Component> _components;
 
-        public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
+        public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base (game, graphicsDevice, content)
         {
 
             _graphics = deviceManager;
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
+            var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
+            var titleTexture = _content.Load<Texture2D>("Controls/title");
 
+            //creamos el titulo de Projectile 2113
+            var title = new Title(titleTexture, titleFont)
+            {
+                Position = new Vector2(235, 25),
+                Text = "Projectile 2113",
+            };
+
+            var gameby = new Title(titleTexture, buttonFont)
+            {
+                Position = new Vector2(569, 380),
+                Text = "Game by Radio Paris",
+            };
 
             //creamos el boton de play
             var playButton = new Button(buttonTexture, buttonFont)
@@ -64,10 +78,12 @@ namespace Project.States
 
             _components = new List<Component>() 
             {
+                title,
                 playButton,
                 helpButton,
                 optionsButton,
-                exitButton
+                exitButton, 
+                gameby
             };
         }
 

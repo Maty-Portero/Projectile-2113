@@ -4,9 +4,17 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Controls/Button.png</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Controls/Title.png</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Fonts/Font.spritefont</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Fonts/FontTitle.spritefont</File>
     <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Player_Sprite.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
