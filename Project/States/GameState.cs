@@ -27,6 +27,7 @@ namespace Project.States
         List<PlayerBullet> bullets;
         float shootCooldown;
         float shootTimer;
+        float bulletSpeed = 300f; // Velocidad de las balas
 
         // Enemy bullet variables
         Texture2D[] enemyBulletTextures;
@@ -36,6 +37,15 @@ namespace Project.States
         Texture2D[] enemyTexture;
         List<Enemy> enemies;
         Random random;
+
+        // Power-up variables
+        private Texture2D powerUpTexture;
+        private Vector2 powerUpPosition;
+        private bool powerUpActive = false;
+        private bool powerUpCollected = false;
+        private double powerUpDuration = 10.0; // Duración del power-up en segundos
+        private double powerUpTimer = 0;
+        private double powerUpSpawnChance = 0.5; // Probabilidad de aparición del power-up
 
         // Player lives variables
         private Texture2D heartFullTexture;
@@ -84,6 +94,9 @@ namespace Project.States
             enemyTexture[1] = content.Load<Texture2D>("EnemyV5 (1)");
             enemyTexture[2] = content.Load<Texture2D>("EnemyV5 (2)");
 
+            // Load power-up texture
+            powerUpTexture = content.Load<Texture2D>("PowerUp-Sprite");
+
             enemies = new List<Enemy>();
             CreateEnemy();
 
@@ -100,6 +113,9 @@ namespace Project.States
                 new Vector2(60, 20),
                 new Vector2(100, 20)
             };
+
+            // Set power-up spawn chance
+            powerUpSpawnChance = 0.5; // 50% de probabilidad de aparición del power-up
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -132,6 +148,12 @@ namespace Project.States
             foreach (var enemy in enemies)
             {
                 enemy.Draw(gameTime, spriteBatch);
+            }
+
+            // Draw power-up
+            if (powerUpActive)
+            {
+                spriteBatch.Draw(powerUpTexture, powerUpPosition, Color.White);
             }
 
             // Draw hearts
@@ -178,7 +200,29 @@ namespace Project.States
         {
             Vector2 bulletPosition = new Vector2(playerPosition.X, playerPosition.Y - playerTexture.Height / 2);
             PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
+            newBullet.Velocity = new Vector2(0, -1) * bulletSpeed; // Hacia arriba
             bullets.Add(newBullet);
+        }
+
+        private void ShootTriple()
+        {
+            Vector2 bulletPosition = new Vector2(playerPosition.X, playerPosition.Y - playerTexture.Height / 2);
+            float angleOffset = MathHelper.ToRadians(20); // Ángulo de 20°
+
+            // Disparo central
+            PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
+            newBullet.Velocity = new Vector2(0, -1) * bulletSpeed; // Hacia arriba
+            bullets.Add(newBullet);
+
+            // Disparo hacia la izquierda
+            PlayerBullet leftBullet = new PlayerBullet(bulletPosition, bulletTextures);
+            leftBullet.Velocity = new Vector2((float)Math.Sin(angleOffset), -(float)Math.Cos(angleOffset)) * bulletSpeed;
+            bullets.Add(leftBullet);
+
+            // Disparo hacia la derecha
+            PlayerBullet rightBullet = new PlayerBullet(bulletPosition, bulletTextures);
+            rightBullet.Velocity = new Vector2(-(float)Math.Sin(angleOffset), -(float)Math.Cos(angleOffset)) * bulletSpeed;
+            bullets.Add(rightBullet);
         }
 
         private void ShootEnemy()
@@ -192,6 +236,25 @@ namespace Project.States
                     enemyBullets.Add(newBullet);
                 }
             }
+        }
+
+        private void SpawnPowerUp(Vector2 position)
+        {
+            if (random.NextDouble() <= powerUpSpawnChance)
+            {
+                powerUpPosition = position;
+                powerUpActive = true;
+            }
+        }
+
+        private Rectangle GetPlayerBounds()
+        {
+            return new Rectangle(
+                (int)(playerPosition.X - playerTexture.Width / 2 - 10), // Ajuste de 10 píxeles a la izquierda
+                (int)(playerPosition.Y - playerTexture.Height / 2),
+                playerTexture.Width,
+                playerTexture.Height
+            );
         }
 
         public override void PostUpdate(GameTime gameTime)
@@ -254,7 +317,14 @@ namespace Project.States
             shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (kstate.IsKeyDown(Keys.Z) && shootTimer <= 0)
             {
-                Shoot();
+                if (powerUpCollected)
+                {
+                    ShootTriple();
+                }
+                else
+                {
+                    Shoot();
+                }
                 shootTimer = shootCooldown;
             }
 
@@ -279,9 +349,11 @@ namespace Project.States
                     {
                         if (bullets[i].GetBounds().Intersects(enemies[j].GetBounds()))
                         {
+                            Vector2 enemyPosition = enemies[j].Position;
                             bullets.RemoveAt(i);
                             enemies.RemoveAt(j);
                             CreateEnemy();
+                            SpawnPowerUp(enemyPosition); // Spawns a power-up at the position of the killed enemy with a probability
                             break;
                         }
                     }
@@ -296,19 +368,10 @@ namespace Project.States
                 {
                     enemyBullets.RemoveAt(i);
                 }
-                else if (!isInvincible && enemyBullets[i].GetBounds().Intersects(new Rectangle((int)playerPosition.X, (int)playerPosition.Y, playerTexture.Width, playerTexture.Height)))
+                else if (!isInvincible && enemyBullets[i].GetBounds().Intersects(GetPlayerBounds()))
                 {
                     enemyBullets.RemoveAt(i);
-                    playerLives--;
-                    isInvincible = true;
-                    invincibleTimer = 2.0; // 2 segundos de invencibilidad
-
-                    // Verificar si el jugador está muerto
-                    if (playerLives <= 0)
-                    {
-                        // Implementar lógica para cuando el jugador muere
-                        // Por ejemplo, reiniciar el juego o mostrar una pantalla de Game Over
-                    }
+                    PlayerTakeDamage();
                 }
             }
 
@@ -328,8 +391,56 @@ namespace Project.States
                     isInvincible = false;
                 }
             }
+
+            // Actualizar power-up
+            if (powerUpActive)
+            {
+                powerUpPosition.Y += 100f * (float)gameTime.ElapsedGameTime.TotalSeconds; // Velocidad de caída del power-up
+
+                if (powerUpPosition.Y > _graphics.PreferredBackBufferHeight)
+                {
+                    powerUpActive = false;
+                }
+                else if (GetPlayerBounds().Intersects(new Rectangle((int)powerUpPosition.X, (int)powerUpPosition.Y, powerUpTexture.Width, powerUpTexture.Height)))
+                {
+                    powerUpActive = false;
+                    powerUpCollected = true;
+                    powerUpTimer = powerUpDuration;
+                }
+            }
+
+            // Temporizador del power-up
+            if (powerUpCollected)
+            {
+                powerUpTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                if (powerUpTimer <= 0)
+                {
+                    powerUpCollected = false;
+                }
+            }
+
+            // Comprobar colisiones con enemigos
+            foreach (var enemy in enemies)
+            {
+                if (!isInvincible && enemy.GetBounds().Intersects(GetPlayerBounds()))
+                {
+                    PlayerTakeDamage();
+                }
+            }
+        }
+
+        private void PlayerTakeDamage()
+        {
+            playerLives--;
+            isInvincible = true;
+            invincibleTimer = 2.0; // 2 segundos de invencibilidad
+
+            // Verificar si el jugador está muerto
+            if (playerLives <= 0)
+            {
+                // Implementar lógica para cuando el jugador muere
+                // Por ejemplo, reiniciar el juego o mostrar una pantalla de Game Over
+            }
         }
     }
 }
-
-

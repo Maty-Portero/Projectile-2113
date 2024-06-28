@@ -14,8 +14,10 @@
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/HeartFull.png</File>
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/Player_Sprite_Damaged.png</File>
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/Player_Sprite.png</File>
+    <File>C:/xampp/htdocs/Projectile-2113/Project/Content/PowerUp-Sprite.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
