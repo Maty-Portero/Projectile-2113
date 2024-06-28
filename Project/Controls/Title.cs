@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Project.Controls
 {
-    public class Button : Component
+    public class Title : Component
     {
         #region Fields
 
@@ -53,13 +53,13 @@ namespace Project.Controls
 
         #region Methods
 
-        public Button(Texture2D texture, SpriteFont font)
+        public Title(Texture2D texture, SpriteFont font)
         {
             _texture = texture;
 
             _font = font;
 
-            PenColour = Color.White;
+            PenColour = Color.Black;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -67,7 +67,7 @@ namespace Project.Controls
             var colour = Color.White;
 
             if (_isHovering)
-                colour = Color.LightGray;
+                colour = Color.Gray;
 
             spriteBatch.Draw(_texture, Rectangle, colour);
 

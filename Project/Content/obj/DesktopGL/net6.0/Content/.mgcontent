@@ -4,6 +4,13 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+<<<<<<< HEAD
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Controls/Button.png</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Controls/Title.png</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Fonts/Font.spritefont</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Fonts/FontTitle.spritefont</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Player_Sprite.png</File>
+=======
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyBullet (1).png</File>
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyBullet (2).png</File>
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/EnemyBullet (3).png</File>
@@ -14,7 +21,11 @@
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/HeartFull.png</File>
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/Player_Sprite_Damaged.png</File>
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/Player_Sprite.png</File>
+<<<<<<< HEAD
     <File>C:/xampp/htdocs/Projectile-2113/Project/Content/PowerUp-Sprite.png</File>
+=======
+>>>>>>> a5fc37f11da6ef38c61b2fd5783810d478f807b1
+>>>>>>> 17be871f9b3c267b2b668be558f278b965105d09
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
@@ -22,11 +33,17 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+<<<<<<< HEAD
+=======
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+<<<<<<< HEAD
     <File xsi:nil="true" />
+=======
+>>>>>>> a5fc37f11da6ef38c61b2fd5783810d478f807b1
+>>>>>>> 17be871f9b3c267b2b668be558f278b965105d09
   </DestFiles>
 </SourceFileCollection>
