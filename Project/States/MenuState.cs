@@ -28,6 +28,7 @@ namespace Project.States
             var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
 
 
+            //creamos el titulo de Projectile 2113
             var title = new Title(titleTexture, titleFont)
             {
                 Position = new Vector2(235, 25),
