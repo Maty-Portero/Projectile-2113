@@ -67,7 +67,7 @@ namespace Project.Controls
             var colour = Color.White;
 
             if (_isHovering)
-                colour = Color.Gray;
+                colour = Color.LightGray;
 
             spriteBatch.Draw(_texture, Rectangle, colour);
 

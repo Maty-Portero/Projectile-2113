@@ -23,11 +23,11 @@ namespace Project.States
             _graphics = deviceManager;
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
+            var titleTexture = _content.Load<Texture2D>("Controls/Title");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
             var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
-            var titleTexture = _content.Load<Texture2D>("Controls/title");
 
-            //creamos el titulo de Projectile 2113
+
             var title = new Title(titleTexture, titleFont)
             {
                 Position = new Vector2(235, 25),
