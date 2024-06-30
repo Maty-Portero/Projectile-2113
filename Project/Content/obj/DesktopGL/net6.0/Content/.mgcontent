@@ -1,1 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Profile>Reach</Profile><Platform>DesktopGL</Platform><Config /><SourceFiles><File>F:/Projectile-2113/Project/Content/BossPrototypeV1_2.png</File><File>F:/Projectile-2113/Project/Content/Controls/Button.png</File><File>F:/Projectile-2113/Project/Content/Controls/Title.png</File><File>F:/Projectile-2113/Project/Content/EnemyBullet (1).png</File><File>F:/Projectile-2113/Project/Content/EnemyBullet (2).png</File><File>F:/Projectile-2113/Project/Content/EnemyBullet (3).png</File><File>F:/Projectile-2113/Project/Content/EnemyV5 (1).png</File><File>F:/Projectile-2113/Project/Content/EnemyV5 (2).png</File><File>F:/Projectile-2113/Project/Content/EnemyV5.png</File><File>F:/Projectile-2113/Project/Content/Fonts/Font.spritefont</File><File>F:/Projectile-2113/Project/Content/Fonts/FontTitle.spritefont</File><File>F:/Projectile-2113/Project/Content/HeartEmpty.png</File><File>F:/Projectile-2113/Project/Content/HeartFull.png</File><File>F:/Projectile-2113/Project/Content/player_bulletone.png</File><File>F:/Projectile-2113/Project/Content/player_bullettwo.png</File><File>F:/Projectile-2113/Project/Content/Player_Sprite_Damaged.png</File><File>F:/Projectile-2113/Project/Content/Player_Sprite.png</File><File>F:/Projectile-2113/Project/Content/PowerUp-Sprite.png</File></SourceFiles><DestFiles><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /></DestFiles></SourceFileCollection>
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/BossPrototypeV1_2.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Controls/Button.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Controls/Title.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyBullet (1).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyBullet (2).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyBullet (3).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyV5 (1).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyV5 (2).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyV5.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Fonts/Font.spritefont</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Fonts/FontTitle.spritefont</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/HeartEmpty.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/HeartFull.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Damaged_Shifting.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Damaged.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Shifting.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/player_bulletone.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/player_bullettwo.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Player_Sprite_Damaged.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Player_Sprite.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/PowerUp-Sprite.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

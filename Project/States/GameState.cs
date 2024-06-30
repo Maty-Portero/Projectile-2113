@@ -74,8 +74,8 @@ namespace Project.States
 
             random = new Random();
 
-            playerTexture = content.Load<Texture2D>("Player_Sprite");
-            damagedPlayerTexture = content.Load<Texture2D>("Player_Sprite_Damaged");
+            playerTexture = content.Load<Texture2D>("NewPlayer_Sprite");
+            damagedPlayerTexture = content.Load<Texture2D>("NewPlayer_Sprite_Damaged");
 
             // Load bullet textures
             bulletTextures = new Texture2D[2];
