@@ -12,39 +12,49 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.States
 {
-    internal class HelpState : State
+    internal class GameOverState : State
     {
         private GraphicsDeviceManager _graphics;
         private List<Component> _components;
 
-        public HelpState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
+        public GameOverState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
-
             _graphics = deviceManager;
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var titleTexture = _content.Load<Texture2D>("Controls/Title");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
+            var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
 
-            var explication = new Title(titleTexture, buttonFont)
+            var title = new Title(titleTexture, titleFont)
             {
-                Position = new Vector2(275, 150),
-                Text = "This is a prototipal version, in next updates this place\ncould be a better place to learn how to play 'Projectile 2113'\nthank you to stay",
+                Position = new Vector2(275, 25),
+                Text = "Game Over",
             };
+
+            //creamos el boton de volver
+            var restartButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(300, 200),
+                Text = "Restart Level",
+            };
+
+            restartButton.Click += restartButton_Click;
 
             //creamos el boton de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300, 300),
-                Text = "Back",
+                Position = new Vector2(300, 250),
+                Text = "Back to Menu",
             };
 
             backButton.Click += backButton_Click;
 
             _components = new List<Component>()
             {
-                explication,
-                backButton
+                title,
+                backButton,
+                restartButton
             };
         }
 
@@ -54,13 +64,17 @@ namespace Project.States
 
             foreach (var component in _components)
                 component.Draw(gameTime, spriteBatch);
-
             spriteBatch.End();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
             _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
+        }
+
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+            _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
         }
 
         public override void PostUpdate(GameTime gameTime)
