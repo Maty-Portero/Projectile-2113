@@ -10,7 +10,6 @@ namespace Project.States
     internal class GameState : State
     {
         private const int MaxEnemies = 5;
-
         Texture2D playerTexture;
         Texture2D damagedPlayerTexture;
         Vector2 playerPosition;
@@ -438,6 +437,7 @@ namespace Project.States
             // Verificar si el jugador está muerto
             if (playerLives <= 0)
             {
+                _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics));
                 // Implementar lógica para cuando el jugador muere
                 // Por ejemplo, reiniciar el juego o mostrar una pantalla de Game Over
             }

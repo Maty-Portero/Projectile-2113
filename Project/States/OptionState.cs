@@ -19,43 +19,24 @@ namespace Project.States
 
         public OptionState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
+
             _graphics = deviceManager;
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
 
-            //creamos el boton de play
-            var volumenButton = new Button(buttonTexture, buttonFont)
+            //creamos el boton de volver
+            var backButton = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(300, 200),
-                Text = "Volumen",
+                Text = "Back",
             };
 
-            volumenButton.Click += volumenButton_Click;
+            backButton.Click += backButton_Click;
 
-            //creamos el boton de options
-            /*var optionsButton = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(300, 250),
-                Text = "Options",
-            };
-
-            optionsButton.Click += optionsButton_Click;
-
-            //creamos el boton de exit
-            var exitButton = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(300, 300),
-                Text = "Exit",
-            };
-
-            exitButton.Click += exitButton_Click;
-            */
             _components = new List<Component>()
             {
-                volumenButton
-                /*optionsButton,
-                exitButton*/
+                backButton
             };
         }
 
@@ -69,19 +50,20 @@ namespace Project.States
             spriteBatch.End();
         }
 
-        private void volumenButton_Click(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
         {
-            //_game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
+            _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
         }
 
         public override void PostUpdate(GameTime gameTime)
         {
-            //throw new NotImplementedException();
+            //saca los sprites si no los necesita
         }
 
         public override void Update(GameTime gameTime)
         {
-            //throw new NotImplementedException();
+            foreach (var component in _components)
+                component.Update(gameTime);
         }
     }
 }
