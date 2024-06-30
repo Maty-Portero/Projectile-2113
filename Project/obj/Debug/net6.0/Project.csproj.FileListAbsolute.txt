@@ -65,10 +65,8 @@ C:\xampp\htdocs\Portero\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x8
 C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.Up2Date
 C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
-<<<<<<< HEAD
 C:\xampp\htdocs\Portero\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Title.xnb
 C:\xampp\htdocs\Portero\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\FontTitle.xnb
-=======
 C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Button.xnb
 C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\enemy_helicopter.xnb
 C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\Font.xnb
@@ -110,8 +108,51 @@ C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (3)
 C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartEmpty.xnb
 C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartFull.xnb
 C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite_Damaged.xnb
-<<<<<<< HEAD
 C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\PowerUp-Sprite.xnb
-=======
 >>>>>>> a5fc37f11da6ef38c61b2fd5783810d478f807b1
 >>>>>>> 17be871f9b3c267b2b668be558f278b965105d09
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\enemy_helicopter.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\BossPrototypeV1_2.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Button.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Title.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (1).xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (2).xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (3).xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5 (1).xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5 (2).xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\Font.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\FontTitle.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartEmpty.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartFull.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bulletone.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bullettwo.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite_Damaged.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\PowerUp-Sprite.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Project.exe
+F:\Projectile-2113\Project\bin\Debug\net6.0\Project.deps.json
+F:\Projectile-2113\Project\bin\Debug\net6.0\Project.runtimeconfig.json
+F:\Projectile-2113\Project\bin\Debug\net6.0\Project.dll
+F:\Projectile-2113\Project\bin\Debug\net6.0\Project.pdb
+F:\Projectile-2113\Project\bin\Debug\net6.0\MonoGame.Framework.dll
+F:\Projectile-2113\Project\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+F:\Projectile-2113\Project\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+F:\Projectile-2113\Project\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+F:\Projectile-2113\Project\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+F:\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+F:\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+F:\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+F:\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.AssemblyReference.cache
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.AssemblyInfoInputs.cache
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.AssemblyInfo.cs
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.CoreCompileInputs.cache
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.sourcelink.json
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.Up2Date
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.dll
+F:\Projectile-2113\Project\obj\Debug\net6.0\refint\Project.dll
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
+F:\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
+F:\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
