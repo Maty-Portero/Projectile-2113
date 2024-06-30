@@ -18,8 +18,10 @@
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/HeartEmpty.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/HeartFull.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Damaged_Shifting.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Damaged_ShiftingV2.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Damaged.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Shifting.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_ShiftingV2.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/player_bulletone.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/player_bullettwo.png</File>
@@ -28,6 +30,8 @@
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/PowerUp-Sprite.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

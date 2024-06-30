@@ -47,3 +47,5 @@ D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPla
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged.xnb
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged_Shifting.xnb
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Shifting.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged_ShiftingV2.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_ShiftingV2.xnb

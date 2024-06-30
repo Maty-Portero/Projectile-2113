@@ -171,6 +171,18 @@
 /processorParam:TextureFormat=Color
 /build:NewPlayer_Sprite_Damaged_Shifting.png
 
+#begin NewPlayer_Sprite_Damaged_ShiftingV2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:NewPlayer_Sprite_Damaged_ShiftingV2.png
+
 #begin NewPlayer_Sprite_Damaged.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -194,6 +206,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:NewPlayer_Sprite_Shifting.png
+
+#begin NewPlayer_Sprite_ShiftingV2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:NewPlayer_Sprite_ShiftingV2.png
 
 #begin NewPlayer_Sprite.png
 /importer:TextureImporter

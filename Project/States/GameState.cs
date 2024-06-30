@@ -10,8 +10,11 @@ namespace Project.States
     internal class GameState : State
     {
         private const int MaxEnemies = 5;
+
         Texture2D playerTexture;
         Texture2D damagedPlayerTexture;
+        Texture2D playerTextureWithHitbox;
+        Texture2D damagedPlayerTextureWithHitbox;
         Vector2 playerPosition;
         float playerSpeed;
         float slowSpeed;
@@ -44,7 +47,7 @@ namespace Project.States
         private bool powerUpCollected = false;
         private double powerUpDuration = 10.0; // Duración del power-up en segundos
         private double powerUpTimer = 0;
-        private double powerUpSpawnChance = 0.5; // Probabilidad de aparición del power-up
+        private double powerUpSpawnChance = 0.1; // Probabilidad de aparición del power-up
 
         // Player lives variables
         private Texture2D heartFullTexture;
@@ -73,8 +76,10 @@ namespace Project.States
 
             random = new Random();
 
-            playerTexture = content.Load<Texture2D>("NewPlayer_Sprite");
-            damagedPlayerTexture = content.Load<Texture2D>("NewPlayer_Sprite_Damaged");
+            playerTexture = content.Load<Texture2D>("Player_Sprite");
+            damagedPlayerTexture = content.Load<Texture2D>("Player_Sprite_Damaged");
+            playerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_ShiftingV2");
+            damagedPlayerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_Damaged_ShiftingV2");
 
             // Load bullet textures
             bulletTextures = new Texture2D[2];
@@ -114,22 +119,24 @@ namespace Project.States
             };
 
             // Set power-up spawn chance
-            powerUpSpawnChance = 0.5; // 50% de probabilidad de aparición del power-up
+            powerUpSpawnChance = 0.1; // 50% de probabilidad de aparición del power-up
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
 
-            // Draw player with flashing effect when invincible
-            if (isInvincible && invincibleFlashTimer < FlashDuration / 2)
+            Texture2D currentTexture;
+            if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))
             {
-                spriteBatch.Draw(damagedPlayerTexture, playerPosition, null, Color.White, 0f, new Vector2(playerTexture.Width / 2, playerTexture.Height / 2), Vector2.One, SpriteEffects.None, 0f);
+                currentTexture = isInvincible && invincibleFlashTimer < FlashDuration / 2 ? damagedPlayerTextureWithHitbox : playerTextureWithHitbox;
             }
             else
             {
-                spriteBatch.Draw(playerTexture, playerPosition, null, Color.White, 0f, new Vector2(playerTexture.Width / 2, playerTexture.Height / 2), Vector2.One, SpriteEffects.None, 0f);
+                currentTexture = isInvincible && invincibleFlashTimer < FlashDuration / 2 ? damagedPlayerTexture : playerTexture;
             }
+
+            spriteBatch.Draw(currentTexture, playerPosition, null, Color.White, 0f, new Vector2(currentTexture.Width / 2, currentTexture.Height / 2), Vector2.One, SpriteEffects.None, 0f);
 
             // Draw player bullets
             foreach (var bullet in bullets)
@@ -197,6 +204,7 @@ namespace Project.States
 
         private void Shoot()
         {
+            // Ajusta la posición inicial del proyectil para que salga desde la punta roja
             Vector2 bulletPosition = new Vector2(playerPosition.X, playerPosition.Y - playerTexture.Height / 2);
             PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
             newBullet.Velocity = new Vector2(0, -1) * bulletSpeed; // Hacia arriba
@@ -205,6 +213,7 @@ namespace Project.States
 
         private void ShootTriple()
         {
+            // Ajusta la posición inicial del proyectil para que salga desde la punta roja
             Vector2 bulletPosition = new Vector2(playerPosition.X, playerPosition.Y - playerTexture.Height / 2);
             float angleOffset = MathHelper.ToRadians(20); // Ángulo de 20°
 
@@ -223,6 +232,12 @@ namespace Project.States
             rightBullet.Velocity = new Vector2(-(float)Math.Sin(angleOffset), -(float)Math.Cos(angleOffset)) * bulletSpeed;
             bullets.Add(rightBullet);
         }
+
+
+
+
+
+
 
         private void ShootEnemy()
         {
@@ -248,11 +263,14 @@ namespace Project.States
 
         private Rectangle GetPlayerBounds()
         {
+            float scale = 0.1f; // Escala del 70%
+            int hitboxWidth = (int)(playerTexture.Width * scale);
+            int hitboxHeight = (int)(playerTexture.Height * scale);
             return new Rectangle(
-                (int)(playerPosition.X - playerTexture.Width / 2 - 10), // Ajuste de 10 píxeles a la izquierda
-                (int)(playerPosition.Y - playerTexture.Height / 2),
-                playerTexture.Width,
-                playerTexture.Height
+                (int)(playerPosition.X - hitboxWidth / 2),
+                (int)(playerPosition.Y - hitboxHeight / 2),
+                hitboxWidth,
+                hitboxHeight
             );
         }
 
@@ -444,3 +462,4 @@ namespace Project.States
         }
     }
 }
+
