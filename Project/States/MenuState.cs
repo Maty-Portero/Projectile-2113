@@ -37,7 +37,7 @@ namespace Project.States
 
             var gameby = new Title(titleTexture, buttonFont)
             {
-                Position = new Vector2(569, 380),
+                Position = new Vector2(573, 500),
                 Text = "Game by Radio Paris",
             };
 
@@ -60,13 +60,13 @@ namespace Project.States
             helpButton.Click += helpButton_Click;
 
             //creamos el boton de options
-            var optionsButton = new Button(buttonTexture, buttonFont)
+            /*var optionsButton = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(320, 300),
                 Text = "Settings",
             };
 
-            optionsButton.Click += optionsButton_Click;
+            optionsButton.Click += optionsButton_Click;*/
 
             //creamos el boton de exit
             var exitButton = new Button(buttonTexture, buttonFont)
@@ -82,7 +82,7 @@ namespace Project.States
                 title,
                 playButton,
                 helpButton,
-                optionsButton,
+                //optionsButton,
                 exitButton, 
                 gameby
             };
@@ -102,10 +102,11 @@ namespace Project.States
         {
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
         }
+        /*
         private void optionsButton_Click(object sender, EventArgs e)
         {
             _game.ChangeState(new OptionState(_game, _graphicsDevice, _content, _graphics));
-        }
+        }*/
 
         private void helpButton_Click(Object sender, EventArgs e)
         {

@@ -96,3 +96,7 @@ D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPla
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged_Shifting.xnb
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Shifting.xnb
 >>>>>>> e2c50d99682141b547d35894cdfc091867c3cd26
+C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite.xnb
+C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged.xnb
+C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged_Shifting.xnb
+C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Shifting.xnb
