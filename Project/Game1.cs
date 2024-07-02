@@ -18,9 +18,6 @@ namespace Project
 
         private State _nextState;
 
-        ushort[] widths;
-        ushort[] heights;
-
         public void ChangeState(State state)
         {
             _nextState = state;
@@ -28,14 +25,10 @@ namespace Project
 
         public Game1()
         {
-            int w = 1920;
-            int h = 1080;
             _graphics = new GraphicsDeviceManager(this);
-            _graphics.PreferredBackBufferWidth = w;
-            _graphics.PreferredBackBufferHeight = h;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-
+            
         }
 
         protected override void Initialize()

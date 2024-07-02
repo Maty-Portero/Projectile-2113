@@ -35,7 +35,7 @@ namespace Project.States
             //creamos el boton de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 300),
+                Position = new Vector2(300, 300),
                 Text = "Back",
             };
 
