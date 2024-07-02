@@ -4,26 +4,34 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/BossPrototypeV1_2.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Controls/Button.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Controls/Title.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/EnemyBullet (1).png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/EnemyBullet (2).png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/EnemyBullet (3).png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/EnemyV5 (1).png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/EnemyV5 (2).png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/EnemyV5.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Fonts/Font.spritefont</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Fonts/FontTitle.spritefont</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/HeartEmpty.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/HeartFull.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/player_bulletone.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/player_bullettwo.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Player_Sprite_Damaged.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Player_Sprite.png</File>
-    <File>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/PowerUp-Sprite.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/BossPrototypeV1_2.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Controls/Button.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Controls/Title.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyBullet (1).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyBullet (2).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyBullet (3).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyV5 (1).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyV5 (2).png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyV5.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Fonts/Font.spritefont</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Fonts/FontTitle.spritefont</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/HeartEmpty.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/HeartFull.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Damaged_Shifting.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Damaged.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite_Shifting.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/NewPlayer_Sprite.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/player_bulletone.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/player_bullettwo.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Player_Sprite_Damaged.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Player_Sprite.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/PowerUp-Sprite.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

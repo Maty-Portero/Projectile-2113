@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\enemy_helicopter.xnb
 C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\BossPrototypeV1_2.xnb
 C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Button.xnb
@@ -44,3 +45,54 @@ C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
 C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
 C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\pause.xnb
+=======
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\BossPrototypeV1_2.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Button.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Title.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (1).xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (2).xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (3).xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5 (1).xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5 (2).xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\enemy_helicopter.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\Font.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\FontTitle.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartEmpty.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartFull.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bulletone.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bullettwo.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite_Damaged.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\PowerUp-Sprite.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Project.exe
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Project.deps.json
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Project.runtimeconfig.json
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Project.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Project.pdb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\MonoGame.Framework.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.AssemblyReference.cache
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.AssemblyInfoInputs.cache
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.AssemblyInfo.cs
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.CoreCompileInputs.cache
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.sourcelink.json
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.Up2Date
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\refint\Project.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
+D:\Data\Documents\GitHub\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged_Shifting.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Shifting.xnb
+>>>>>>> e2c50d99682141b547d35894cdfc091867c3cd26
