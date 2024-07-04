@@ -102,19 +102,37 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Alumno\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> ed449e3e10dc20520e094d799c59571311d09255
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Project.csproj",
       "projectName": "Project",
       "projectPath": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
       "outputPath": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\obj\\",
+=======
+      "projectUniqueName": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Project.csproj",
+      "projectName": "Project",
+      "projectPath": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Project.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\obj\\",
+>>>>>>> ed449e3e10dc20520e094d799c59571311d09255
       "projectStyle": "PackageReference",
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> ed449e3e10dc20520e094d799c59571311d09255
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
