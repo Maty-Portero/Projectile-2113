@@ -47,7 +47,7 @@ namespace Project.States
         private bool powerUpCollected = false;
         private double powerUpDuration = 10.0; // Duración del power-up en segundos
         private double powerUpTimer = 0;
-        private double powerUpSpawnChance = 0.5; // Probabilidad de aparición del power-up
+        private double powerUpSpawnChance = 0.05; // Probabilidad de aparición del power-up
 
         // Player lives variables
         private Texture2D heartFullTexture;
@@ -66,6 +66,13 @@ namespace Project.States
         // Stage and round variables
         private int stage;
         private int round;
+
+        private bool roundCompleted;
+        private double roundCompletionTimer;
+        private const double roundCompletionDuration = 5.0;
+
+        private bool stageCompleted;
+        private double stageCompletionTimer;
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
@@ -86,8 +93,8 @@ namespace Project.States
 
             playerTexture = content.Load<Texture2D>("Player_Sprite");
             damagedPlayerTexture = content.Load<Texture2D>("Player_Sprite_Damaged");
-            playerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_Shifting");
-            damagedPlayerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_Damaged_Shifting");
+            playerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_ShiftingV2");
+            damagedPlayerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_Damaged_ShiftingV2");
 
             // Load bullet textures
             bulletTextures = new Texture2D[2];
@@ -113,7 +120,7 @@ namespace Project.States
             font = content.Load<SpriteFont>("Fonts/ArcadeFont");
 
             enemies = new List<Enemy>();
-            CreateEnemy();
+            CreateEnemiesRound1();
 
             playerPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
 
@@ -201,30 +208,91 @@ namespace Project.States
                 }
             }
 
+            if (roundCompleted)
+            {
+                string completionText = "Round Completed, Next Round Starting in 5 Seconds";
+                Vector2 textSize = font.MeasureString(completionText);
+                Vector2 textPosition = new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
+                spriteBatch.DrawString(font, completionText, textPosition, Color.White);
+            }
+
+            if (stageCompleted)
+            {
+                string completionText = "Stage Completed!";
+                Vector2 textSize = font.MeasureString(completionText);
+                Vector2 textPosition = new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
+                spriteBatch.DrawString(font, completionText, textPosition, Color.White);
+            }
+
             spriteBatch.End();
         }
 
-        private void CreateEnemy()
+        private void CreateEnemiesRound1()
         {
-            int numEnemiesToCreate = 1;
-            double probability = 1.0;
+            // Create 3 enemies on the right side
+            for (int i = 0; i < 3; i++)
+            {
+                int xPosition = _graphics.PreferredBackBufferWidth - enemyTexture[0].Width;
+                int yPosition = i * (enemyTexture[0].Height + 10);
+                enemies.Add(new Enemy(enemyTexture, new Vector2(xPosition, yPosition), random));
+            }
 
-            while (numEnemiesToCreate > 0 && enemies.Count < MaxEnemies)
+            // Create 2 enemies on the left side
+            int yOffset = 30; // Additional offset for enemies on the left
+            for (int i = 0; i < 2; i++)
+            {
+                int xPosition = 0;
+                int yPosition = i * (enemyTexture[0].Height + 10) + yOffset;
+                enemies.Add(new Enemy(enemyTexture, new Vector2(xPosition, yPosition), random));
+            }
+        }
+
+        private void CreateEnemiesRound2()
+        {
+            for (int i = 0; i < 6; i++)
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
                 enemies.Add(new Enemy(enemyTexture, new Vector2(xPosition, yPosition), random));
+            }
+        }
 
-                numEnemiesToCreate--;
+        private void CreateEnemiesRound3()
+        {
+            Vector2[] positions = new Vector2[]
+            {
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTexture[0].Height + 5),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 5, (enemyTexture[0].Height + 5) * 2),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
+            };
 
-                if (numEnemiesToCreate == 0 && enemies.Count < MaxEnemies)
-                {
-                    probability /= 2;
-                    if (random.NextDouble() < probability)
-                    {
-                        numEnemiesToCreate++;
-                    }
-                }
+            foreach (var pos in positions)
+            {
+                enemies.Add(new Enemy(enemyTexture, pos, random));
+            }
+        }
+
+        private void CreateEnemiesRound4()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, new Vector2(xPosition, yPosition), random));
+            }
+        }
+
+        private void CreateEnemiesRound5()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, new Vector2(xPosition, yPosition), random));
             }
         }
 
@@ -389,7 +457,7 @@ namespace Project.States
                             Vector2 enemyPosition = enemies[j].Position;
                             bullets.RemoveAt(i);
                             enemies.RemoveAt(j);
-                            CreateEnemy();
+                            //CreateEnemy();
                             SpawnPowerUp(enemyPosition); // Spawns a power-up at the position of the killed enemy with a probability
 
                             // Incrementar puntaje
@@ -466,6 +534,49 @@ namespace Project.States
                 if (!isInvincible && enemy.GetBounds().Intersects(GetPlayerBounds()))
                 {
                     PlayerTakeDamage();
+                }
+            }
+
+            // Check for round completion
+            if (enemies.Count == 0 && !roundCompleted)
+            {
+                roundCompleted = true;
+                roundCompletionTimer = roundCompletionDuration;
+            }
+
+            if (roundCompleted)
+            {
+                roundCompletionTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                if (roundCompletionTimer <= 0)
+                {
+                    round++;
+                    roundCompleted = false;
+                    if (round == 3)
+                    {
+                        CreateEnemiesRound3();
+                    }
+                    else if (round == 4)
+                    {
+                        CreateEnemiesRound4();
+                    }
+                    else if (round == 5)
+                    {
+                        CreateEnemiesRound5();
+                    }
+                    else if (round > 5)
+                    {
+                        stageCompleted = true;
+                        stageCompletionTimer = roundCompletionDuration;
+                    }
+                }
+            }
+
+            if (stageCompleted)
+            {
+                stageCompletionTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                if (stageCompletionTimer <= 0)
+                {
+                    _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
                 }
             }
         }

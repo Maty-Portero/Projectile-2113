@@ -26,8 +26,6 @@ namespace Project
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            _graphics.IsFullScreen = true;
-            _graphics.ApplyChanges();
             Content.RootDirectory = "Content";
             IsMouseVisible = true;            
         }

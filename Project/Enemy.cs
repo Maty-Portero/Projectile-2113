@@ -29,8 +29,7 @@ namespace Project
             this.random = random;
 
             // Inicializar dirección y velocidad
-            direction = new Vector2((float)(random.NextDouble() * 2 - 1), (float)(random.NextDouble() * 2 - 1));
-            direction.Normalize();
+            direction = position.X == 0 ? new Vector2(1, 0) : new Vector2(-1, 0);
             speed = 100f;
         }
 
@@ -60,22 +59,10 @@ namespace Project
             // Actualizar posición
             Position += direction * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            // Cambiar dirección aleatoriamente
-            if (random.NextDouble() < 0.01)
-            {
-                direction = new Vector2((float)(random.NextDouble() * 2 - 1), (float)(random.NextDouble() * 2 - 1));
-                direction.Normalize();
-            }
-
-            // Limitar el movimiento dentro de los bordes de la pantalla
+            // Cambiar dirección al llegar a los bordes de la pantalla
             if (Position.X < 0 || Position.X > 800 - textures[0].Width) // Asumiendo que el ancho de la pantalla es 800
             {
                 direction.X = -direction.X;
-            }
-
-            if (Position.Y < 0 || Position.Y > 150 - textures[0].Height) // Asumiendo que la altura de la pantalla es 480
-            {
-                direction.Y = -direction.Y;
             }
         }
 
@@ -90,5 +77,3 @@ namespace Project
         }
     }
 }
-
-

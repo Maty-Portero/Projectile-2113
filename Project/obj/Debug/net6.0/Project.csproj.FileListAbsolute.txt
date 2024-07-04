@@ -104,3 +104,59 @@ C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\refint\Project.
 C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
 C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 C:\xampp\htdocs\Portero\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\enemy_helicopter.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\BossPrototypeV1_2.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Button.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Title.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (1).xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (2).xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (3).xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5 (1).xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5 (2).xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\ArcadeFont.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\File.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\Font.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\FontTitle.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartEmpty.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartFull.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged_Shifting.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Damaged_ShiftingV2.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_Shifting.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\NewPlayer_Sprite_ShiftingV2.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bulletone.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\player_bullettwo.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite_Damaged.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\PowerUp-Sprite.xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Project.exe
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Project.deps.json
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Project.runtimeconfig.json
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Project.dll
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Project.pdb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.AssemblyInfoInputs.cache
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.AssemblyInfo.cs
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.sourcelink.json
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.Up2Date
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.dll
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\refint\Project.dll
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
+C:\xampp\htdocs\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5_Damaged (1).xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5_Damaged (2).xnb
+C:\xampp\htdocs\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5_Damaged.xnb
