@@ -63,6 +63,10 @@ namespace Project.States
         private int score;
         private SpriteFont font;
 
+        // Stage and round variables
+        private int stage;
+        private int round;
+
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
             _graphics = deviceManager;
@@ -116,6 +120,10 @@ namespace Project.States
             // Initialize score
             score = 0;
 
+            // Initialize stage and round
+            stage = 1;
+            round = 1;
+
             // Load heart textures
             heartFullTexture = content.Load<Texture2D>("HeartFull");
             heartEmptyTexture = content.Load<Texture2D>("HeartEmpty");
@@ -135,6 +143,10 @@ namespace Project.States
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
+
+            // Draw stage and round
+            string stageText = $"Stage {stage} - Round {round}";
+            spriteBatch.DrawString(font, stageText, new Vector2(20, 0), Color.White);
 
             // Draw score
             string scoreText = $"SCORE: {score.ToString("D7")}";
