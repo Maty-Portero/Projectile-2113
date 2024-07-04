@@ -23,12 +23,19 @@ namespace Project.States
             _graphics = deviceManager;
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
+            var titleTexture = _content.Load<Texture2D>("Controls/Title");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
+
+            var explication = new Title(titleTexture, buttonFont)
+            {
+                Position = new Vector2(275, 150),
+                Text = "This is a prototipal version, in next updates this place\ncould be a better place to configure 'Projectile 2113'\nthank you to stay",
+            };
 
             //creamos el boton de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 200),
+                Position = new Vector2(320, 300),
                 Text = "Back",
             };
 
@@ -36,6 +43,7 @@ namespace Project.States
 
             _components = new List<Component>()
             {
+                explication,
                 backButton
             };
         }

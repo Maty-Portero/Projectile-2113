@@ -210,7 +210,7 @@ namespace Project.States
 
             if (roundCompleted)
             {
-                string completionText = "Round Completed, Next Round Starting in 5 Seconds";
+                string completionText = "Round completed, next round starting in 5 seconds";
                 Vector2 textSize = font.MeasureString(completionText);
                 Vector2 textPosition = new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
                 spriteBatch.DrawString(font, completionText, textPosition, Color.White);
@@ -218,7 +218,7 @@ namespace Project.States
 
             if (stageCompleted)
             {
-                string completionText = "Stage Completed!";
+                string completionText = "Stage completed!";
                 Vector2 textSize = font.MeasureString(completionText);
                 Vector2 textPosition = new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
                 spriteBatch.DrawString(font, completionText, textPosition, Color.White);
