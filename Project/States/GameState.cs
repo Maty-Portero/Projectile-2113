@@ -47,7 +47,7 @@ namespace Project.States
         private bool powerUpCollected = false;
         private double powerUpDuration = 10.0; // Duración del power-up en segundos
         private double powerUpTimer = 0;
-        private double powerUpSpawnChance = 0.1; // Probabilidad de aparición del power-up
+        private double powerUpSpawnChance = 0.5; // Probabilidad de aparición del power-up
 
         // Player lives variables
         private Texture2D heartFullTexture;
@@ -58,6 +58,10 @@ namespace Project.States
         private double invincibleFlashTimer = 0;
         private const double FlashDuration = 0.1; // Duración de cada flash
         private List<Vector2> heartPositions;
+
+        // Score variables
+        private int score;
+        private SpriteFont font;
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
@@ -78,8 +82,8 @@ namespace Project.States
 
             playerTexture = content.Load<Texture2D>("Player_Sprite");
             damagedPlayerTexture = content.Load<Texture2D>("Player_Sprite_Damaged");
-            playerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_ShiftingV2");
-            damagedPlayerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_Damaged_ShiftingV2");
+            playerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_Shifting");
+            damagedPlayerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_Damaged_Shifting");
 
             // Load bullet textures
             bulletTextures = new Texture2D[2];
@@ -101,10 +105,16 @@ namespace Project.States
             // Load power-up texture
             powerUpTexture = content.Load<Texture2D>("PowerUp-Sprite");
 
+            // Load font for score
+            font = content.Load<SpriteFont>("Fonts/ArcadeFont");
+
             enemies = new List<Enemy>();
             CreateEnemy();
 
             playerPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
+
+            // Initialize score
+            score = 0;
 
             // Load heart textures
             heartFullTexture = content.Load<Texture2D>("HeartFull");
@@ -113,18 +123,22 @@ namespace Project.States
             // Initialize heart positions
             heartPositions = new List<Vector2>
             {
-                new Vector2(20, 20),
-                new Vector2(60, 20),
-                new Vector2(100, 20)
+                new Vector2(20, 60),  // Adjusted position to leave space for score
+                new Vector2(60, 60),
+                new Vector2(100, 60)
             };
 
             // Set power-up spawn chance
-            powerUpSpawnChance = 0.1; // 50% de probabilidad de aparición del power-up
+            powerUpSpawnChance = 0.5; // 50% de probabilidad de aparición del power-up
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
+
+            // Draw score
+            string scoreText = $"SCORE: {score.ToString("D7")}";
+            spriteBatch.DrawString(font, scoreText, new Vector2(20, 20), Color.White);
 
             Texture2D currentTexture;
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))
@@ -233,12 +247,6 @@ namespace Project.States
             bullets.Add(rightBullet);
         }
 
-
-
-
-
-
-
         private void ShootEnemy()
         {
             foreach (var enemy in enemies)
@@ -263,7 +271,7 @@ namespace Project.States
 
         private Rectangle GetPlayerBounds()
         {
-            float scale = 0.1f; // Escala del 70%
+            float scale = 0.7f; // Escala del 70%
             int hitboxWidth = (int)(playerTexture.Width * scale);
             int hitboxHeight = (int)(playerTexture.Height * scale);
             return new Rectangle(
@@ -371,6 +379,10 @@ namespace Project.States
                             enemies.RemoveAt(j);
                             CreateEnemy();
                             SpawnPowerUp(enemyPosition); // Spawns a power-up at the position of the killed enemy with a probability
+
+                            // Incrementar puntaje
+                            score += 1000;
+
                             break;
                         }
                     }
@@ -462,4 +474,3 @@ namespace Project.States
         }
     }
 }
-

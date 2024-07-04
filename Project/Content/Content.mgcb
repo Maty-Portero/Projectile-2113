@@ -121,6 +121,19 @@
 /processorParam:TextureFormat=Color
 /build:EnemyV5.png
 
+#begin Fonts/ArcadeFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArcadeFont.spritefont
+
+#begin Fonts/File.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Fonts/File.fx
+
 #begin Fonts/Font.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

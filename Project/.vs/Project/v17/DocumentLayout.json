@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\content\\fonts\\arcadefont.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:content\\fonts\\arcadefont.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\content\\fonts\\file.fx||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:content\\fonts\\file.fx||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +58,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "ArcadeFont.spritefont",
+              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Content\\Fonts\\ArcadeFont.spritefont",
+              "RelativeDocumentMoniker": "Content\\Fonts\\ArcadeFont.spritefont",
+              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Content\\Fonts\\ArcadeFont.spritefont",
+              "RelativeToolTip": "Content\\Fonts\\ArcadeFont.spritefont",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-04T01:04:01.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "File.fx",
+              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Content\\Fonts\\File.fx",
+              "RelativeDocumentMoniker": "Content\\Fonts\\File.fx",
+              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Content\\Fonts\\File.fx",
+              "RelativeToolTip": "Content\\Fonts\\File.fx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-04T00:51:49.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Title.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Controls\\Title.cs",
               "RelativeDocumentMoniker": "Controls\\Title.cs",
@@ -62,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Button.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Controls\\Button.cs",
               "RelativeDocumentMoniker": "Controls\\Button.cs",
@@ -74,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "MenuState.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\MenuState.cs",
               "RelativeDocumentMoniker": "States\\MenuState.cs",
@@ -86,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Enemy.cs",
               "RelativeDocumentMoniker": "Enemy.cs",
@@ -98,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Component.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Component.cs",
               "RelativeDocumentMoniker": "Component.cs",
@@ -116,14 +150,14 @@
               "RelativeDocumentMoniker": "States\\GameState.cs",
               "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeToolTip": "States\\GameState.cs",
-              "ViewState": "AQIAAMMAAAAAAAAAAAAawM4AAABaAAAA",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAQwGwAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T16:41:41.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Game1.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
