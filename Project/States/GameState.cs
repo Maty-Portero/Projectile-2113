@@ -47,7 +47,7 @@ namespace Project.States
         private bool powerUpCollected = false;
         private double powerUpDuration = 10.0; // Duración del power-up en segundos
         private double powerUpTimer = 0;
-        private double powerUpSpawnChance = 0.05; // Probabilidad de aparición del power-up
+        private double powerUpSpawnChance = 0.005; // Probabilidad de aparición del power-up
 
         // Player lives variables
         private Texture2D heartFullTexture;
@@ -70,6 +70,7 @@ namespace Project.States
         private bool roundCompleted;
         private double roundCompletionTimer;
         private const double roundCompletionDuration = 5.0;
+        private int remainingSeconds;
 
         private bool stageCompleted;
         private double stageCompletionTimer;
@@ -208,9 +209,9 @@ namespace Project.States
                 }
             }
 
-            if (roundCompleted)
+            if (roundCompleted && round <= 5)
             {
-                string completionText = "Round completed, next round starting in 5 seconds";
+                string completionText = $"Round completed, next round starting in {remainingSeconds} seconds";
                 Vector2 textSize = font.MeasureString(completionText);
                 Vector2 textPosition = new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
                 spriteBatch.DrawString(font, completionText, textPosition, Color.White);
@@ -249,16 +250,6 @@ namespace Project.States
 
         private void CreateEnemiesRound2()
         {
-            for (int i = 0; i < 6; i++)
-            {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
-                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
-                enemies.Add(new Enemy(enemyTexture, new Vector2(xPosition, yPosition), random));
-            }
-        }
-
-        private void CreateEnemiesRound3()
-        {
             Vector2[] positions = new Vector2[]
             {
                 new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
@@ -268,6 +259,8 @@ namespace Project.States
                 new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
                 new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 5, (enemyTexture[0].Height + 5) * 2),
                 new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
             };
 
             foreach (var pos in positions)
@@ -276,7 +269,7 @@ namespace Project.States
             }
         }
 
-        private void CreateEnemiesRound4()
+        private void CreateEnemiesRound3()
         {
             for (int i = 0; i < 9; i++)
             {
@@ -286,9 +279,19 @@ namespace Project.States
             }
         }
 
-        private void CreateEnemiesRound5()
+        private void CreateEnemiesRound4()
         {
             for (int i = 0; i < 10; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, new Vector2(xPosition, yPosition), random));
+            }
+        }
+
+        private void CreateEnemiesRound5()
+        {
+            for (int i = 0; i < 15; i++)
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
@@ -351,7 +354,7 @@ namespace Project.States
 
         private Rectangle GetPlayerBounds()
         {
-            float scale = 0.7f; // Escala del 70%
+            float scale = 0.05f; // Escala del 70%
             int hitboxWidth = (int)(playerTexture.Width * scale);
             int hitboxHeight = (int)(playerTexture.Height * scale);
             return new Rectangle(
@@ -542,16 +545,22 @@ namespace Project.States
             {
                 roundCompleted = true;
                 roundCompletionTimer = roundCompletionDuration;
+                remainingSeconds = (int)Math.Ceiling(roundCompletionDuration);
             }
 
             if (roundCompleted)
             {
                 roundCompletionTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                remainingSeconds = (int)Math.Ceiling(roundCompletionTimer);
                 if (roundCompletionTimer <= 0)
                 {
                     round++;
                     roundCompleted = false;
-                    if (round == 3)
+                    if (round == 2)
+                    {
+                        CreateEnemiesRound2();
+                    }
+                    else if (round == 3)
                     {
                         CreateEnemiesRound3();
                     }
@@ -567,6 +576,7 @@ namespace Project.States
                     {
                         stageCompleted = true;
                         stageCompletionTimer = roundCompletionDuration;
+                        remainingSeconds = (int)Math.Ceiling(stageCompletionTimer);
                     }
                 }
             }
@@ -574,6 +584,7 @@ namespace Project.States
             if (stageCompleted)
             {
                 stageCompletionTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                remainingSeconds = (int)Math.Ceiling(stageCompletionTimer);
                 if (stageCompletionTimer <= 0)
                 {
                     _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));

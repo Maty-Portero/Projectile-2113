@@ -216,3 +216,6 @@ C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\n
 C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.Up2Date
 C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5_Damaged (1).xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5_Damaged (2).xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyV5_Damaged.xnb
