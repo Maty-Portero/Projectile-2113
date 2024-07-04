@@ -13,6 +13,7 @@
     <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/EnemyV5 (1).png</File>
     <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/EnemyV5 (2).png</File>
     <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/EnemyV5.png</File>
+    <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Fonts/ArcadeFont.spritefont</File>
     <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Fonts/File.fx</File>
     <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Fonts/Font.spritefont</File>
     <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/Fonts/FontTitle.spritefont</File>
@@ -31,6 +32,7 @@
     <File>C:/xampp/htdocs/Portero/Projectile-2113/Project/Content/PowerUp-Sprite.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

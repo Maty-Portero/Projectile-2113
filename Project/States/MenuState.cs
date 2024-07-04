@@ -37,7 +37,7 @@ namespace Project.States
 
             var gameby = new Title(titleTexture, buttonFont)
             {
-                Position = new Vector2(569, 380),
+                Position = new Vector2(572, 500),
                 Text = "Game by Radio Paris",
             };
 
