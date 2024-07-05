@@ -145,7 +145,7 @@ namespace Project.States
             };
 
             // Set power-up spawn chance
-            powerUpSpawnChance = 0.5; // 50% de probabilidad de aparición del power-up
+            powerUpSpawnChance = 0.05; // 50% de probabilidad de aparición del power-up
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -252,15 +252,15 @@ namespace Project.States
         {
             Vector2[] positions = new Vector2[]
             {
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTexture[0].Height + 5),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 5, (enemyTexture[0].Height + 5) * 2),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTexture[0].Height + 5),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 15, (enemyTexture[0].Height + 5) * 2), // Ajuste aquí para mover más a la derecha
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
             };
 
             foreach (var pos in positions)
@@ -268,6 +268,7 @@ namespace Project.States
                 enemies.Add(new Enemy(enemyTexture, pos, random));
             }
         }
+
 
         private void CreateEnemiesRound3()
         {
@@ -281,7 +282,7 @@ namespace Project.States
 
         private void CreateEnemiesRound4()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 12; i++)
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
@@ -291,7 +292,7 @@ namespace Project.States
 
         private void CreateEnemiesRound5()
         {
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 20; i++)
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
@@ -301,17 +302,18 @@ namespace Project.States
 
         private void Shoot()
         {
-            // Ajusta la posición inicial del proyectil para que salga desde la punta roja
-            Vector2 bulletPosition = new Vector2(playerPosition.X, playerPosition.Y - playerTexture.Height / 2);
+            // Ajusta la posición inicial del proyectil para que salga desde el centro de la punta roja del jugador
+            Vector2 bulletPosition = new Vector2(playerPosition.X - bulletTextures[0].Width / 2, playerPosition.Y - playerTexture.Height / 2 - 15); // Ajuste de 10 píxeles hacia arriba
             PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
             newBullet.Velocity = new Vector2(0, -1) * bulletSpeed; // Hacia arriba
             bullets.Add(newBullet);
         }
 
+
         private void ShootTriple()
         {
             // Ajusta la posición inicial del proyectil para que salga desde la punta roja
-            Vector2 bulletPosition = new Vector2(playerPosition.X, playerPosition.Y - playerTexture.Height / 2);
+            Vector2 bulletPosition = new Vector2(playerPosition.X - bulletTextures[0].Width / 2, playerPosition.Y - playerTexture.Height / 2 - 15);
             float angleOffset = MathHelper.ToRadians(20); // Ángulo de 20°
 
             // Disparo central
@@ -572,7 +574,7 @@ namespace Project.States
                     {
                         CreateEnemiesRound5();
                     }
-                    else if (round > 5)
+                    else if (round > 4)
                     {
                         stageCompleted = true;
                         stageCompletionTimer = roundCompletionDuration;

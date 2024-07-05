@@ -1,42 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\",
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\projectile-2113\\project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\content\\fonts\\arcadefont.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\states\\helpstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\helpstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\states\\optionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\optionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\states\\menustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\menustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\content\\fonts\\arcadefont.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:content\\fonts\\arcadefont.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\content\\fonts\\file.fx||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\content\\fonts\\file.fx||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:content\\fonts\\file.fx||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\controls\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\controls\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:controls\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\controls\\title.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\xampp\\htdocs\\Projectile-2113\\Project\\controls\\title.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:controls\\title.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\states\\menustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\menustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,12 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -62,15 +66,40 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "OptionState.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\States\\OptionState.cs",
+              "RelativeDocumentMoniker": "States\\OptionState.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\States\\OptionState.cs",
+              "RelativeToolTip": "States\\OptionState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAACaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:11:04.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HelpState.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\States\\HelpState.cs",
+              "RelativeDocumentMoniker": "States\\HelpState.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\States\\HelpState.cs",
+              "RelativeToolTip": "States\\HelpState.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:05:38.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ArcadeFont.spritefont",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Content\\Fonts\\ArcadeFont.spritefont",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Content\\Fonts\\ArcadeFont.spritefont",
               "RelativeDocumentMoniker": "Content\\Fonts\\ArcadeFont.spritefont",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Content\\Fonts\\ArcadeFont.spritefont",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Content\\Fonts\\ArcadeFont.spritefont",
               "RelativeToolTip": "Content\\Fonts\\ArcadeFont.spritefont",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -78,11 +107,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "File.fx",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Content\\Fonts\\File.fx",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Content\\Fonts\\File.fx",
               "RelativeDocumentMoniker": "Content\\Fonts\\File.fx",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Content\\Fonts\\File.fx",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Content\\Fonts\\File.fx",
               "RelativeToolTip": "Content\\Fonts\\File.fx",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -90,11 +119,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Title.cs",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Controls\\Title.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Controls\\Title.cs",
               "RelativeDocumentMoniker": "Controls\\Title.cs",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Controls\\Title.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Controls\\Title.cs",
               "RelativeToolTip": "Controls\\Title.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -102,11 +131,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Button.cs",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Controls\\Button.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Controls\\Button.cs",
               "RelativeDocumentMoniker": "Controls\\Button.cs",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Controls\\Button.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Controls\\Button.cs",
               "RelativeToolTip": "Controls\\Button.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -114,11 +143,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "MenuState.cs",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\MenuState.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\States\\MenuState.cs",
               "RelativeDocumentMoniker": "States\\MenuState.cs",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\MenuState.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\States\\MenuState.cs",
               "RelativeToolTip": "States\\MenuState.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -128,21 +157,22 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Enemy.cs",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Enemy.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Enemy.cs",
               "RelativeDocumentMoniker": "Enemy.cs",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Enemy.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Enemy.cs",
               "RelativeToolTip": "Enemy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAPAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAADwv00AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:06:41.441Z"
+              "WhenOpened": "2024-06-14T18:06:41.441Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Component.cs",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Component.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Component.cs",
               "RelativeDocumentMoniker": "Component.cs",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Component.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Component.cs",
               "RelativeToolTip": "Component.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -152,26 +182,27 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GameState.cs",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\GameState.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeDocumentMoniker": "States\\GameState.cs",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\GameState.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeToolTip": "States\\GameState.cs",
-              "ViewState": "AQIAANUBAAAAAAAAAAAQwGICAAAAAAAA",
+              "ViewState": "AQIAAD0CAAAAAAAAAADwv18CAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T16:41:41.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
-              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Game1.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Game1.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Projectile-2113\\Project\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA4AAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAQwC0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T21:13:39.616Z"
+              "WhenOpened": "2024-05-31T21:13:39.616Z",
+              "EditorCaption": ""
             }
           ]
         }

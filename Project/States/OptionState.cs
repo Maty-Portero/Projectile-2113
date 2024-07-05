@@ -29,7 +29,7 @@ namespace Project.States
             var explication = new Title(titleTexture, buttonFont)
             {
                 Position = new Vector2(275, 150),
-                Text = "This is a prototipal version, in next updates this place\ncould be a better place to configure 'Projectile 2113'\nthank you to stay",
+                Text = "This technical demo is just to showcase main functions of the game \n The menus are still in progress \n Thanks for your patience.",
             };
 
             //creamos el boton de volver
