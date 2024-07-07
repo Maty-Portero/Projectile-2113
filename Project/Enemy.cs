@@ -7,6 +7,7 @@ namespace Project
     public class Enemy : Component
     {
         private Texture2D[] textures;
+        private Texture2D[] damagedTextures; // Agrega texturas dañadas
         private int currentFrame;
         private double animationTime;
         private double timePerFrame = 0.05;
@@ -15,18 +16,24 @@ namespace Project
         private Vector2 direction;
         private float speed;
         private Random random;
+        private bool isDamaged;
+        private double damageTimer;
+        private const double damageDuration = 0.05; // Duración del sprite dañado
 
         public Vector2 Position { get; set; }
+        public int Health { get; private set; }
 
-        public Enemy(Texture2D[] textures, Vector2 position, Random random)
+        public Enemy(Texture2D[] textures, Texture2D[] damagedTextures, Vector2 position, Random random)
         {
             this.textures = textures;
+            this.damagedTextures = damagedTextures; // Inicializa texturas dañadas
             Position = position;
             currentFrame = 0;
             animationTime = 0;
             shootCooldown = 1.0f;
             shootTimer = 0;
             this.random = random;
+            Health = 5; // Vida inicial
 
             // Inicializar dirección y velocidad
             direction = position.X == 0 ? new Vector2(1, 0) : new Vector2(-1, 0);
@@ -35,7 +42,8 @@ namespace Project
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(textures[currentFrame], Position, Color.White);
+            Texture2D textureToDraw = isDamaged ? damagedTextures[currentFrame] : textures[currentFrame];
+            spriteBatch.Draw(textureToDraw, Position, Color.White);
         }
 
         public Rectangle GetBounds()
@@ -64,6 +72,16 @@ namespace Project
             {
                 direction.X = -direction.X;
             }
+
+            // Actualizar temporizador de daño
+            if (isDamaged)
+            {
+                damageTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                if (damageTimer <= 0)
+                {
+                    isDamaged = false;
+                }
+            }
         }
 
         public bool CanShoot()
@@ -74,6 +92,13 @@ namespace Project
                 return true;
             }
             return false;
+        }
+
+        public void TakeDamage(int damage)
+        {
+            Health -= damage;
+            isDamaged = true;
+            damageTimer = damageDuration;
         }
     }
 }
