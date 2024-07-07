@@ -7,7 +7,7 @@ namespace Project
     public class Enemy : Component
     {
         private Texture2D[] textures;
-        private Texture2D[] damagedTextures; // Agrega texturas dañadas
+        private Texture2D[] damagedTextures;
         private int currentFrame;
         private double animationTime;
         private double timePerFrame = 0.05;
@@ -16,24 +16,24 @@ namespace Project
         private Vector2 direction;
         private float speed;
         private Random random;
+        private int health;
         private bool isDamaged;
-        private double damageTimer;
-        private const double damageDuration = 0.05; // Duración del sprite dañado
+        private double damageFlashTimer;
+        private double damageFlashDuration = 0.05;
 
         public Vector2 Position { get; set; }
-        public int Health { get; private set; }
 
-        public Enemy(Texture2D[] textures, Texture2D[] damagedTextures, Vector2 position, Random random)
+        public Enemy(Texture2D[] textures, Texture2D[] damagedTextures, Vector2 position, Random random, int health)
         {
             this.textures = textures;
-            this.damagedTextures = damagedTextures; // Inicializa texturas dañadas
+            this.damagedTextures = damagedTextures;
             Position = position;
             currentFrame = 0;
             animationTime = 0;
             shootCooldown = 1.0f;
             shootTimer = 0;
             this.random = random;
-            Health = 5; // Vida inicial
+            this.health = 5;
 
             // Inicializar dirección y velocidad
             direction = position.X == 0 ? new Vector2(1, 0) : new Vector2(-1, 0);
@@ -42,8 +42,14 @@ namespace Project
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            Texture2D textureToDraw = isDamaged ? damagedTextures[currentFrame] : textures[currentFrame];
-            spriteBatch.Draw(textureToDraw, Position, Color.White);
+            if (isDamaged)
+            {
+                spriteBatch.Draw(damagedTextures[currentFrame], Position, Color.White);
+            }
+            else
+            {
+                spriteBatch.Draw(textures[currentFrame], Position, Color.White);
+            }
         }
 
         public Rectangle GetBounds()
@@ -73,11 +79,11 @@ namespace Project
                 direction.X = -direction.X;
             }
 
-            // Actualizar temporizador de daño
+            // Actualizar flash de daño
             if (isDamaged)
             {
-                damageTimer -= gameTime.ElapsedGameTime.TotalSeconds;
-                if (damageTimer <= 0)
+                damageFlashTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                if (damageFlashTimer <= 0)
                 {
                     isDamaged = false;
                 }
@@ -96,9 +102,14 @@ namespace Project
 
         public void TakeDamage(int damage)
         {
-            Health -= damage;
+            health -= damage;
             isDamaged = true;
-            damageTimer = damageDuration;
+            damageFlashTimer = damageFlashDuration;
+        }
+
+        public bool IsDead()
+        {
+            return health <= 0;
         }
     }
 }

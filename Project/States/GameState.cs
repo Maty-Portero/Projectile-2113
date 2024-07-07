@@ -36,15 +36,15 @@ namespace Project.States
         List<EnemyBullet> enemyBullets;
 
         // Enemy variables
-        Texture2D[] enemyTextures;
-        Texture2D[] damagedEnemyTextures; // Texturas dañadas
+        Texture2D[] enemyTexture;
+        Texture2D[] enemyDamagedTexture;
         List<Enemy> enemies;
         Random random;
 
         // Power-up variables
         private Texture2D powerUpTexture;
-        private Vector2 powerUpPosition;
-        private bool powerUpActive = false;
+        private List<Vector2> powerUpPositions;
+        private List<bool> powerUpActiveList;
         private bool powerUpCollected = false;
         private double powerUpDuration = 10.0; // Duración del power-up en segundos
         private double powerUpTimer = 0;
@@ -109,16 +109,16 @@ namespace Project.States
             enemyBulletTextures[1] = content.Load<Texture2D>("EnemyBullet (2)");
             enemyBulletTextures[2] = content.Load<Texture2D>("EnemyBullet (3)");
 
-            // Load enemy textures and damaged textures
-            enemyTextures = new Texture2D[3];
-            enemyTextures[0] = content.Load<Texture2D>("EnemyV5");
-            enemyTextures[1] = content.Load<Texture2D>("EnemyV5 (1)");
-            enemyTextures[2] = content.Load<Texture2D>("EnemyV5 (2)");
+            // Load enemy texture and create enemies
+            enemyTexture = new Texture2D[3];
+            enemyTexture[0] = content.Load<Texture2D>("EnemyV5");
+            enemyTexture[1] = content.Load<Texture2D>("EnemyV5 (1)");
+            enemyTexture[2] = content.Load<Texture2D>("EnemyV5 (2)");
 
-            damagedEnemyTextures = new Texture2D[3];
-            damagedEnemyTextures[0] = content.Load<Texture2D>("EnemyV5_Damaged");
-            damagedEnemyTextures[1] = content.Load<Texture2D>("EnemyV5_Damaged (1)");
-            damagedEnemyTextures[2] = content.Load<Texture2D>("EnemyV5_Damaged (2)");
+            enemyDamagedTexture = new Texture2D[3];
+            enemyDamagedTexture[0] = content.Load<Texture2D>("EnemyV5_Damaged");
+            enemyDamagedTexture[1] = content.Load<Texture2D>("EnemyV5_Damaged (1)");
+            enemyDamagedTexture[2] = content.Load<Texture2D>("EnemyV5_Damaged (2)");
 
             // Load power-up texture
             powerUpTexture = content.Load<Texture2D>("PowerUp-Sprite");
@@ -127,6 +127,9 @@ namespace Project.States
             font = content.Load<SpriteFont>("Fonts/ArcadeFont");
 
             enemies = new List<Enemy>();
+            powerUpPositions = new List<Vector2>();
+            powerUpActiveList = new List<bool>();
+
             CreateEnemiesRound1();
 
             playerPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
@@ -196,10 +199,13 @@ namespace Project.States
                 enemy.Draw(gameTime, spriteBatch);
             }
 
-            // Draw power-up
-            if (powerUpActive)
+            // Draw power-ups
+            for (int i = 0; i < powerUpPositions.Count; i++)
             {
-                spriteBatch.Draw(powerUpTexture, powerUpPosition, Color.White);
+                if (powerUpActiveList[i])
+                {
+                    spriteBatch.Draw(powerUpTexture, powerUpPositions[i], Color.White);
+                }
             }
 
             // Draw hearts
@@ -213,6 +219,13 @@ namespace Project.States
                 {
                     spriteBatch.Draw(heartEmptyTexture, heartPositions[i], Color.White);
                 }
+            }
+
+            // Draw power-up timer if collected
+            if (powerUpCollected)
+            {
+                string powerUpText = $"Bullets Power Up: {Math.Ceiling(powerUpTimer)}";
+                spriteBatch.DrawString(font, powerUpText, new Vector2(20, 100), Color.White);
             }
 
             if (roundCompleted && round <= 5)
@@ -239,9 +252,9 @@ namespace Project.States
             // Create 3 enemies on the right side
             for (int i = 0; i < 3; i++)
             {
-                int xPosition = _graphics.PreferredBackBufferWidth - enemyTextures[0].Width;
-                int yPosition = i * (enemyTextures[0].Height + 10);
-                enemies.Add(new Enemy(enemyTextures, damagedEnemyTextures, new Vector2(xPosition, yPosition), random));
+                int xPosition = _graphics.PreferredBackBufferWidth - enemyTexture[0].Width;
+                int yPosition = i * (enemyTexture[0].Height + 10);
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
 
             // Create 2 enemies on the left side
@@ -249,8 +262,8 @@ namespace Project.States
             for (int i = 0; i < 2; i++)
             {
                 int xPosition = 0;
-                int yPosition = i * (enemyTextures[0].Height + 10) + yOffset;
-                enemies.Add(new Enemy(enemyTextures, damagedEnemyTextures, new Vector2(xPosition, yPosition), random));
+                int yPosition = i * (enemyTexture[0].Height + 10) + yOffset;
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
         }
 
@@ -258,30 +271,31 @@ namespace Project.States
         {
             Vector2[] positions = new Vector2[]
             {
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTextures[0].Width / 2, 0),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTextures[0].Width - 5, enemyTextures[0].Height + 5),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTextures[0].Height + 5),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTextures[0].Width * 1.5f - 10, (enemyTextures[0].Height + 5) * 2),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTextures[0].Width / 2, (enemyTextures[0].Height + 5) * 2),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTextures[0].Width / 2 + 15, (enemyTextures[0].Height + 5) * 2), // Ajuste aquí para mover más a la derecha
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTextures[0].Width * 2 - 15, (enemyTextures[0].Height + 5) * 3),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTextures[0].Width / 2, (enemyTextures[0].Height + 5) * 3),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTextures[0].Width / 2 + 10, (enemyTextures[0].Height + 5) * 3),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTexture[0].Height + 5),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 15, (enemyTexture[0].Height + 5) * 2), // Ajuste aquí para mover más a la derecha
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
+        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
             };
 
             foreach (var pos in positions)
             {
-                enemies.Add(new Enemy(enemyTextures, damagedEnemyTextures, pos, random));
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, pos, random, 3));
             }
         }
+
 
         private void CreateEnemiesRound3()
         {
             for (int i = 0; i < 9; i++)
             {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTextures[0].Width);
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
-                enemies.Add(new Enemy(enemyTextures, damagedEnemyTextures, new Vector2(xPosition, yPosition), random));
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
         }
 
@@ -289,9 +303,9 @@ namespace Project.States
         {
             for (int i = 0; i < 12; i++)
             {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTextures[0].Width);
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
-                enemies.Add(new Enemy(enemyTextures, damagedEnemyTextures, new Vector2(xPosition, yPosition), random));
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
         }
 
@@ -299,9 +313,9 @@ namespace Project.States
         {
             for (int i = 0; i < 20; i++)
             {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTextures[0].Width);
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
-                enemies.Add(new Enemy(enemyTextures, damagedEnemyTextures, new Vector2(xPosition, yPosition), random));
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
         }
 
@@ -313,6 +327,7 @@ namespace Project.States
             newBullet.Velocity = new Vector2(0, -1) * bulletSpeed; // Hacia arriba
             bullets.Add(newBullet);
         }
+
 
         private void ShootTriple()
         {
@@ -342,7 +357,7 @@ namespace Project.States
             {
                 if (enemy.CanShoot())
                 {
-                    Vector2 bulletPosition = new Vector2(enemy.Position.X + enemyTextures[0].Width / 2, enemy.Position.Y + enemyTextures[0].Height);
+                    Vector2 bulletPosition = new Vector2(enemy.Position.X + enemyTexture[0].Width / 2, enemy.Position.Y + enemyTexture[0].Height);
                     EnemyBullet newBullet = new EnemyBullet(bulletPosition, enemyBulletTextures);
                     enemyBullets.Add(newBullet);
                 }
@@ -353,8 +368,8 @@ namespace Project.States
         {
             if (random.NextDouble() <= powerUpSpawnChance)
             {
-                powerUpPosition = position;
-                powerUpActive = true;
+                powerUpPositions.Add(position);
+                powerUpActiveList.Add(true);
             }
         }
 
@@ -464,14 +479,15 @@ namespace Project.States
                         if (bullets[i].GetBounds().Intersects(enemies[j].GetBounds()))
                         {
                             Vector2 enemyPosition = enemies[j].Position;
-                            enemies[j].TakeDamage(1); // Aplica daño al enemigo
+                            enemies[j].TakeDamage(1);
                             bullets.RemoveAt(i);
-
-                            // Verifica si el enemigo ha muerto
-                            if (enemies[j].Health <= 0)
+                            if (enemies[j].IsDead())
                             {
                                 enemies.RemoveAt(j);
+                                //CreateEnemy();
                                 SpawnPowerUp(enemyPosition); // Spawns a power-up at the position of the killed enemy with a probability
+
+                                // Incrementar puntaje
                                 score += 1000;
                             }
 
@@ -514,19 +530,22 @@ namespace Project.States
             }
 
             // Actualizar power-up
-            if (powerUpActive)
+            for (int i = 0; i < powerUpPositions.Count; i++)
             {
-                powerUpPosition.Y += 100f * (float)gameTime.ElapsedGameTime.TotalSeconds; // Velocidad de caída del power-up
+                if (powerUpActiveList[i])
+                {
+                    powerUpPositions[i] = new Vector2(powerUpPositions[i].X, powerUpPositions[i].Y + 100f * (float)gameTime.ElapsedGameTime.TotalSeconds); // Velocidad de caída del power-up
 
-                if (powerUpPosition.Y > _graphics.PreferredBackBufferHeight)
-                {
-                    powerUpActive = false;
-                }
-                else if (GetPlayerBounds().Intersects(new Rectangle((int)powerUpPosition.X, (int)powerUpPosition.Y, powerUpTexture.Width, powerUpTexture.Height)))
-                {
-                    powerUpActive = false;
-                    powerUpCollected = true;
-                    powerUpTimer = powerUpDuration;
+                    if (powerUpPositions[i].Y > _graphics.PreferredBackBufferHeight)
+                    {
+                        powerUpActiveList[i] = false;
+                    }
+                    else if (GetPlayerBounds().Intersects(new Rectangle((int)powerUpPositions[i].X, (int)powerUpPositions[i].Y, powerUpTexture.Width, powerUpTexture.Height)))
+                    {
+                        powerUpActiveList[i] = false;
+                        powerUpCollected = true;
+                        powerUpTimer = powerUpDuration;
+                    }
                 }
             }
 
