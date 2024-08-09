@@ -26,8 +26,16 @@ namespace Project
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            _graphics.IsFullScreen = true;
+            if (GraphicsDevice == null)
+            {
+                _graphics.ApplyChanges();
+            }
+
+            // Change the resolution to match your current desktop
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
             _graphics.ApplyChanges();
+            _graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;            
         }

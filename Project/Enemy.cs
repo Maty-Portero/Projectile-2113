@@ -74,7 +74,7 @@ namespace Project
             Position += direction * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // Cambiar dirección al llegar a los bordes de la pantalla
-            if (Position.X < 0 || Position.X > 800 - textures[0].Width) // Asumiendo que el ancho de la pantalla es 800
+            if (Position.X < 0 || Position.X > 1920 - textures[0].Width) // Asumiendo que el ancho de la pantalla es 800
             {
                 direction.X = -direction.X;
             }

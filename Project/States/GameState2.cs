@@ -249,47 +249,15 @@ namespace Project.States
 
         private void CreateEnemiesRound1()
         {
-            // Create 3 enemies on the right side
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 6; i++)
             {
-                int xPosition = _graphics.PreferredBackBufferWidth - enemyTexture[0].Width;
-                int yPosition = i * (enemyTexture[0].Height + 10);
-                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
-            }
-
-            // Create 2 enemies on the left side
-            int yOffset = 30; // Additional offset for enemies on the left
-            for (int i = 0; i < 2; i++)
-            {
-                int xPosition = 0;
-                int yPosition = i * (enemyTexture[0].Height + 10) + yOffset;
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
         }
 
         private void CreateEnemiesRound2()
-        {
-            Vector2[] positions = new Vector2[]
-            {
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTexture[0].Height + 5),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 15, (enemyTexture[0].Height + 5) * 2), // Ajuste aquí para mover más a la derecha
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
-            };
-
-            foreach (var pos in positions)
-            {
-                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, pos, random, 3));
-            }
-        }
-
-
-        private void CreateEnemiesRound3()
         {
             for (int i = 0; i < 9; i++)
             {
@@ -299,9 +267,19 @@ namespace Project.States
             }
         }
 
-        private void CreateEnemiesRound4()
+        private void CreateEnemiesRound3()
         {
             for (int i = 0; i < 12; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
+            }
+        }
+
+        private void CreateEnemiesRound4()
+        {
+            for (int i = 0; i < 15; i++)
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
@@ -318,6 +296,58 @@ namespace Project.States
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
         }
+
+        private void CreateEnemiesRound6()
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
+            }
+        }
+
+        private void CreateEnemiesRound7()
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
+            }
+        }
+
+        private void CreateEnemiesRound8()
+        {
+            for (int i = 0; i < 36; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
+            }
+        }
+
+        private void CreateEnemiesRound9()
+        {
+            for (int i = 0; i < 40; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
+            }
+        }
+
+        private void CreateEnemiesRound10()
+        {
+            for (int i = 0; i < 45; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
+            }
+        }
+
+
 
         private void Shoot()
         {
@@ -433,9 +463,9 @@ namespace Project.States
                 playerPosition.X = playerTexture.Width / 2;
             }
 
-            if (playerPosition.Y > 585)
+            if (playerPosition.Y > 1035)
             {
-                playerPosition.Y = 585;
+                playerPosition.Y = 1035;
             }
             else if (playerPosition.Y < playerTexture.Height / 2)
             {
@@ -501,7 +531,7 @@ namespace Project.States
             for (int i = enemyBullets.Count - 1; i >= 0; i--)
             {
                 enemyBullets[i].Update(gameTime);
-                if (enemyBullets[i].Position.Y > 585)
+                if (enemyBullets[i].Position.Y > 1035)
                 {
                     enemyBullets.RemoveAt(i);
                 }

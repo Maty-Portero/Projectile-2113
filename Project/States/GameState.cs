@@ -261,7 +261,7 @@ namespace Project.States
             int yOffset = 30; // Additional offset for enemies on the left
             for (int i = 0; i < 2; i++)
             {
-                int xPosition = 0;
+                int xPosition = 100;
                 int yPosition = i * (enemyTexture[0].Height + 10) + yOffset;
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
@@ -433,9 +433,9 @@ namespace Project.States
                 playerPosition.X = playerTexture.Width / 2;
             }
 
-            if (playerPosition.Y > 585)
+            if (playerPosition.Y > 1035)
             {
-                playerPosition.Y = 585;
+                playerPosition.Y = 1035;
             }
             else if (playerPosition.Y < playerTexture.Height / 2)
             {
@@ -501,7 +501,7 @@ namespace Project.States
             for (int i = enemyBullets.Count - 1; i >= 0; i--)
             {
                 enemyBullets[i].Update(gameTime);
-                if (enemyBullets[i].Position.Y > 585)
+                if (enemyBullets[i].Position.Y > 1035)
                 {
                     enemyBullets.RemoveAt(i);
                 }
