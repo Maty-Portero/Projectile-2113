@@ -7,7 +7,7 @@ using System;
 
 namespace Project.States
 {
-    internal class GameState : State
+    internal class GameState2 : State
     {
         private const int MaxEnemies = 5;
 
@@ -76,7 +76,7 @@ namespace Project.States
         private bool stageCompleted;
         private double stageCompletionTimer;
 
-        public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
+        public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
             _graphics = deviceManager;
             content.RootDirectory = "Content";

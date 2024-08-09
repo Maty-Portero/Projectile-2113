@@ -63,7 +63,7 @@ namespace Project
 
         protected override void Draw(GameTime gameTime)
         {
-            _graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+            _graphics.GraphicsDevice.Clear(Color.SkyBlue);
             _currentState.Draw(gameTime, _spriteBatch);
 
             base.Draw(gameTime);

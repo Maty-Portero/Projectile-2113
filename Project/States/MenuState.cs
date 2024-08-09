@@ -100,7 +100,7 @@ namespace Project.States
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
+            _game.ChangeState(new modeGameState(_game, _graphicsDevice, _content, _graphics));
         }
         private void optionsButton_Click(object sender, EventArgs e)
         {
