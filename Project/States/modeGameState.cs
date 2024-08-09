@@ -29,7 +29,7 @@ namespace Project.States
             //creamos el boton de how to play
             var mode1Button = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 250),
+                Position = new Vector2(710, 275),
                 Text = "Stage Mode",
             };
 
@@ -38,7 +38,7 @@ namespace Project.States
             //creamos el boton de options
             var mode2Button = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 300),
+                Position = new Vector2(710, 400),
                 Text = "Infinite Mode",
             };
 
@@ -46,7 +46,7 @@ namespace Project.States
 
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 350),
+                Position = new Vector2(710, 525),
                 Text = "Back",
             };
 

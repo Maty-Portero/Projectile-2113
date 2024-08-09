@@ -28,14 +28,14 @@ namespace Project.States
 
             var title = new Title(titleTexture, titleFont)
             {
-                Position = new Vector2(255, 25),
+                Position = new Vector2(820, 50),
                 Text = "Game Over",
             };
 
             //creamos el boton de volver
             var restartButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 200),
+                Position = new Vector2(710, 400),
                 Text = "Restart Level",
             };
 
@@ -44,7 +44,7 @@ namespace Project.States
             //creamos el boton de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 250),
+                Position = new Vector2(710, 525),
                 Text = "Back to Menu",
             };
 

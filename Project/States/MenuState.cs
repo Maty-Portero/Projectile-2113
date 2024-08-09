@@ -31,20 +31,20 @@ namespace Project.States
             //creamos el titulo de Projectile 2113
             var title = new Title(titleTexture, titleFont)
             {
-                Position = new Vector2(255, 25),
+                Position = new Vector2(820, 50),
                 Text = "Projectile 2113",
             };
 
             var gameby = new Title(titleTexture, buttonFont)
             {
-                Position = new Vector2(573, 500),
+                Position = new Vector2(1685, 950),
                 Text = "Game by Radio Paris",
             };
 
             //creamos el boton de play
             var playButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 200),
+                Position = new Vector2(710, 275),
                 Text = "Play",
             };
 
@@ -53,7 +53,7 @@ namespace Project.States
             //creamos el boton de how to play
             var helpButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 250),
+                Position = new Vector2(710, 400),
                 Text = "How To Play",
             };
 
@@ -62,7 +62,7 @@ namespace Project.States
             //creamos el boton de options
             var optionsButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 300),
+                Position = new Vector2(710, 525),
                 Text = "Settings",
             };
 
@@ -71,7 +71,7 @@ namespace Project.States
             //creamos el boton de exit
             var exitButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 350),
+                Position = new Vector2(710, 650),
                 Text = "Exit",
             };
 

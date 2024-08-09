@@ -28,14 +28,14 @@ namespace Project.States
 
             var explication = new Title(titleTexture, buttonFont)
             {
-                Position = new Vector2(275, 150),
+                Position = new Vector2(800, 300),
                 Text = "This technical demo is just to showcase main functions of the game \n The menus are still in progress \n Thanks for your patience.",
             };
 
             //creamos el boton de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(320, 300),
+                Position = new Vector2(710, 525),
                 Text = "Back",
             };
 
