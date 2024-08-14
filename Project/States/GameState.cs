@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
@@ -401,6 +401,32 @@ namespace Project.States
             {
                 direction.Normalize();
             }
+
+            /*if (Joystick.LastConnectedIndex == 0)
+            {
+                JoystickState jstate = Joystick.GetState(PlayerIndex.One);
+
+                float updatedPlayerSpeed = playerSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                if (jstate.Axes[1] < -deadZone)
+                {
+                    playerPosition.Y -= updatedPlayerSpeed;
+                }
+                else if (jstate.Axes[1] > deadZone)
+                {
+                    playerPosition.Y += updatedPlayerSpeed;
+                }
+
+                if (jstate.Axes[0] < -deadZone)
+                {
+                    playerPosition.X -= updatedPlayerSpeed;
+                }
+                else if (jstate.Axes[0] > deadZone)
+                {
+                    playerPosition.X += updatedPlayerSpeed;
+                }
+            }*/
+
 
             if (kstate.IsKeyDown(Keys.Up))
             {
