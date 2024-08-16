@@ -12,12 +12,12 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.States
 {
-    internal class MenuState : State
+    internal class MenuStateLogIn : State
     {
         private GraphicsDeviceManager _graphics;
         private List<Component> _components;
 
-        public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base (game, graphicsDevice, content)
+        public MenuStateLogIn(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base (game, graphicsDevice, content)
         {
 
             _graphics = deviceManager;
@@ -44,7 +44,7 @@ namespace Project.States
             var LogInButton = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(10, 950),
-                Text = "Log In",
+                Text = "Log Out",
             };
 
             LogInButton.Click += LogInButton_Click;
@@ -109,7 +109,7 @@ namespace Project.States
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            _game.ChangeState(new modeGameState(_game, _graphicsDevice, _content, _graphics));
+            _game.ChangeState(new modeGameStateLogIn(_game, _graphicsDevice, _content, _graphics));
         }
         private void optionsButton_Click(object sender, EventArgs e)
         {
@@ -118,7 +118,7 @@ namespace Project.States
 
         private void LogInButton_Click(Object sender, EventArgs e)
         {
-            _game.ChangeState(new MenuStateLogIn(_game, _graphicsDevice, _content, _graphics));
+            _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
         }
 
         private void helpButton_Click(Object sender, EventArgs e)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/EnemyBullet (1).png</SourceFile>
-  <SourceTime>2024-07-12T20:51:32.1476419-03:00</SourceTime>
-  <DestFile>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/bin/DesktopGL/Content/EnemyBullet (1).xnb</DestFile>
-  <DestTime>2024-08-16T17:10:58.360188-03:00</DestTime>
+  <SourceFile>C:/xampp/htdocs/Portero 5°10°/Projectile-2113/Project/Content/EnemyBullet (1).png</SourceFile>
+  <SourceTime>2024-08-16T17:43:03.8523826-03:00</SourceTime>
+  <DestFile>C:/xampp/htdocs/Portero 5°10°/Projectile-2113/Project/Content/bin/DesktopGL/Content/EnemyBullet (1).xnb</DestFile>
+  <DestTime>2024-08-16T17:46:43.8271033-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T08:44:56-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
