@@ -427,33 +427,34 @@ namespace Project.States
 
             Vector2 direction = Vector2.Zero;
 
+            if (kstate.IsKeyDown(Keys.Up))
+            {
+                direction.Y -= 1;
+            }
+
+            if (kstate.IsKeyDown(Keys.Down))
+            {
+                direction.Y += 1;
+            }
+
+            if (kstate.IsKeyDown(Keys.Left))
+            {
+                direction.X -= 1;
+            }
+
+            if (kstate.IsKeyDown(Keys.Right))
+            {
+                direction.X += 1;
+            }
+
             if (direction != Vector2.Zero)
             {
                 direction.Normalize();
             }
 
-            if (kstate.IsKeyDown(Keys.Up))
-            {
-                playerPosition.Y -= playerSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-
-            if (kstate.IsKeyDown(Keys.Down))
-            {
-                playerPosition.Y += playerSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-
-            if (kstate.IsKeyDown(Keys.Left))
-            {
-                playerPosition.X -= playerSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-
-            if (kstate.IsKeyDown(Keys.Right))
-            {
-                playerPosition.X += playerSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-
             playerPosition += direction * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+            // Mantén al jugador dentro de los límites de la pantalla
             if (playerPosition.X > _graphics.PreferredBackBufferWidth - playerTexture.Width / 2)
             {
                 playerPosition.X = _graphics.PreferredBackBufferWidth - playerTexture.Width / 2;
