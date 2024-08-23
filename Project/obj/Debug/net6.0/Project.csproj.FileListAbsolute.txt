@@ -275,3 +275,4 @@ C:\xampp\htdocs\Portero 5°10°\Projectile-2113\Project\obj\Debug\net6.0\refint\
 C:\xampp\htdocs\Portero 5°10°\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
 C:\xampp\htdocs\Portero 5°10°\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 C:\xampp\htdocs\Portero 5°10°\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
+C:\xampp\htdocs\Portero 5°10°\Projectile-2113\Project\bin\Debug\net6.0\Content\background.xnb

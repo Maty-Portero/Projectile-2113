@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/xampp/htdocs/Portero 5°10°/Projectile-2113/Project/Content/background.png</File>
     <File>C:/xampp/htdocs/Portero 5°10°/Projectile-2113/Project/Content/BossPrototypeV1_2.png</File>
     <File>C:/xampp/htdocs/Portero 5°10°/Projectile-2113/Project/Content/Controls/Button.png</File>
     <File>C:/xampp/htdocs/Portero 5°10°/Projectile-2113/Project/Content/Controls/Title.png</File>
@@ -35,6 +36,7 @@
     <File>C:/xampp/htdocs/Portero 5°10°/Projectile-2113/Project/Content/PowerUp-Sprite.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
