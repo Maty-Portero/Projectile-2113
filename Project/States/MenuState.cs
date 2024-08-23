@@ -118,7 +118,7 @@ namespace Project.States
 
         private void LogInButton_Click(Object sender, EventArgs e)
         {
-            _game.ChangeState(new MenuStateLogIn(_game, _graphicsDevice, _content, _graphics));
+            _game.ChangeState(new LoadScreenLoggedInState(_game, _graphicsDevice, _content, _graphics));
         }
 
         private void helpButton_Click(Object sender, EventArgs e)
