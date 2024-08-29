@@ -29,7 +29,7 @@ namespace Project.States
         List<PlayerBullet> bullets;
         float shootCooldown;
         float shootTimer;
-        float bulletSpeed = 300f; // Velocidad de las balas
+        float bulletSpeed = 600f; // Velocidad de las balas
 
         // Enemy bullet variables
         Texture2D[] enemyBulletTextures;
@@ -81,8 +81,8 @@ namespace Project.States
             _graphics = deviceManager;
             content.RootDirectory = "Content";
 
-            playerSpeed = 200f;
-            slowSpeed = 100f;
+            playerSpeed = 400f;
+            slowSpeed = 200f;
             deadZone = 4096;
 
             bullets = new List<PlayerBullet>();
@@ -95,33 +95,33 @@ namespace Project.States
 
             playerTexture = content.Load<Texture2D>("Player_Sprite");
             damagedPlayerTexture = content.Load<Texture2D>("Player_Sprite_Damaged");
-            playerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_ShiftingV2");
-            damagedPlayerTextureWithHitbox = content.Load<Texture2D>("NewPlayer_Sprite_Damaged_ShiftingV2");
+            playerTextureWithHitbox = content.Load<Texture2D>("Player_Sprite_Hitbox");
+            damagedPlayerTextureWithHitbox = content.Load<Texture2D>("Player_Sprite_Damaged_Hitbox");
 
             // Load bullet textures
             bulletTextures = new Texture2D[2];
-            bulletTextures[0] = content.Load<Texture2D>("player_bulletone");
-            bulletTextures[1] = content.Load<Texture2D>("player_bullettwo");
+            bulletTextures[0] = content.Load<Texture2D>("Player_Bullet (1)");
+            bulletTextures[1] = content.Load<Texture2D>("Player_Bullet (2)");
 
             // Load enemy bullet textures
             enemyBulletTextures = new Texture2D[3];
-            enemyBulletTextures[0] = content.Load<Texture2D>("EnemyBullet (1)");
-            enemyBulletTextures[1] = content.Load<Texture2D>("EnemyBullet (2)");
-            enemyBulletTextures[2] = content.Load<Texture2D>("EnemyBullet (3)");
+            enemyBulletTextures[0] = content.Load<Texture2D>("Enemy_Bullet (1)");
+            enemyBulletTextures[1] = content.Load<Texture2D>("Enemy_Bullet (2)");
+            enemyBulletTextures[2] = content.Load<Texture2D>("Enemy_Bullet (3)");
 
             // Load enemy texture and create enemies
             enemyTexture = new Texture2D[3];
-            enemyTexture[0] = content.Load<Texture2D>("EnemyV5");
-            enemyTexture[1] = content.Load<Texture2D>("EnemyV5 (1)");
-            enemyTexture[2] = content.Load<Texture2D>("EnemyV5 (2)");
+            enemyTexture[0] = content.Load<Texture2D>("Enemy_V6 (1)");
+            enemyTexture[1] = content.Load<Texture2D>("Enemy_V6 (2)");
+            enemyTexture[2] = content.Load<Texture2D>("Enemy_V6 (3)");
 
             enemyDamagedTexture = new Texture2D[3];
-            enemyDamagedTexture[0] = content.Load<Texture2D>("EnemyV5_Damaged");
-            enemyDamagedTexture[1] = content.Load<Texture2D>("EnemyV5_Damaged (1)");
-            enemyDamagedTexture[2] = content.Load<Texture2D>("EnemyV5_Damaged (2)");
+            enemyDamagedTexture[0] = content.Load<Texture2D>("Enemy_V6_Damaged (1)");
+            enemyDamagedTexture[1] = content.Load<Texture2D>("Enemy_V6_Damaged (2)");
+            enemyDamagedTexture[2] = content.Load<Texture2D>("Enemy_V6_Damaged (3)");
 
             // Load power-up texture
-            powerUpTexture = content.Load<Texture2D>("PowerUp-Sprite");
+            powerUpTexture = content.Load<Texture2D>("PowerUp_Sprite");
 
             // Load font for score
             font = content.Load<SpriteFont>("Fonts/ArcadeFont");
@@ -142,8 +142,8 @@ namespace Project.States
             round = 1;
 
             // Load heart textures
-            heartFullTexture = content.Load<Texture2D>("HeartFull");
-            heartEmptyTexture = content.Load<Texture2D>("HeartEmpty");
+            heartFullTexture = content.Load<Texture2D>("HP_Icon");
+            heartEmptyTexture = content.Load<Texture2D>("HP_Icon_Loss");
 
             // Initialize heart positions
             heartPositions = new List<Vector2>
