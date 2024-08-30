@@ -52,6 +52,7 @@ if (isset($_SESSION['usuario'])) {
 
                         La metodología usada en nuestro grupo es la SCRUM. El juego está diseñado para todas las edades.
                     </p>
+                    <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="../Encuesta/index.html">Ir a la Encuesta</a></button>
                 </div>
             </div>
         </section>
