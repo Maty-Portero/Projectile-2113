@@ -51,7 +51,13 @@ if (isset($_SESSION['usuario'])) {
                         La temática de este videojuego estará basada en una Guerra Futurista en el año 2113.<br><br>
 
                         La metodología usada en nuestro grupo es la SCRUM. El juego está diseñado para todas las edades.
-                    </p>
+                    </p><br>
+                    <h4>Ahora, te vas a preguntar, ¿A quién le vendemos este juego?</h4>
+                    <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="https://www.dotemu.com/">DOTEMU</a></button><br>
+                    <h4>¿Queres saber más de Dotemu? clickeá acá</h4>
+                    <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="https://www.dotemu.com/about/">Saber más</a></button><br><br><br>
+
+                    <h4>¿Queres dejarnos una opinión? Clickeá en este botón</h4>
                     <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="../Encuesta/index.html">Ir a la Encuesta</a></button>
                 </div>
             </div>

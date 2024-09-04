@@ -5,7 +5,7 @@
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.112.5">
 
-<link rel="icon" type="image/x-icon" href="../fts/logo_claro_negro.png">
+<link rel="icon" type="image/x-icon" href="../fts/logo_oscuro_morado.png">
 <title>Radio París</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
