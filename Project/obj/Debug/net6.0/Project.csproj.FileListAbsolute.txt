@@ -335,3 +335,167 @@ C:\Users\Alumno\Downloads\Projectile-2113\Project\bin\Debug\net6.0\Content\Playe
 C:\Users\Alumno\Downloads\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Bullet (2).xnb
 C:\Users\Alumno\Downloads\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Bullet (3).xnb
 C:\Users\Alumno\Downloads\Projectile-2113\Project\bin\Debug\net6.0\Content\PowerUp_Sprite.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\enemy_helicopter.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\background.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\BossPrototypeV1_2.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Button.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Controls\Title.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (1).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (2).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\EnemyBullet (3).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_Bullet (1).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_Bullet (2).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_Bullet (3).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_V6 (1).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_V6 (2).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_V6 (3).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_V6_Damaged (1).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_V6_Damaged (2).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Enemy_V6_Damaged (3).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\ArcadeFont.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\File.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\Font.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Fonts\FontTitle.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartEmpty.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\HeartFull.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\HP_Icon.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\HP_Icon_Loss.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Bullet (1).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Bullet (2).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Bullet (3).xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite_Damaged.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite_Damaged_Hitbox.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\Player_Sprite_Hitbox.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\PowerUp_Sprite.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Project.exe
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Project.deps.json
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Project.runtimeconfig.json
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Project.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Project.pdb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.AssemblyInfoInputs.cache
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.AssemblyInfo.cs
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.sourcelink.json
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.csproj.Up2Date
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\refint\Project.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\pointsSprite_0.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\pointsSprite_1.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\pointsSprite_2.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\pointsSprite_3.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\pointsSprite_4.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_000.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_001.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_002.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_003.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_004.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_005.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_006.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_007.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_008.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_009.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_010.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_011.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_012.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_013.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_014.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_015.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_016.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_017.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_018.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_019.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_020.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_021.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_022.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_023.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_024.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_025.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_026.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_027.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_028.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_029.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_030.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_031.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_032.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_033.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_034.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_035.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_036.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_037.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_038.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_039.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_040.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_041.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_042.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_043.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_044.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_045.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_046.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_047.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_048.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_049.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_050.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_051.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_052.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_053.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_054.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_055.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_056.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_057.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_058.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_059.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_060.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_061.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_062.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_063.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_064.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_065.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_066.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_067.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_068.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_069.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_070.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_071.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_072.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_073.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_074.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_075.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_076.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_077.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_078.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_079.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_080.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_081.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_082.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_083.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_084.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_085.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_086.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_087.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_088.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_089.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_090.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_091.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_092.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_093.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_094.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_095.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_096.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_097.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_098.xnb
+C:\Users\Alumno\Desktop\project2113\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_099.xnb

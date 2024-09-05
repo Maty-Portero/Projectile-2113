@@ -49,6 +49,10 @@ namespace Project.States
         private double powerUpDuration = 10.0; // Duración del power-up en segundos
         private double powerUpTimer = 0;
         private double powerUpSpawnChance = 0.005; // Probabilidad de aparición del power-up
+        private Texture2D[] powerUpTimerFrames; // Array de frames para la animación del timer
+        private int currentPowerUpFrame = 0; // Frame actual de la animación del power-up
+        private double powerUpFrameTimer = 0; // Temporizador para cambiar frames
+        private double powerUpFrameTime = 0.1; // Tiempo entre frames
 
         // Player lives variables
         private Texture2D heartFullTexture;
@@ -63,6 +67,10 @@ namespace Project.States
         // Score variables
         private int score;
         private SpriteFont font;
+
+        // Points animation variables
+        private Texture2D[] pointsAnimationFrames; // Array de frames para la animación de los 1000 puntos
+        private List<PointsAnimation> pointsAnimations; // Lista para almacenar animaciones activas
 
         // Stage and round variables
         private int stage;
@@ -129,6 +137,21 @@ namespace Project.States
             enemies = new List<Enemy>();
             powerUpPositions = new List<Vector2>();
             powerUpActiveList = new List<bool>();
+
+            // Load power-up timer frames
+            powerUpTimerFrames = new Texture2D[100];
+            for (int i = 0; i < powerUpTimerFrames.Length; i++)
+            {
+                powerUpTimerFrames[i] = content.Load<Texture2D>($"timerSprite_{i:000}");
+            }
+
+            // Load points animation frames
+            pointsAnimationFrames = new Texture2D[5];
+            for (int i = 0; i < pointsAnimationFrames.Length; i++)
+            {
+                pointsAnimationFrames[i] = content.Load<Texture2D>($"pointsSprite_{i}");
+            }
+            pointsAnimations = new List<PointsAnimation>();
 
             CreateEnemiesRound1();
 
@@ -224,8 +247,14 @@ namespace Project.States
             // Draw power-up timer if collected
             if (powerUpCollected)
             {
-                string powerUpText = $"Bullets Power Up: {Math.Ceiling(powerUpTimer)}";
-                spriteBatch.DrawString(font, powerUpText, new Vector2(20, 100), Color.White);
+                // Reemplaza el texto del power-up con la animación
+                spriteBatch.Draw(powerUpTimerFrames[currentPowerUpFrame], new Vector2(20, 100), Color.White);
+            }
+
+            // Draw points animations
+            foreach (var animation in pointsAnimations)
+            {
+                animation.Draw(spriteBatch);
             }
 
             if (roundCompleted && round <= 5)
@@ -271,15 +300,15 @@ namespace Project.States
         {
             Vector2[] positions = new Vector2[]
             {
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTexture[0].Height + 5),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 15, (enemyTexture[0].Height + 5) * 2), // Ajuste aquí para mover más a la derecha
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
-        new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTexture[0].Height + 5),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 15, (enemyTexture[0].Height + 5) * 2), // Ajuste aquí para mover más a la derecha
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
+                new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
             };
 
             foreach (var pos in positions)
@@ -287,7 +316,6 @@ namespace Project.States
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, pos, random, 3));
             }
         }
-
 
         private void CreateEnemiesRound3()
         {
@@ -321,31 +349,25 @@ namespace Project.States
 
         private void Shoot()
         {
-            // Ajusta la posición inicial del proyectil para que salga desde el centro de la punta roja del jugador
-            Vector2 bulletPosition = new Vector2(playerPosition.X - bulletTextures[0].Width / 2, playerPosition.Y - playerTexture.Height / 2 - 15); // Ajuste de 10 píxeles hacia arriba
+            Vector2 bulletPosition = new Vector2(playerPosition.X - bulletTextures[0].Width / 2, playerPosition.Y - playerTexture.Height / 2 - 15);
             PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
-            newBullet.Velocity = new Vector2(0, -1) * bulletSpeed; // Hacia arriba
+            newBullet.Velocity = new Vector2(0, -1) * bulletSpeed;
             bullets.Add(newBullet);
         }
 
-
         private void ShootTriple()
         {
-            // Ajusta la posición inicial del proyectil para que salga desde la punta roja
             Vector2 bulletPosition = new Vector2(playerPosition.X - bulletTextures[0].Width / 2, playerPosition.Y - playerTexture.Height / 2 - 15);
-            float angleOffset = MathHelper.ToRadians(20); // Ángulo de 20°
+            float angleOffset = MathHelper.ToRadians(20);
 
-            // Disparo central
             PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
-            newBullet.Velocity = new Vector2(0, -1) * bulletSpeed; // Hacia arriba
+            newBullet.Velocity = new Vector2(0, -1) * bulletSpeed;
             bullets.Add(newBullet);
 
-            // Disparo hacia la izquierda
             PlayerBullet leftBullet = new PlayerBullet(bulletPosition, bulletTextures);
             leftBullet.Velocity = new Vector2((float)Math.Sin(angleOffset), -(float)Math.Cos(angleOffset)) * bulletSpeed;
             bullets.Add(leftBullet);
 
-            // Disparo hacia la derecha
             PlayerBullet rightBullet = new PlayerBullet(bulletPosition, bulletTextures);
             rightBullet.Velocity = new Vector2(-(float)Math.Sin(angleOffset), -(float)Math.Cos(angleOffset)) * bulletSpeed;
             bullets.Add(rightBullet);
@@ -392,31 +414,6 @@ namespace Project.States
 
         public override void Update(GameTime gameTime)
         {
-            //La base del controlador con joystick (aclaracion por las dudas, esto no esta en gamestate 2, si se modifica algo o se finaliza, habria que agregarlo al mismo tambien
-            /*if (Joystick.LastConnectedIndex == 0)
-{
-    JoystickState jstate = Joystick.GetState(PlayerIndex.One);
-
-    float updatedPlayerSpeed = playerSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-    if (jstate.Axes[1] < -deadZone)
-    {
-        playerPosition.Y -= updatedPlayerSpeed;
-    }
-    else if (jstate.Axes[1] > deadZone)
-    {
-        playerPosition.Y += updatedPlayerSpeed;
-    }
-
-    if (jstate.Axes[0] < -deadZone)
-    {
-        playerPosition.X -= updatedPlayerSpeed;
-    }
-    else if (jstate.Axes[0] > deadZone)
-    {
-        playerPosition.X += updatedPlayerSpeed;
-    }
-}*/
             var kstate = Keyboard.GetState();
             float currentSpeed = kstate.IsKeyDown(Keys.LeftShift) || kstate.IsKeyDown(Keys.RightShift) ? slowSpeed : playerSpeed;
 
@@ -510,11 +507,13 @@ namespace Project.States
                             if (enemies[j].IsDead())
                             {
                                 enemies.RemoveAt(j);
-                                //CreateEnemy();
                                 SpawnPowerUp(enemyPosition); // Spawns a power-up at the position of the killed enemy with a probability
 
                                 // Incrementar puntaje
                                 score += 1000;
+
+                                // Agregar animación de puntos
+                                pointsAnimations.Add(new PointsAnimation(pointsAnimationFrames, enemyPosition));
                             }
 
                             break;
@@ -571,6 +570,7 @@ namespace Project.States
                         powerUpActiveList[i] = false;
                         powerUpCollected = true;
                         powerUpTimer = powerUpDuration;
+                        currentPowerUpFrame = 0; // Reinicia la animación del power-up
                     }
                 }
             }
@@ -579,9 +579,33 @@ namespace Project.States
             if (powerUpCollected)
             {
                 powerUpTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                powerUpFrameTimer += gameTime.ElapsedGameTime.TotalSeconds;
+
+                if (powerUpFrameTimer >= powerUpFrameTime)
+                {
+                    powerUpFrameTimer = 0;
+                    currentPowerUpFrame++;
+
+                    if (currentPowerUpFrame >= powerUpTimerFrames.Length)
+                    {
+                        currentPowerUpFrame = 0; // Reinicia la animación si llega al final
+                    }
+                }
+
                 if (powerUpTimer <= 0)
                 {
                     powerUpCollected = false;
+                    currentPowerUpFrame = 0; // Resetea el frame al final del power-up
+                }
+            }
+
+            // Actualizar animaciones de puntos
+            for (int i = pointsAnimations.Count - 1; i >= 0; i--)
+            {
+                pointsAnimations[i].Update(gameTime);
+                if (pointsAnimations[i].IsFinished)
+                {
+                    pointsAnimations.RemoveAt(i);
                 }
             }
 
@@ -658,6 +682,50 @@ namespace Project.States
                 _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics));
                 // Implementar lógica para cuando el jugador muere
                 // Por ejemplo, reiniciar el juego o mostrar una pantalla de Game Over
+            }
+        }
+    }
+
+    // Clase para la animación de los 1000 puntos
+    internal class PointsAnimation
+    {
+        private Texture2D[] frames;
+        private int currentFrame;
+        private double timer;
+        private double frameTime = 0.1; // Duración de cada frame
+        private Vector2 position;
+        public bool IsFinished { get; private set; }
+
+        public PointsAnimation(Texture2D[] frames, Vector2 position)
+        {
+            this.frames = frames;
+            this.position = position;
+            currentFrame = 0;
+            timer = 0;
+            IsFinished = false;
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            timer += gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (timer >= frameTime)
+            {
+                timer = 0;
+                currentFrame++;
+
+                if (currentFrame >= frames.Length)
+                {
+                    IsFinished = true;
+                }
+            }
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            if (!IsFinished)
+            {
+                spriteBatch.Draw(frames[currentFrame], position, Color.White);
             }
         }
     }
