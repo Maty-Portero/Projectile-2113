@@ -1,16 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-<<<<<<< HEAD
-    "\\Project",
-    "\\Project\\Controls",
-    "\\Project\\States"
+    "\\Web"
   ],
-  "SelectedNode": "\\Project\\Controls",
-=======
-    "\\Project"
-  ],
-  "SelectedNode": "\\Project\\Game1.cs",
->>>>>>> d579dcd922c31073b55a48cf3909ff471a007528
+  "SelectedNode": "\\Web",
   "PreviewInSolutionExplorer": false
 }
