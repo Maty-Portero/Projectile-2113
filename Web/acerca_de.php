@@ -58,7 +58,7 @@ if (isset($_SESSION['usuario'])) {
                     <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="https://www.dotemu.com/about/">Saber más</a></button><br><br><br>
 
                     <h4>¿Queres dejarnos una opinión? Clickeá en este botón</h4>
-                    <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="../Encuesta/index.html">Ir a la Encuesta</a></button>
+                    <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="">Ir a la Encuesta</a></button>
                 </div>
             </div>
         </section>
