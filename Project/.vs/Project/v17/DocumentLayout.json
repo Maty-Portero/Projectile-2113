@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\",
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\Portero 5\u00B010\u00B0\\Projectile-2113\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\states\\optionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\optionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\portero 5\u00B010\u00B0\\projectile-2113\\project\\states\\gamestate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\portero 5\u00B010\u00B0\\projectile-2113\\project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\pointsanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:pointsanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +30,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -53,41 +49,33 @@
               "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OptionState.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\OptionState.cs",
-              "RelativeDocumentMoniker": "States\\OptionState.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\OptionState.cs",
-              "RelativeToolTip": "States\\OptionState.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAIwIcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T18:26:09.436Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PointsAnimation.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\PointsAnimation.cs",
-              "RelativeDocumentMoniker": "PointsAnimation.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\PointsAnimation.cs",
-              "RelativeToolTip": "PointsAnimation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GameState2.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Portero 5\u00B010\u00B0\\Projectile-2113\\Project\\States\\GameState2.cs",
+              "RelativeDocumentMoniker": "States\\GameState2.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Portero 5\u00B010\u00B0\\Projectile-2113\\Project\\States\\GameState2.cs",
+              "RelativeToolTip": "States\\GameState2.cs",
+              "ViewState": "AQIAAM0BAAAAAAAAAAAowN0BAAB9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T20:14:55.966Z"
+              "WhenOpened": "2024-09-06T20:08:30.994Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "GameState.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\GameState.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Portero 5\u00B010\u00B0\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeDocumentMoniker": "States\\GameState.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\GameState.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Portero 5\u00B010\u00B0\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeToolTip": "States\\GameState.cs",
-              "ViewState": "AQIAAHMCAAAAAAAAAAAswJACAAAYAAAA",
+              "ViewState": "AQIAALwBAAAAAAAAAAAiwNUBAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T20:04:26.204Z",
+              "WhenOpened": "2024-09-06T20:08:30.06Z",
               "EditorCaption": ""
             }
           ]
