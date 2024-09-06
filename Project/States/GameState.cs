@@ -339,13 +339,34 @@ namespace Project.States
 
         private void CreateEnemiesRound5()
         {
-            for (int i = 0; i < 20; i++)
+            // Crear 10 enemigos MiniCopter en posiciones aleatorias
+            for (int i = 0; i < 10; i++)
+            {
+                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
+                enemies.Add(new MiniCopter(_content, new Vector2(xPosition, yPosition), random));
+            }
+
+            // Mantener los enemigos originales
+            for (int i = 0; i < 10; i++)
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 3));
             }
         }
+
+
+        private void CreateMiniCopters()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                int xPosition = random.Next(100, _graphics.PreferredBackBufferWidth - 100);
+                int yPosition = random.Next(50, 150);
+                enemies.Add(new MiniCopter(_content, new Vector2(xPosition, yPosition), random));
+            }
+        }
+
 
         private void Shoot()
         {
@@ -648,16 +669,16 @@ namespace Project.States
                     }
                     else if (round == 5)
                     {
-                        CreateEnemiesRound5();
+                        CreateEnemiesRound5(); 
                     }
                     else if (round > 5)
                     {
                         stageCompleted = true;
                         stageCompletionTimer = roundCompletionDuration;
-                        
                     }
                 }
             }
+
 
             if (stageCompleted)
             {

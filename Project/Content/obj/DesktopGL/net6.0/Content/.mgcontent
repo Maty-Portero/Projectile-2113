@@ -25,9 +25,26 @@
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Enemy_V6_Damaged (1).png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Enemy_V6_Damaged (2).png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Enemy_V6_Damaged (3).png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/enemy2BulletSprite_0.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/enemy2BulletSprite_1.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/enemy2BulletSprite_2.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/enemy2BulletSprite_3.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/enemy2BulletSprite_4.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/EnemyBullet (1).png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/EnemyBullet (2).png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/EnemyBullet (3).png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_00.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_01.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_02.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_03.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_04.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_05.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_06.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_07.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_08.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_09.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_10.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/explosionSprite_11.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Fonts/ArcadeFont.spritefont</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Fonts/File.fx</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Fonts/Font.spritefont</File>
@@ -36,6 +53,10 @@
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/HeartFull.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/HP_Icon_Loss.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/HP_Icon.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/miniCopterSprite_0.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/miniCopterSprite_1.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/miniCopterSprite_2.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/miniCopterSprite_3.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Player_Bullet (1).png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Player_Bullet (2).png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Player_Bullet (3).png</File>
@@ -44,6 +65,11 @@
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Player_Sprite_Hitbox.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/Player_Sprite.webp</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/PowerUp_Sprite.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/RocketIcon.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/rocketSprite_0.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/rocketSprite_1.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/rocketSprite_2.png</File>
+    <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/rocketSprite_3.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/timerSprite_000.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/timerSprite_001.png</File>
     <File>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/timerSprite_002.png</File>
@@ -154,6 +180,32 @@
     <File>pointsSprite_5.png</File>
     <File>pointsSprite_6.png</File>
     <File>pointsSprite_7.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

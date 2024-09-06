@@ -20,11 +20,11 @@ namespace Project.States
             animationTime = 0;
         }
 
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime) // Marcar como virtual
         {
             Position.Y += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            // Update animation
+            // Actualizar la animación
             animationTime += gameTime.ElapsedGameTime.TotalSeconds;
             if (animationTime >= timePerFrame)
             {
@@ -33,12 +33,12 @@ namespace Project.States
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch) // Marcar como virtual
         {
             spriteBatch.Draw(textures[currentFrame], Position, Color.White);
         }
 
-        public Rectangle GetBounds()
+        public virtual Rectangle GetBounds() // Marcar como virtual
         {
             return new Rectangle((int)Position.X, (int)Position.Y, textures[0].Width, textures[0].Height);
         }

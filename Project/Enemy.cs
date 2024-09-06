@@ -14,7 +14,7 @@ namespace Project
         private float shootCooldown;
         private float shootTimer;
         private Vector2 direction;
-        private float speed;
+        protected float speed; // Cambiado a protected para acceso en clases derivadas
         private Random random;
         private int health;
         private bool isDamaged;
@@ -33,13 +33,14 @@ namespace Project
             shootCooldown = 1.0f;
             shootTimer = 0;
             this.random = random;
-            this.health = 5;
+            this.health = health;
 
             // Inicializar dirección y velocidad
             direction = position.X == 0 ? new Vector2(1, 0) : new Vector2(-1, 0);
             speed = 100f;
         }
 
+        // Implementación del método Draw heredado de Component
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (isDamaged)
@@ -52,11 +53,7 @@ namespace Project
             }
         }
 
-        public Rectangle GetBounds()
-        {
-            return new Rectangle((int)Position.X, (int)Position.Y, textures[0].Width, textures[0].Height);
-        }
-
+        // Implementación del método Update heredado de Component
         public override void Update(GameTime gameTime)
         {
             // Actualizar animación
@@ -74,7 +71,7 @@ namespace Project
             Position += direction * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // Cambiar dirección al llegar a los bordes de la pantalla
-            if (Position.X < 0 || Position.X > 1920 - textures[0].Width) // Asumiendo que el ancho de la pantalla es 800
+            if (Position.X < 0 || Position.X > 1920 - textures[0].Width) // Ajustar según el tamaño de la pantalla
             {
                 direction.X = -direction.X;
             }
@@ -88,6 +85,11 @@ namespace Project
                     isDamaged = false;
                 }
             }
+        }
+
+        public virtual Rectangle GetBounds()
+        {
+            return new Rectangle((int)Position.X, (int)Position.Y, textures[0].Width, textures[0].Height);
         }
 
         public bool CanShoot()

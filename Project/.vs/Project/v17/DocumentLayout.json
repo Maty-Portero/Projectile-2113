@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\states\\optionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\optionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\minicopterbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:minicopterbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\minicopter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:minicopter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\users\\alumno\\downloads\\projectile-2113\\project\\states\\optionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\optionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\pointsanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,28 +74,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OptionState.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\OptionState.cs",
-              "RelativeDocumentMoniker": "States\\OptionState.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\OptionState.cs",
-              "RelativeToolTip": "States\\OptionState.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAIwIcAAAAJAAAA",
+              "DocumentIndex": 3,
+              "Title": "MiniCopterBullet.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\MiniCopterBullet.cs",
+              "RelativeDocumentMoniker": "MiniCopterBullet.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\MiniCopterBullet.cs",
+              "RelativeToolTip": "MiniCopterBullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T18:26:09.436Z",
+              "WhenOpened": "2024-09-06T20:43:23.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MiniCopter.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\MiniCopter.cs",
+              "RelativeDocumentMoniker": "MiniCopter.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\MiniCopter.cs",
+              "RelativeToolTip": "MiniCopter.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAswDUAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T20:43:06.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PointsAnimation.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\PointsAnimation.cs",
-              "RelativeDocumentMoniker": "PointsAnimation.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\PointsAnimation.cs",
-              "RelativeToolTip": "PointsAnimation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Title": "EnemyBullet.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\EnemyBullet.cs",
+              "RelativeDocumentMoniker": "EnemyBullet.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\EnemyBullet.cs",
+              "RelativeToolTip": "EnemyBullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T20:14:55.966Z"
+              "WhenOpened": "2024-09-06T20:38:38.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\Enemy.cs",
+              "RelativeDocumentMoniker": "Enemy.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\Enemy.cs",
+              "RelativeToolTip": "Enemy.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAkwEkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T20:37:00.767Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -85,9 +132,48 @@
               "RelativeDocumentMoniker": "States\\GameState.cs",
               "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeToolTip": "States\\GameState.cs",
-              "ViewState": "AQIAAHMCAAAAAAAAAAAswJACAAAYAAAA",
+              "ViewState": "AQIAAIYCAAAAAAAAAAAowJ8CAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T20:04:26.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\Game1.cs",
+              "RelativeDocumentMoniker": "Game1.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\Game1.cs",
+              "RelativeToolTip": "Game1.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAUwHEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:23:21.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OptionState.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\OptionState.cs",
+              "RelativeDocumentMoniker": "States\\OptionState.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\States\\OptionState.cs",
+              "RelativeToolTip": "States\\OptionState.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAA7wIYAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T18:26:09.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PointsAnimation.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\PointsAnimation.cs",
+              "RelativeDocumentMoniker": "PointsAnimation.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\PointsAnimation.cs",
+              "RelativeToolTip": "PointsAnimation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T20:14:55.966Z",
               "EditorCaption": ""
             }
           ]
