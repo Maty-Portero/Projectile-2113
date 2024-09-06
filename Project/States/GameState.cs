@@ -146,7 +146,7 @@ namespace Project.States
             }
 
             // Load points animation frames
-            pointsAnimationFrames = new Texture2D[5];
+            pointsAnimationFrames = new Texture2D[8];
             for (int i = 0; i < pointsAnimationFrames.Length; i++)
             {
                 pointsAnimationFrames[i] = content.Load<Texture2D>($"pointsSprite_{i}");
@@ -171,9 +171,9 @@ namespace Project.States
             // Initialize heart positions
             heartPositions = new List<Vector2>
             {
-                new Vector2(20, 60),  // Adjusted position to leave space for score
-                new Vector2(60, 60),
-                new Vector2(100, 60)
+                new Vector2(10, 30),  // Adjusted position to leave space for score
+                new Vector2(60, 30),
+                new Vector2(110, 30)
             };
 
             // Set power-up spawn chance
@@ -654,7 +654,7 @@ namespace Project.States
                     {
                         stageCompleted = true;
                         stageCompletionTimer = roundCompletionDuration;
-                        remainingSeconds = (int)Math.Ceiling(stageCompletionTimer);
+                        
                     }
                 }
             }

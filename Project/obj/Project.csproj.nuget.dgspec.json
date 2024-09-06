@@ -1,26 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alumno\\Desktop\\project2113\\Projectile-2113\\Project\\Project.csproj": {}
+    "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alumno\\Desktop\\project2113\\Projectile-2113\\Project\\Project.csproj": {
+    "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\project2113\\Projectile-2113\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\Alumno\\Desktop\\project2113\\Projectile-2113\\Project\\Project.csproj",
+        "projectPath": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alumno\\Desktop\\project2113\\Projectile-2113\\Project\\obj\\",
+        "outputPath": "C:\\Users\\Alumno\\Downloads\\Projectile-2113\\Project\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Users\\Alumno\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -72,12 +65,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

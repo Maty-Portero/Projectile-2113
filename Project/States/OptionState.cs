@@ -1,14 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Project.Controls;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.States
 {
@@ -19,31 +14,88 @@ namespace Project.States
 
         public OptionState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
-
             _graphics = deviceManager;
-            //cargamos texturas y fuentes
+
+            // Cargar texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
-            var titleTexture = _content.Load<Texture2D>("Controls/Title");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
 
-            var explication = new Title(titleTexture, buttonFont)
+            // Crear los botones de resolución con eventos Click
+            var button720p = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(800, 300),
-                Text = "This technical demo is just to showcase main functions of the game \n The menus are still in progress \n Thanks for your patience.",
+                Position = new Vector2(210, 400),
+                Text = "720p",
+            };
+            button720p.Click += (sender, e) => ChangeResolution(1280, 720);
+
+            var button1080p = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(210, 500),
+                Text = "1080p",
+            };
+            button1080p.Click += (sender, e) => ChangeResolution(1920, 1080);
+
+            var button4k = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(210, 600),
+                Text = "4K",
+            };
+            button4k.Click += (sender, e) => ChangeResolution(2560, 1440);
+
+            var button8k = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(210, 700),
+                Text = "8K",
+            };
+            button8k.Click += (sender, e) => ChangeResolution(3840, 2160);
+
+            // Crear los botones de modo de pantalla
+            var fullscreenButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(710, 400), // Ubicación central
+                Text = "Full Screen",
+            };
+            fullscreenButton.Click += (sender, e) => SetFullScreen(true);
+
+            var windowedButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(710, 500), // Justo debajo del botón de pantalla completa
+                Text = "Windowed",
+            };
+            windowedButton.Click += (sender, e) => SetFullScreen(false);
+
+            // Crear los botones de volumen a la derecha
+            var activateVolumeButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(1210, 400), // Posición a la derecha
+                Text = "Activate Volume",
             };
 
-            //creamos el boton de volver
+            var muteButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(1210, 500), // Justo debajo del botón de activar volumen
+                Text = "Mute",
+            };
+
+            // Crear el botón de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 525),
+                Position = new Vector2(710, 925),
                 Text = "Back",
             };
-
             backButton.Click += backButton_Click;
 
+            // Agregar los componentes a la lista
             _components = new List<Component>()
             {
-                explication,
+                button720p,
+                button1080p,
+                button4k,
+                button8k,
+                fullscreenButton,
+                windowedButton,
+                activateVolumeButton,
+                muteButton,
                 backButton
             };
         }
@@ -56,6 +108,21 @@ namespace Project.States
                 component.Draw(gameTime, spriteBatch);
 
             spriteBatch.End();
+        }
+
+        private void ChangeResolution(int width, int height)
+        {
+            // Cambiar la resolución del juego
+            _graphics.PreferredBackBufferWidth = width;
+            _graphics.PreferredBackBufferHeight = height;
+            _graphics.ApplyChanges();
+        }
+
+        private void SetFullScreen(bool isFullScreen)
+        {
+            // Cambiar entre pantalla completa y modo ventana
+            _graphics.IsFullScreen = isFullScreen;
+            _graphics.ApplyChanges();
         }
 
         private void backButton_Click(object sender, EventArgs e)
