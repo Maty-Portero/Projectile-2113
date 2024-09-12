@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\states\\gamestate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\minicopter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:minicopter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\minicopterbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|d:\\data\\documents\\github\\projectile-2113\\project\\pointsanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:pointsanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "GameState2.cs",
+              "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\GameState2.cs",
+              "RelativeDocumentMoniker": "States\\GameState2.cs",
+              "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\GameState2.cs",
+              "RelativeToolTip": "States\\GameState2.cs",
+              "ViewState": "AQIAAO0BAAAAAAAAAAAcwBwCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T20:43:45.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MiniCopterBullet.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\MiniCopterBullet.cs",
               "RelativeDocumentMoniker": "MiniCopterBullet.cs",
@@ -82,25 +99,24 @@
               "RelativeToolTip": "MiniCopterBullet.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAswDoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T20:43:23.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-06T20:43:23.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MiniCopter.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\MiniCopter.cs",
               "RelativeDocumentMoniker": "MiniCopter.cs",
               "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\MiniCopter.cs",
               "RelativeToolTip": "MiniCopter.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAIwGgAAAAAAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAUwGMAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T20:43:06.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "EnemyBullet.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\EnemyBullet.cs",
               "RelativeDocumentMoniker": "EnemyBullet.cs",
@@ -112,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Enemy.cs",
               "RelativeDocumentMoniker": "Enemy.cs",
@@ -120,37 +136,37 @@
               "RelativeToolTip": "Enemy.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAqwCgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T20:37:00.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-06T20:37:00.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameState.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeDocumentMoniker": "States\\GameState.cs",
               "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeToolTip": "States\\GameState.cs",
-              "ViewState": "AQIAAOkCAAAAAAAAAAAUwAsDAAAAAAAA",
+              "ViewState": "AQIAAKMAAAAAAAAAAAAowMEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T20:04:26.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Game1.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAUwHEAAAAOAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAADwv3EAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T19:23:21.783Z"
+              "WhenOpened": "2024-09-06T19:23:21.783Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "OptionState.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\States\\OptionState.cs",
               "RelativeDocumentMoniker": "States\\OptionState.cs",
@@ -158,12 +174,11 @@
               "RelativeToolTip": "States\\OptionState.cs",
               "ViewState": "AQIAAHEAAAAAAAAAAAAkwIYAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T18:26:09.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-06T18:26:09.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PointsAnimation.cs",
               "DocumentMoniker": "D:\\Data\\Documents\\GitHub\\Projectile-2113\\Project\\PointsAnimation.cs",
               "RelativeDocumentMoniker": "PointsAnimation.cs",

@@ -96,9 +96,9 @@ namespace Project
 
         public void FireProjectile()
         {
-            // Crear y disparar el proyectil específico del MiniCopter
-            var projectile = new MiniCopterBullet(GameState.Instance.ContentManager, new Vector2(Position.X, Position.Y + 10)); // Ajustar la posición inicial del proyectil
-            GameState.Instance.AddEnemyBullet(projectile);
+            var projectile = new MiniCopterBullet(GameState2.Instance.ContentManager, new Vector2(Position.X, Position.Y + 10));
+            GameState2.Instance.AddEnemyBullet(projectile);
         }
+
     }
 }
