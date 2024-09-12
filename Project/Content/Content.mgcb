@@ -13,7 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../PointsV3/pointsSprite_0.png
+#begin ../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_0.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -23,9 +23,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../PointsV3/pointsSprite_0.png;pointsSprite_0.png
+/build:../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_0.png;MiniCopterSprite_0.png
 
-#begin ../../../PointsV3/pointsSprite_1.png
+#begin ../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,9 +35,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../PointsV3/pointsSprite_1.png;pointsSprite_1.png
+/build:../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_1.png;MiniCopterSprite_1.png
 
-#begin ../../../PointsV3/pointsSprite_2.png
+#begin ../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -47,9 +47,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../PointsV3/pointsSprite_2.png;pointsSprite_2.png
+/build:../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_2.png;MiniCopterSprite_2.png
 
-#begin ../../../PointsV3/pointsSprite_3.png
+#begin ../../../../../Downloads/Player_Sprite_Damaged.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -59,9 +59,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../PointsV3/pointsSprite_3.png;pointsSprite_3.png
+/build:../../../../../Downloads/Player_Sprite_Damaged.png;Player_Sprite_Damaged.png
 
-#begin ../../../PointsV3/pointsSprite_4.png
+#begin ../../../../../Downloads/Player_Sprite.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -71,9 +71,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../PointsV3/pointsSprite_4.png;pointsSprite_4.png
+/build:../../../../../Downloads/Player_Sprite.png;Player_Sprite.png
 
-#begin ../../../PointsV3/pointsSprite_5.png
+#begin ../../../../../Downloads/PointsV3/pointsSprite_0.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -83,9 +83,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../PointsV3/pointsSprite_5.png;pointsSprite_5.png
+/build:../../../../../Downloads/PointsV3/pointsSprite_0.png;pointsSprite_0.png
 
-#begin ../../../PointsV3/pointsSprite_6.png
+#begin ../../../../../Downloads/PointsV3/pointsSprite_1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -95,9 +95,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../PointsV3/pointsSprite_6.png;pointsSprite_6.png
+/build:../../../../../Downloads/PointsV3/pointsSprite_1.png;pointsSprite_1.png
 
-#begin ../../../PointsV3/pointsSprite_7.png
+#begin ../../../../../Downloads/PointsV3/pointsSprite_2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -107,7 +107,31 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../PointsV3/pointsSprite_7.png;pointsSprite_7.png
+/build:../../../../../Downloads/PointsV3/pointsSprite_2.png;pointsSprite_2.png
+
+#begin ../../../../../Downloads/PointsV3/pointsSprite_3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../../Downloads/PointsV3/pointsSprite_3.png;pointsSprite_3.png
+
+#begin ../../../../../Downloads/PointsV3/pointsSprite_4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../../Downloads/PointsV3/pointsSprite_4.png;pointsSprite_4.png
 
 #begin background.png
 /importer:TextureImporter
@@ -580,7 +604,7 @@
 /processorParam:TextureFormat=Color
 /build:HP_Icon.png
 
-#begin miniCopterSprite_0.png
+#begin MiniCopterDamagedSprite_0.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -590,9 +614,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:miniCopterSprite_0.png
+/build:MiniCopterDamagedSprite_0.png
 
-#begin miniCopterSprite_1.png
+#begin MiniCopterDamagedSprite_1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -602,9 +626,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:miniCopterSprite_1.png
+/build:MiniCopterDamagedSprite_1.png
 
-#begin miniCopterSprite_2.png
+#begin MiniCopterDamagedSprite_2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -614,19 +638,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:miniCopterSprite_2.png
-
-#begin miniCopterSprite_3.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:miniCopterSprite_3.png
+/build:MiniCopterDamagedSprite_2.png
 
 #begin Player_Bullet (1).png
 /importer:TextureImporter
@@ -676,18 +688,6 @@
 /processorParam:TextureFormat=Color
 /build:Player_Sprite_Damaged_Hitbox.png
 
-#begin Player_Sprite_Damaged.webp
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Player_Sprite_Damaged.webp
-
 #begin Player_Sprite_Hitbox.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -700,7 +700,7 @@
 /processorParam:TextureFormat=Color
 /build:Player_Sprite_Hitbox.png
 
-#begin Player_Sprite.webp
+#begin pointsSprite_5.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -710,7 +710,31 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Player_Sprite.webp
+/build:pointsSprite_5.png
+
+#begin pointsSprite_6.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:pointsSprite_6.png
+
+#begin pointsSprite_7.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:pointsSprite_7.png
 
 #begin PowerUp_Sprite.png
 /importer:TextureImporter

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/miniCopterSprite_1.png</SourceFile>
-  <SourceTime>2024-09-06T17:28:51.4136837-03:00</SourceTime>
-  <DestFile>C:/Users/Alumno/Downloads/Projectile-2113/Project/Content/bin/DesktopGL/Content/miniCopterSprite_1.xnb</DestFile>
-  <DestTime>2024-09-06T17:48:44.4885377-03:00</DestTime>
+  <SourceFile>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_1.png</SourceFile>
+  <SourceTime>2024-09-12T16:43:45.9451272-03:00</SourceTime>
+  <DestFile>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/bin/DesktopGL/Content/MiniCopterSprite_1.xnb</DestFile>
+  <DestTime>2024-09-12T16:49:54.8006578-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T08:44:56-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

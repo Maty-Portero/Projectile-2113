@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Project.States;
 using System;
 using System.Collections.Generic;
 
@@ -9,6 +10,7 @@ namespace Project
     public class MiniCopter : Enemy
     {
         private List<Texture2D> _sprites;
+        private List<Texture2D> _damagedSprites;
         private int _currentFrame;
         private double _animationTimer;
         private const double AnimationSpeed = 0.1; // Velocidad de la animación
@@ -19,14 +21,21 @@ namespace Project
             // Cargar los sprites del MiniCopter
             _sprites = new List<Texture2D>
             {
-                content.Load<Texture2D>("miniCopterSprite_0"),
-                content.Load<Texture2D>("miniCopterSprite_1"),
-                content.Load<Texture2D>("miniCopterSprite_2"),
-                content.Load<Texture2D>("miniCopterSprite_3"),
+                content.Load<Texture2D>("MiniCopterSprite_0"),
+                content.Load<Texture2D>("MiniCopterSprite_1"),
+                content.Load<Texture2D>("MiniCopterSprite_2"),
             };
 
-            // Ajustar la velocidad y dirección si es necesario
+            // Cargar los sprites dañados
+            _damagedSprites = new List<Texture2D>
+            {
+                content.Load<Texture2D>("MiniCopterDamagedSprite_0"),
+                content.Load<Texture2D>("MiniCopterDamagedSprite_1"),
+                content.Load<Texture2D>("MiniCopterDamagedSprite_2"),
+            };
+
             speed = 150f; // Puede ajustar la velocidad según el comportamiento deseado
+            direction = new Vector2(1, 0); // Inicializa la dirección del movimiento hacia la derecha
         }
 
         public override void Update(GameTime gameTime)
@@ -41,22 +50,42 @@ namespace Project
                 _animationTimer = 0;
             }
 
+            // Ajustar posición y dirección para mantenerse dentro de los límites de la pantalla
+            Position += direction * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            // Cambiar dirección al llegar a los bordes de la pantalla
+            if (Position.X < 0 || Position.X > 1920 - _sprites[0].Width) // Ajustar según el tamaño de la pantalla
+            {
+                direction.X = -direction.X;
+                Position = new Vector2(MathHelper.Clamp(Position.X, 0, 1920 - _sprites[0].Width), Position.Y);
+            }
+
             // Lógica adicional, como disparar
-            // Podrías agregar un método para disparar desde aquí si es necesario
+            if (CanShoot())
+            {
+                FireProjectile();
+            }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             // Dibujar el MiniCopter usando el frame actual
-            spriteBatch.Draw(_sprites[_currentFrame], Position, Color.White);
+            if (isDamaged)
+            {
+                spriteBatch.Draw(_damagedSprites[_currentFrame], Position, Color.White);
+            }
+            else
+            {
+                spriteBatch.Draw(_sprites[_currentFrame], Position, Color.White);
+            }
         }
 
         public override Rectangle GetBounds()
         {
-            // Reducir el tamaño del hitbox al 50%
+            // Reducir el tamaño del hitbox al 90%
             Texture2D currentTexture = _sprites[_currentFrame];
-            int hitboxWidth = (int)(currentTexture.Width * 0.5f);
-            int hitboxHeight = (int)(currentTexture.Height * 0.5f);
+            int hitboxWidth = (int)(currentTexture.Width * 0.9f);
+            int hitboxHeight = (int)(currentTexture.Height * 0.9f);
             return new Rectangle(
                 (int)(Position.X - hitboxWidth / 2),
                 (int)(Position.Y - hitboxHeight / 2),
@@ -65,11 +94,11 @@ namespace Project
             );
         }
 
-        public void FireProjectile(ContentManager content)
+        public void FireProjectile()
         {
             // Crear y disparar el proyectil específico del MiniCopter
-            var projectile = new MiniCopterBullet(content, new Vector2(Position.X, Position.Y + 10)); // Ajustar la posición inicial del proyectil
-            // Aquí deberías agregar el proyectil a la lista de proyectiles activos en el GameState
+            var projectile = new MiniCopterBullet(GameState.Instance.ContentManager, new Vector2(Position.X, Position.Y + 10)); // Ajustar la posición inicial del proyectil
+            GameState.Instance.AddEnemyBullet(projectile);
         }
     }
 }
