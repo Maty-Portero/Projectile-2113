@@ -5,10 +5,6 @@ using Microsoft.Xna.Framework.Input;
 using Project.Controls;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.States
 {
@@ -16,15 +12,23 @@ namespace Project.States
     {
         private GraphicsDeviceManager _graphics;
         private List<Component> _components;
+        private int _finalScore; // Variable para almacenar el puntaje final
+        private SpriteFont _font; // Fuente para el puntaje
 
-        public GameOverState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
+        public GameOverState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager, int finalScore)
+    : base(game, graphicsDevice, content)
         {
             _graphics = deviceManager;
-            //cargamos texturas y fuentes
+            _finalScore = finalScore; // Asignar el puntaje final correctamente
+
+            // Cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var titleTexture = _content.Load<Texture2D>("Controls/Title");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
             var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
+
+            // Asignar la fuente para mostrar el puntaje
+            _font = titleFont;
 
             var title = new Title(titleTexture, titleFont)
             {
@@ -32,7 +36,7 @@ namespace Project.States
                 Text = "Game Over",
             };
 
-            //creamos el boton de volver
+            // Crear el botón de reiniciar
             var restartButton = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(710, 400),
@@ -41,7 +45,7 @@ namespace Project.States
 
             restartButton.Click += restartButton_Click;
 
-            //creamos el boton de volver
+            // Crear el botón de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(710, 525),
@@ -51,12 +55,13 @@ namespace Project.States
             backButton.Click += backButton_Click;
 
             _components = new List<Component>()
-            {
-                title,
-                backButton,
-                restartButton
-            };
+    {
+        title,
+        backButton,
+        restartButton
+    };
         }
+
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
@@ -64,8 +69,15 @@ namespace Project.States
 
             foreach (var component in _components)
                 component.Draw(gameTime, spriteBatch);
+
+            // Dibujar el puntaje en la pantalla
+            string scoreText = $"Score: {_finalScore}";
+            Vector2 scorePosition = new Vector2(820, 150); // Ajusta la posición según lo necesites
+            spriteBatch.DrawString(_font, scoreText, scorePosition, Color.White);
+
             spriteBatch.End();
         }
+
 
         private void backButton_Click(object sender, EventArgs e)
         {
@@ -79,7 +91,7 @@ namespace Project.States
 
         public override void PostUpdate(GameTime gameTime)
         {
-            //saca los sprites si no los necesita
+            // Saca los sprites si no los necesita
         }
 
         public override void Update(GameTime gameTime)

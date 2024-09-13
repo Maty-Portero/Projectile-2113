@@ -84,6 +84,9 @@ namespace Project.States
         private bool stageCompleted;
         private double stageCompletionTimer;
 
+        private int currentScore = 0; // Define la variable para el puntaje
+
+
         // Singleton instance for GameState
         public static GameState Instance { get; private set; }
 
@@ -726,11 +729,11 @@ namespace Project.States
             // Verificar si el jugador está muerto
             if (playerLives <= 0)
             {
-                _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics));
-                // Implementar lógica para cuando el jugador muere
-                // Por ejemplo, reiniciar el juego o mostrar una pantalla de Game Over
+                // Pasa el puntaje actual al cambiar al estado de Game Over
+                _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics, score));
             }
         }
+
     }
 
     // Clase para la animación de los 1000 puntos

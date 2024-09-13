@@ -772,3 +772,4 @@ D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\timerS
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\MiniCopterDamagedSprite_0.xnb
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\MiniCopterDamagedSprite_1.xnb
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\MiniCopterDamagedSprite_2.xnb
+D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\plusOneLife.xnb

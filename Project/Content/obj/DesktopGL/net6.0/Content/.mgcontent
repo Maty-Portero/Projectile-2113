@@ -63,6 +63,7 @@
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Player_Bullet (3).png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Player_Sprite_Damaged_Hitbox.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/Player_Sprite_Hitbox.png</File>
+    <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/plusOneLife.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/pointsSprite_5.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/pointsSprite_6.png</File>
     <File>D:/Data/Documents/GitHub/Projectile-2113/Project/Content/pointsSprite_7.png</File>
@@ -184,6 +185,7 @@
     <File>pointsSprite_2.png</File>
     <File>pointsSprite_3.png</File>
     <File>pointsSprite_4.png</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

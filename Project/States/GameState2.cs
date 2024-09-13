@@ -77,6 +77,9 @@ namespace Project.States
         private double nextRoundTimer;
         private int nextRoundRemainingSeconds;
 
+        private int currentScore = 0; // Define la variable para el puntaje
+
+
         public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content)
         {
@@ -545,12 +548,15 @@ namespace Project.States
         {
             playerLives--;
             isInvincible = true;
-            invincibleTimer = 2.0;
+            invincibleTimer = 2.0; // 2 segundos de invencibilidad
 
+            // Verificar si el jugador está muerto
             if (playerLives <= 0)
             {
-                _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics));
+                // Pasa el puntaje actual al cambiar al estado de Game Over
+                _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics, score));
             }
         }
+
     }
 }
