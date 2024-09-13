@@ -36,7 +36,7 @@ namespace Project.States
             var explication = new Title(titleTexture, buttonFont)
             {
                 Position = new Vector2(800, 300),
-                Text = "OK Now you're logged out. \n Click the 'OK' button to continue",
+                Text = "You have logged out, you have lost access to the following contents: \n 'Infinite Mode' \n Log In again to be able to access to the aditional content.",
             };
 
             //creamos el boton de exit

@@ -13,7 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_0.png
+#begin ../../../../../Users/Alumno/Downloads/MiniCopter_V2/MiniCopterSprite_0.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -23,9 +23,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_0.png;MiniCopterSprite_0.png
+/build:../../../../../Users/Alumno/Downloads/MiniCopter_V2/MiniCopterSprite_0.png;MiniCopterSprite_0.png
 
-#begin ../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_1.png
+#begin ../../../../../Users/Alumno/Downloads/MiniCopter_V2/MiniCopterSprite_1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,9 +35,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_1.png;MiniCopterSprite_1.png
+/build:../../../../../Users/Alumno/Downloads/MiniCopter_V2/MiniCopterSprite_1.png;MiniCopterSprite_1.png
 
-#begin ../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_2.png
+#begin ../../../../../Users/Alumno/Downloads/MiniCopter_V2/MiniCopterSprite_2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -47,9 +47,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/MiniCopter_V2/MiniCopterSprite_2.png;MiniCopterSprite_2.png
+/build:../../../../../Users/Alumno/Downloads/MiniCopter_V2/MiniCopterSprite_2.png;MiniCopterSprite_2.png
 
-#begin ../../../../../Downloads/Player_Sprite_Damaged.png
+#begin ../../../../../Users/Alumno/Downloads/Player_Sprite_Damaged.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -59,9 +59,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/Player_Sprite_Damaged.png;Player_Sprite_Damaged.png
+/build:../../../../../Users/Alumno/Downloads/Player_Sprite_Damaged.png;Player_Sprite_Damaged.png
 
-#begin ../../../../../Downloads/Player_Sprite.png
+#begin ../../../../../Users/Alumno/Downloads/Player_Sprite.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -71,9 +71,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/Player_Sprite.png;Player_Sprite.png
+/build:../../../../../Users/Alumno/Downloads/Player_Sprite.png;Player_Sprite.png
 
-#begin ../../../../../Downloads/PointsV3/pointsSprite_0.png
+#begin ../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_0.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -83,9 +83,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/PointsV3/pointsSprite_0.png;pointsSprite_0.png
+/build:../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_0.png;pointsSprite_0.png
 
-#begin ../../../../../Downloads/PointsV3/pointsSprite_1.png
+#begin ../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -95,9 +95,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/PointsV3/pointsSprite_1.png;pointsSprite_1.png
+/build:../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_1.png;pointsSprite_1.png
 
-#begin ../../../../../Downloads/PointsV3/pointsSprite_2.png
+#begin ../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -107,9 +107,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/PointsV3/pointsSprite_2.png;pointsSprite_2.png
+/build:../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_2.png;pointsSprite_2.png
 
-#begin ../../../../../Downloads/PointsV3/pointsSprite_3.png
+#begin ../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_3.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -119,9 +119,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/PointsV3/pointsSprite_3.png;pointsSprite_3.png
+/build:../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_3.png;pointsSprite_3.png
 
-#begin ../../../../../Downloads/PointsV3/pointsSprite_4.png
+#begin ../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_4.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -131,7 +131,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/PointsV3/pointsSprite_4.png;pointsSprite_4.png
+/build:../../../../../Users/Alumno/Downloads/PointsV3/pointsSprite_4.png;pointsSprite_4.png
 
 #begin background.png
 /importer:TextureImporter

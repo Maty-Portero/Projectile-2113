@@ -42,14 +42,22 @@ namespace Project.States
         List<Enemy> enemies;
         Random random;
 
+        // Points animation variables
+        private Texture2D[] pointsAnimationFrames; // Array de frames para la animación de los 1000 puntos
+        private List<PointsAnimation> pointsAnimations; // Lista para almacenar animaciones activas
+
         // Power-up variables
         private Texture2D powerUpTexture;
         private List<Vector2> powerUpPositions;
         private List<bool> powerUpActiveList;
         private bool powerUpCollected = false;
-        private double powerUpDuration = 10.0;
+        private double powerUpDuration = 10.0; // Duración del power-up en segundos
         private double powerUpTimer = 0;
-        private double powerUpSpawnChance = 0.005;
+        private double powerUpSpawnChance = 0.005; // Probabilidad de aparición del power-up
+        private Texture2D[] powerUpTimerFrames; // Array de frames para la animación del timer
+        private int currentPowerUpFrame = 0; // Frame actual de la animación del power-up
+        private double powerUpFrameTimer = 0; // Temporizador para cambiar frames
+        private double powerUpFrameTime = 0.1; // Tiempo entre frames
 
         // Player lives variables
         private Texture2D heartFullTexture;
@@ -138,6 +146,21 @@ namespace Project.States
             powerUpPositions = new List<Vector2>();
             powerUpActiveList = new List<bool>();
 
+            // Load power-up timer frames
+            powerUpTimerFrames = new Texture2D[100];
+            for (int i = 0; i < powerUpTimerFrames.Length; i++)
+            {
+                powerUpTimerFrames[i] = content.Load<Texture2D>($"timerSprite_{i:000}");
+            }
+
+            // Load points animation frames
+            pointsAnimationFrames = new Texture2D[8];
+            for (int i = 0; i < pointsAnimationFrames.Length; i++)
+            {
+                pointsAnimationFrames[i] = content.Load<Texture2D>($"pointsSprite_{i}");
+            }
+            pointsAnimations = new List<PointsAnimation>();
+
             CreateEnemies();
 
             playerPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
@@ -155,9 +178,9 @@ namespace Project.States
             // Initialize heart positions
             heartPositions = new List<Vector2>
             {
-                new Vector2(20, 60),  // Adjusted position to leave space for score
+                new Vector2(10, 60),  // Adjusted position to leave space for score
                 new Vector2(60, 60),
-                new Vector2(100, 60)
+                new Vector2(110, 60)
             };
 
             powerUpSpawnChance = 0.05;
@@ -234,6 +257,19 @@ namespace Project.States
                 Vector2 messageSize = font.MeasureString(message);
                 Vector2 messagePosition = new Vector2((_graphics.PreferredBackBufferWidth - messageSize.X) / 2, _graphics.PreferredBackBufferHeight / 2);
                 spriteBatch.DrawString(font, message, messagePosition, Color.White);
+            }
+
+            // Draw power-up timer if collected
+            if (powerUpCollected)
+            {
+                // Reemplaza el texto del power-up con la animación
+                spriteBatch.Draw(powerUpTimerFrames[currentPowerUpFrame], new Vector2(20, 100), Color.White);
+            }
+
+            // Draw points animations
+            foreach (var animation in pointsAnimations)
+            {
+                animation.Draw(spriteBatch);
             }
 
             spriteBatch.End();
@@ -438,6 +474,9 @@ namespace Project.States
 
                                 // Incrementar puntaje
                                 score += 1000;
+
+                                // Agregar animación de puntos
+                                pointsAnimations.Add(new PointsAnimation(pointsAnimationFrames, enemyPosition));
                             }
 
                             break;
@@ -485,7 +524,7 @@ namespace Project.States
             {
                 if (powerUpActiveList[i])
                 {
-                    powerUpPositions[i] = new Vector2(powerUpPositions[i].X, powerUpPositions[i].Y + 100f * (float)gameTime.ElapsedGameTime.TotalSeconds);
+                    powerUpPositions[i] = new Vector2(powerUpPositions[i].X, powerUpPositions[i].Y + 100f * (float)gameTime.ElapsedGameTime.TotalSeconds); // Velocidad de caída del power-up
 
                     if (powerUpPositions[i].Y > _graphics.PreferredBackBufferHeight)
                     {
@@ -496,6 +535,7 @@ namespace Project.States
                         powerUpActiveList[i] = false;
                         powerUpCollected = true;
                         powerUpTimer = powerUpDuration;
+                        currentPowerUpFrame = 0; // Reinicia la animación del power-up
                     }
                 }
             }
@@ -504,11 +544,27 @@ namespace Project.States
             if (powerUpCollected)
             {
                 powerUpTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                powerUpFrameTimer += gameTime.ElapsedGameTime.TotalSeconds;
+
+                if (powerUpFrameTimer >= powerUpFrameTime)
+                {
+                    powerUpFrameTimer = 0;
+                    currentPowerUpFrame++;
+
+                    if (currentPowerUpFrame >= powerUpTimerFrames.Length)
+                    {
+                        currentPowerUpFrame = 0; // Reinicia la animación si llega al final
+                    }
+                }
+
                 if (powerUpTimer <= 0)
                 {
                     powerUpCollected = false;
+                    currentPowerUpFrame = 0; // Resetea el frame al final del power-up
                 }
             }
+
+
 
             // Comprobar colisiones con enemigos
             foreach (var enemy in enemies)
@@ -516,6 +572,16 @@ namespace Project.States
                 if (!isInvincible && enemy.GetBounds().Intersects(GetPlayerBounds()))
                 {
                     PlayerTakeDamage();
+                }
+            }
+
+            // Actualizar animaciones de puntos
+            for (int i = pointsAnimations.Count - 1; i >= 0; i--)
+            {
+                pointsAnimations[i].Update(gameTime);
+                if (pointsAnimations[i].IsFinished)
+                {
+                    pointsAnimations.RemoveAt(i);
                 }
             }
 
@@ -558,5 +624,51 @@ namespace Project.States
             }
         }
 
+        // Clase para la animación de los 1000 puntos
+        internal class PointsAnimation
+        {
+            private Texture2D[] frames;
+            private int currentFrame;
+            private double timer;
+            private double frameTime = 0.1; // Duración de cada frame
+            private Vector2 position;
+            public bool IsFinished { get; private set; }
+
+            public PointsAnimation(Texture2D[] frames, Vector2 position)
+            {
+                this.frames = frames;
+                this.position = position;
+                currentFrame = 0;
+                timer = 0;
+                IsFinished = false;
+            }
+
+            public void Update(GameTime gameTime)
+            {
+                timer += gameTime.ElapsedGameTime.TotalSeconds;
+
+                if (timer >= frameTime)
+                {
+                    timer = 0;
+                    currentFrame++;
+
+                    if (currentFrame >= frames.Length)
+                    {
+                        IsFinished = true;
+                    }
+                }
+            }
+
+            public void Draw(SpriteBatch spriteBatch)
+            {
+                if (!IsFinished)
+                {
+                    spriteBatch.Draw(frames[currentFrame], position, Color.White);
+                }
+            }
+        }
+
     }
+
+
 }

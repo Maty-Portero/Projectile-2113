@@ -73,7 +73,7 @@ namespace Project.States
             // Dibujar el puntaje en la pantalla
             string scoreText = $"Score: {_finalScore}";
             Vector2 scorePosition = new Vector2(820, 150); // Ajusta la posición según lo necesites
-            spriteBatch.DrawString(_font, scoreText, scorePosition, Color.White);
+            spriteBatch.DrawString(_font, scoreText, scorePosition, Color.Black);
 
             spriteBatch.End();
         }

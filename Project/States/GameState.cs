@@ -273,6 +273,7 @@ namespace Project.States
                 animation.Draw(spriteBatch);
             }
 
+
             if (roundCompleted && round <= 5)
             {
                 string completionText = $"Round completed, next round starting in {remainingSeconds} seconds";
