@@ -1,12 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"F:/Projectile-2113/Project/Content/MiniCopterSprite_0.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/MiniCopterSprite_0.xnb","TextureProcessor","Texture2DContent",1600,65621,0,1027874
-"F:/Projectile-2113/Project/Content/MiniCopterSprite_1.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/MiniCopterSprite_1.xnb","TextureProcessor","Texture2DContent",1908,65621,0,0021705
-"F:/Projectile-2113/Project/Content/MiniCopterSprite_2.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/MiniCopterSprite_2.xnb","TextureProcessor","Texture2DContent",1897,65621,0,0021495
-"F:/Projectile-2113/Project/Content/miniCopterSprite_3.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/miniCopterSprite_3.xnb","TextureProcessor","Texture2DContent",1910,65621,0,0022829
-"F:/Projectile-2113/Project/Content/Player_Sprite_Damaged.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite_Damaged.xnb","TextureProcessor","Texture2DContent",742,16469,0,0021745
-"F:/Projectile-2113/Project/Content/Player_Sprite.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",510,4181,0,0014814
-"F:/Projectile-2113/Project/Content/pointsSprite_0.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/pointsSprite_0.xnb","TextureProcessor","Texture2DContent",329,16469,0,0019306
-"F:/Projectile-2113/Project/Content/pointsSprite_1.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/pointsSprite_1.xnb","TextureProcessor","Texture2DContent",331,16469,0,0020292
-"F:/Projectile-2113/Project/Content/pointsSprite_2.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/pointsSprite_2.xnb","TextureProcessor","Texture2DContent",334,16469,0,0044514
-"F:/Projectile-2113/Project/Content/pointsSprite_3.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/pointsSprite_3.xnb","TextureProcessor","Texture2DContent",336,16469,0,0017557
-"F:/Projectile-2113/Project/Content/pointsSprite_4.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/pointsSprite_4.xnb","TextureProcessor","Texture2DContent",339,16469,0,0024151
+"F:/Projectile-2113/Project/Content/Player_Sprite.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",510,4181,0,0946424
+"F:/Projectile-2113/Project/Content/Player_Sprite.webp","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",218,16469,0,0019525

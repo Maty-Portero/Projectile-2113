@@ -652,7 +652,7 @@
 /processorParam:TextureFormat=Color
 /build:Player_Sprite.png
 
-#begin Player_Sprite.png
+#begin Player_Sprite.webp
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -662,7 +662,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Player_Sprite.png
+/build:Player_Sprite.webp
 
 #begin plusOneLife.png
 /importer:TextureImporter
