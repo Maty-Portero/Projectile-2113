@@ -80,7 +80,7 @@ namespace Project
 
             // TODO: use this.Content to load your game content here
             myBackground = new ScrollingBackground();
-            Texture2D background = Content.Load<Texture2D>("background");
+            Texture2D background = Content.Load<Texture2D>("starfield");
             myBackground.Load(GraphicsDevice, background);
 
             GraphicsDevice.Clear(Color.SkyBlue);
