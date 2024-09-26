@@ -127,9 +127,6 @@ namespace Project
         {
             _graphics.GraphicsDevice.Clear(Color.SkyBlue);
             _currentState.Draw(gameTime, _spriteBatch);
-            _spriteBatch.Begin();
-            //(descomentar) myBackground.Draw(_spriteBatch, Color.White);
-            _spriteBatch.End();
             base.Draw(gameTime);
         }
     }

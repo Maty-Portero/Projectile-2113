@@ -87,7 +87,10 @@ namespace Project.States
 
         private int currentScore = 0; // Define la variable para el puntaje
 
-
+        // Background variables
+        Texture2D backgroundTexture;
+        Vector2 bgPosition1, bgPosition2;
+        float bgSpeed = 100f; // Velocidad del fondo desplazable
         public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content)
         {
@@ -108,6 +111,12 @@ namespace Project.States
             enemyBullets = new List<EnemyBullet>();
 
             random = new Random();
+
+            backgroundTexture = content.Load<Texture2D>("background");
+
+            // Posición inicial de los fondos (uno encima del otro)
+            bgPosition1 = Vector2.Zero;
+            bgPosition2 = new Vector2(0, -backgroundTexture.Height);
 
             playerTexture = content.Load<Texture2D>("Player_Sprite");
             damagedPlayerTexture = content.Load<Texture2D>("Player_Sprite_Damaged");
@@ -189,7 +198,9 @@ namespace Project.States
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-
+            // Dibujar ambos fondos
+            spriteBatch.Draw(backgroundTexture, bgPosition1, Color.White);
+            spriteBatch.Draw(backgroundTexture, bgPosition2, Color.White);
             // Draw round
             string roundText = $"Infinite Mode - Round {round}";
             spriteBatch.DrawString(font, roundText, new Vector2(20, 0), Color.White);
@@ -379,6 +390,22 @@ namespace Project.States
         {
             var kstate = Keyboard.GetState();
             float currentSpeed = kstate.IsKeyDown(Keys.LeftShift) || kstate.IsKeyDown(Keys.RightShift) ? slowSpeed : playerSpeed;
+            
+            // Actualizar posiciones del fondo
+            bgPosition1.Y += bgSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            bgPosition2.Y += bgSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            // Si el primer fondo sale de la pantalla, lo reubicamos arriba
+            if (bgPosition1.Y >= backgroundTexture.Height)
+            {
+                bgPosition1.Y = bgPosition2.Y - backgroundTexture.Height;
+            }
+
+            // Si el segundo fondo sale de la pantalla, lo reubicamos arriba
+            if (bgPosition2.Y >= backgroundTexture.Height)
+            {
+                bgPosition2.Y = bgPosition1.Y - backgroundTexture.Height;
+            }
 
             Vector2 direction = Vector2.Zero;
 
