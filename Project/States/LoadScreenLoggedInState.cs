@@ -26,6 +26,7 @@ namespace Project.States
             var titleTexture = _content.Load<Texture2D>("Controls/Title");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
             var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
+            
 
             var gameby = new Title(titleTexture, buttonFont)
             {
@@ -38,6 +39,16 @@ namespace Project.States
                 Position = new Vector2(800, 300),
                 Text = "You've just logged in. You've gained accesed to aditional content: \n 'Infinite Mode' ",
             };
+
+            if (playerData.loggedIn == false)
+            {
+                playerData.loggedIn = true;
+            }
+            else
+            {
+                playerData.loggedIn = false;
+                explication.Text = "\"You have logged out, you have lost access to the following contents: \\n 'Infinite Mode' \\n Please login again to be able to access to the aditional content.\"";
+            }
 
             //creamos el boton de exit
             var acceptButton = new Button(buttonTexture, buttonFont)
@@ -68,7 +79,7 @@ namespace Project.States
 
         private void acceptButton_Click(Object sender, EventArgs e)
         {
-            _game.ChangeState(new MenuStateLogIn(_game, _graphicsDevice, _content, _graphics));
+            _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
         }
 
         public override void PostUpdate(GameTime gameTime)
