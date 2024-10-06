@@ -25,7 +25,7 @@ namespace Project.States
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
             var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
 
-            
+
             //creamos el boton de how to play
             var mode1Button = new Button(buttonTexture, buttonFont)
             {
@@ -35,9 +35,18 @@ namespace Project.States
 
             mode1Button.Click += mode1Button_Click;
 
-            var backButton = new Button(buttonTexture, buttonFont)
+            //creamos el boton de options
+            var mode2Button = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(710, 400),
+                Text = "Infinite Mode",
+            };
+
+            mode2Button.Click += mode2Button_Click;
+
+            var backButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(710, 525),
                 Text = "Back",
             };
 
@@ -48,7 +57,12 @@ namespace Project.States
                 mode1Button,
                 backButton
             };
+            if (playerData.loggedIn == true)
+            {
+                _components.Add(mode2Button);
+            }
         }
+ 
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
@@ -62,6 +76,10 @@ namespace Project.States
         private void mode1Button_Click(object sender, EventArgs e)
         {
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
+        }
+        private void mode2Button_Click(object sender, EventArgs e)
+        {
+            _game.ChangeState(new GameState2(_game, _graphicsDevice, _content, _graphics));
         }
 
         public override void PostUpdate(GameTime gameTime)
