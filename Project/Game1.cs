@@ -15,6 +15,8 @@ namespace Project
 
         Vector2 playerPosition;
 
+        public int estado = 0;
+
         private State _currentState;
 
         private State _nextState;

@@ -20,8 +20,7 @@ namespace Project.States
 
         public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base (game, graphicsDevice, content)
         {
-
-            _graphics = deviceManager;
+           _graphics = deviceManager;
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var titleTexture = _content.Load<Texture2D>("Controls/Title");

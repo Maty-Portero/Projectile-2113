@@ -17,6 +17,8 @@ namespace Project.States
 
         protected Game1 _game;
 
+        int lugar = 0;
+
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         public abstract void PostUpdate(GameTime gameTime);
         public abstract void Update(GameTime gameTime);        

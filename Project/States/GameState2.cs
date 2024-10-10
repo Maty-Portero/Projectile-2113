@@ -94,6 +94,8 @@ namespace Project.States
         public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content)
         {
+            _game.estado = 2;
+
             Instance = this;
             ContentManager = content;
 

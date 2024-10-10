@@ -17,7 +17,6 @@ namespace Project.States
 
         public modeGameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
-
             _graphics = deviceManager;
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");

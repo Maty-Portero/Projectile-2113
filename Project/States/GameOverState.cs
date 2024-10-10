@@ -86,7 +86,10 @@ namespace Project.States
 
         private void restartButton_Click(object sender, EventArgs e)
         {
-            _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
+            if (_game.estado == 1)
+                _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
+            else
+                _game.ChangeState(new GameState2(_game, _graphicsDevice, _content, _graphics));            
         }
 
         public override void PostUpdate(GameTime gameTime)

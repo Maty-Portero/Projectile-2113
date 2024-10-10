@@ -14,42 +14,14 @@ namespace Project.States
 
         public OptionState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
+
             _graphics = deviceManager;
 
             // Cargar texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
 
-            // Crear los botones de resolución con eventos Click
-            var button720p = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(210, 400),
-                Text = "720p",
-            };
-            button720p.Click += (sender, e) => ChangeResolution(1280, 720);
-
-            var button1080p = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(210, 500),
-                Text = "1080p",
-            };
-            button1080p.Click += (sender, e) => ChangeResolution(1920, 1080);
-
-            var button4k = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(210, 600),
-                Text = "4K",
-            };
-            button4k.Click += (sender, e) => ChangeResolution(2560, 1440);
-
-            var button8k = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(210, 700),
-                Text = "8K",
-            };
-            button8k.Click += (sender, e) => ChangeResolution(3840, 2160);
-
-            // Crear los botones de modo de pantalla
+           // Crear los botones de modo de pantalla
             var fullscreenButton = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(710, 400), // Ubicación central
@@ -64,19 +36,6 @@ namespace Project.States
             };
             windowedButton.Click += (sender, e) => SetFullScreen(false);
 
-            // Crear los botones de volumen a la derecha
-            var activateVolumeButton = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(1210, 400), // Posición a la derecha
-                Text = "Activate Volume",
-            };
-
-            var muteButton = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(1210, 500), // Justo debajo del botón de activar volumen
-                Text = "Mute",
-            };
-
             // Crear el botón de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
@@ -88,14 +47,8 @@ namespace Project.States
             // Agregar los componentes a la lista
             _components = new List<Component>()
             {
-                button720p,
-                button1080p,
-                button4k,
-                button8k,
                 fullscreenButton,
                 windowedButton,
-                activateVolumeButton,
-                muteButton,
                 backButton
             };
         }
