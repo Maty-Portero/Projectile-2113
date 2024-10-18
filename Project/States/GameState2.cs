@@ -43,26 +43,29 @@ namespace Project.States
         Random random;
 
         // Points animation variables
-        private Texture2D[] pointsAnimationFrames; // Array de frames para la animación de los 1000 puntos
-        private List<PointsAnimation> pointsAnimations; // Lista para almacenar animaciones activas
+        private Texture2D[] pointsAnimationFrames;
+        private List<PointsAnimation> pointsAnimations;
 
         // Power-up variables
         private Texture2D powerUpTexture;
+        private Texture2D plusOneLifePowerUpTexture; // Nuevo power-up de vida extra
         private List<Vector2> powerUpPositions;
         private List<bool> powerUpActiveList;
         private bool powerUpCollected = false;
-        private double powerUpDuration = 10.0; // Duración del power-up en segundos
+        private double powerUpDuration = 10.0;
         private double powerUpTimer = 0;
-        private double powerUpSpawnChance = 0.005; // Probabilidad de aparición del power-up
-        private Texture2D[] powerUpTimerFrames; // Array de frames para la animación del timer
-        private int currentPowerUpFrame = 0; // Frame actual de la animación del power-up
-        private double powerUpFrameTimer = 0; // Temporizador para cambiar frames
-        private double powerUpFrameTime = 0.1; // Tiempo entre frames
+        private double powerUpSpawnChance = 0.005; // Probabilidad para el power-up ya existente
+        private double plusOneLifeSpawnChance = 0.03; // Probabilidad del nuevo power-up
+        private Texture2D[] powerUpTimerFrames;
+        private int currentPowerUpFrame = 0;
+        private double powerUpFrameTimer = 0;
+        private double powerUpFrameTime = 0.1;
 
         // Player lives variables
         private Texture2D heartFullTexture;
         private Texture2D heartEmptyTexture;
         private int playerLives = 3;
+        private int maxLives = 5; // Límite de vidas a 5
         private bool isInvincible = false;
         private double invincibleTimer = 0;
         private double invincibleFlashTimer = 0;
@@ -85,12 +88,13 @@ namespace Project.States
         private double nextRoundTimer;
         private int nextRoundRemainingSeconds;
 
-        private int currentScore = 0; // Define la variable para el puntaje
+        private int currentScore = 0;
 
         // Background variables
         Texture2D backgroundTexture;
         Vector2 bgPosition1, bgPosition2;
-        float bgSpeed = 100f; // Velocidad del fondo desplazable
+        float bgSpeed = 100f;
+
         public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content)
         {
@@ -116,7 +120,6 @@ namespace Project.States
 
             backgroundTexture = content.Load<Texture2D>("background");
 
-            // Posición inicial de los fondos (uno encima del otro)
             bgPosition1 = Vector2.Zero;
             bgPosition2 = new Vector2(0, -backgroundTexture.Height);
 
@@ -147,8 +150,9 @@ namespace Project.States
             enemyDamagedTexture[1] = content.Load<Texture2D>("Enemy_V6_Damaged (2)");
             enemyDamagedTexture[2] = content.Load<Texture2D>("Enemy_V6_Damaged (3)");
 
-            // Load power-up texture
+            // Load power-up textures
             powerUpTexture = content.Load<Texture2D>("PowerUp_Sprite");
+            plusOneLifePowerUpTexture = content.Load<Texture2D>("plusOneLife"); // Nuevo power-up
 
             // Load font for score
             font = content.Load<SpriteFont>("Fonts/ArcadeFont");
@@ -189,7 +193,7 @@ namespace Project.States
             // Initialize heart positions
             heartPositions = new List<Vector2>
             {
-                new Vector2(10, 60),  // Adjusted position to leave space for score
+                new Vector2(10, 60),
                 new Vector2(60, 60),
                 new Vector2(110, 60)
             };
@@ -200,14 +204,11 @@ namespace Project.States
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            // Dibujar ambos fondos
             spriteBatch.Draw(backgroundTexture, bgPosition1, Color.White);
             spriteBatch.Draw(backgroundTexture, bgPosition2, Color.White);
-            // Draw round
             string roundText = $"Infinite Mode - Round {round}";
             spriteBatch.DrawString(font, roundText, new Vector2(20, 0), Color.White);
 
-            // Draw score
             string scoreText = $"SCORE: {score.ToString("D7")}";
             spriteBatch.DrawString(font, scoreText, new Vector2(20, 20), Color.White);
 
@@ -223,25 +224,21 @@ namespace Project.States
 
             spriteBatch.Draw(currentTexture, playerPosition, null, Color.White, 0f, new Vector2(currentTexture.Width / 2, currentTexture.Height / 2), Vector2.One, SpriteEffects.None, 0f);
 
-            // Draw player bullets
             foreach (var bullet in bullets)
             {
                 bullet.Draw(spriteBatch);
             }
 
-            // Draw enemy bullets
             foreach (var bullet in enemyBullets)
             {
                 bullet.Draw(spriteBatch);
             }
 
-            // Draw enemies
             foreach (var enemy in enemies)
             {
                 enemy.Draw(gameTime, spriteBatch);
             }
 
-            // Draw power-ups
             for (int i = 0; i < powerUpPositions.Count; i++)
             {
                 if (powerUpActiveList[i])
@@ -250,7 +247,6 @@ namespace Project.States
                 }
             }
 
-            // Draw hearts
             for (int i = 0; i < heartPositions.Count; i++)
             {
                 if (i < playerLives)
@@ -263,7 +259,6 @@ namespace Project.States
                 }
             }
 
-            // Mostrar el mensaje de "Next round in X seconds"
             if (nextRoundStarting)
             {
                 string message = $"Next round in {nextRoundRemainingSeconds} seconds";
@@ -272,14 +267,11 @@ namespace Project.States
                 spriteBatch.DrawString(font, message, messagePosition, Color.White);
             }
 
-            // Draw power-up timer if collected
             if (powerUpCollected)
             {
-                // Reemplaza el texto del power-up con la animación
                 spriteBatch.Draw(powerUpTimerFrames[currentPowerUpFrame], new Vector2(20, 100), Color.White);
             }
 
-            // Draw points animations
             foreach (var animation in pointsAnimations)
             {
                 animation.Draw(spriteBatch);
@@ -290,16 +282,14 @@ namespace Project.States
 
         private void CreateEnemies()
         {
-            // Determinar cantidades aleatorias para enemigos y MiniCopters basados en la ronda actual
-            int minEnemies = 2 + round - 1; // Incrementa el mínimo por ronda
-            int maxEnemies = 3 + round - 1; // Incrementa el máximo por ronda
-            int minMiniCopters = Math.Max(0, round - 1); // Empieza con 0 y luego incrementa
-            int maxMiniCopters = Math.Max(1, round); // Empieza con 1 y luego incrementa
+            int minEnemies = 2 + round - 1;
+            int maxEnemies = 3 + round - 1;
+            int minMiniCopters = Math.Max(0, round - 1);
+            int maxMiniCopters = Math.Max(1, round);
 
             int numberOfEnemies = random.Next(minEnemies, maxEnemies + 1);
             int numberOfMiniCopters = random.Next(minMiniCopters, maxMiniCopters + 1);
 
-            // Crear enemigos en posiciones aleatorias
             for (int i = 0; i < numberOfEnemies; i++)
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
@@ -307,7 +297,6 @@ namespace Project.States
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 5));
             }
 
-            // Crear MiniCopters en posiciones aleatorias
             for (int i = 0; i < numberOfMiniCopters; i++)
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
@@ -315,7 +304,6 @@ namespace Project.States
                 enemies.Add(new MiniCopter(_content, new Vector2(xPosition, yPosition), random));
             }
         }
-
 
         private void Shoot()
         {
@@ -358,10 +346,18 @@ namespace Project.States
 
         private void SpawnPowerUp(Vector2 position)
         {
-            if (random.NextDouble() <= powerUpSpawnChance)
+            double chance = random.NextDouble();
+
+            if (chance <= powerUpSpawnChance)
             {
                 powerUpPositions.Add(position);
                 powerUpActiveList.Add(true);
+            }
+            else if (chance <= plusOneLifeSpawnChance) // Nuevo power-up de vida extra
+            {
+                powerUpPositions.Add(position);
+                powerUpActiveList.Add(true);
+                powerUpTexture = plusOneLifePowerUpTexture;
             }
         }
 
@@ -383,7 +379,6 @@ namespace Project.States
             enemyBullets.Add(bullet);
         }
 
-
         public override void PostUpdate(GameTime gameTime)
         {
         }
@@ -392,18 +387,15 @@ namespace Project.States
         {
             var kstate = Keyboard.GetState();
             float currentSpeed = kstate.IsKeyDown(Keys.LeftShift) || kstate.IsKeyDown(Keys.RightShift) ? slowSpeed : playerSpeed;
-            
-            // Actualizar posiciones del fondo
+
             bgPosition1.Y += bgSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
             bgPosition2.Y += bgSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            // Si el primer fondo sale de la pantalla, lo reubicamos arriba
             if (bgPosition1.Y >= backgroundTexture.Height)
             {
                 bgPosition1.Y = bgPosition2.Y - backgroundTexture.Height;
             }
 
-            // Si el segundo fondo sale de la pantalla, lo reubicamos arriba
             if (bgPosition2.Y >= backgroundTexture.Height)
             {
                 bgPosition2.Y = bgPosition1.Y - backgroundTexture.Height;
@@ -438,7 +430,6 @@ namespace Project.States
 
             playerPosition += direction * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            // Mantén al jugador dentro de los límites de la pantalla
             if (playerPosition.X > _graphics.PreferredBackBufferWidth - playerTexture.Width / 2)
             {
                 playerPosition.X = _graphics.PreferredBackBufferWidth - playerTexture.Width / 2;
@@ -457,7 +448,6 @@ namespace Project.States
                 playerPosition.Y = playerTexture.Height / 2;
             }
 
-            // Disparo del jugador
             shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             if ((kstate.IsKeyDown(Keys.Space) && shootTimer <= 0) || (kstate.IsKeyDown(Keys.LeftControl) && shootTimer <= 0))
             {
@@ -472,14 +462,12 @@ namespace Project.States
                 shootTimer = shootCooldown;
             }
 
-            // Actualizar enemigos
             foreach (var enemy in enemies)
             {
                 enemy.Update(gameTime);
             }
             ShootEnemy();
 
-            // Actualizar balas del jugador
             for (int i = bullets.Count - 1; i >= 0; i--)
             {
                 bullets[i].Update(gameTime);
@@ -501,10 +489,8 @@ namespace Project.States
                                 enemies.RemoveAt(j);
                                 SpawnPowerUp(enemyPosition);
 
-                                // Incrementar puntaje
                                 score += 1000;
 
-                                // Agregar animación de puntos
                                 pointsAnimations.Add(new PointsAnimation(pointsAnimationFrames, enemyPosition));
                             }
 
@@ -514,7 +500,6 @@ namespace Project.States
                 }
             }
 
-            // Actualizar balas del enemigo
             for (int i = enemyBullets.Count - 1; i >= 0; i--)
             {
                 enemyBullets[i].Update(gameTime);
@@ -529,9 +514,6 @@ namespace Project.States
                 }
             }
 
-
-
-            // Actualizar invencibilidad
             if (isInvincible)
             {
                 invincibleTimer -= gameTime.ElapsedGameTime.TotalSeconds;
@@ -548,12 +530,11 @@ namespace Project.States
                 }
             }
 
-            // Actualizar power-up
             for (int i = 0; i < powerUpPositions.Count; i++)
             {
                 if (powerUpActiveList[i])
                 {
-                    powerUpPositions[i] = new Vector2(powerUpPositions[i].X, powerUpPositions[i].Y + 100f * (float)gameTime.ElapsedGameTime.TotalSeconds); // Velocidad de caída del power-up
+                    powerUpPositions[i] = new Vector2(powerUpPositions[i].X, powerUpPositions[i].Y + 100f * (float)gameTime.ElapsedGameTime.TotalSeconds);
 
                     if (powerUpPositions[i].Y > _graphics.PreferredBackBufferHeight)
                     {
@@ -562,14 +543,24 @@ namespace Project.States
                     else if (GetPlayerBounds().Intersects(new Rectangle((int)powerUpPositions[i].X, (int)powerUpPositions[i].Y, powerUpTexture.Width, powerUpTexture.Height)))
                     {
                         powerUpActiveList[i] = false;
-                        powerUpCollected = true;
-                        powerUpTimer = powerUpDuration;
-                        currentPowerUpFrame = 0; // Reinicia la animación del power-up
+                        if (powerUpTexture == plusOneLifePowerUpTexture) // Recolectar el power-up de vida
+                        {
+                            if (playerLives < maxLives)
+                            {
+                                playerLives++;
+                                heartPositions.Add(new Vector2(heartPositions[playerLives - 2].X + 50, heartPositions[playerLives - 2].Y)); // Agregar un corazón más a la derecha
+                            }
+                        }
+                        else
+                        {
+                            powerUpCollected = true;
+                            powerUpTimer = powerUpDuration;
+                            currentPowerUpFrame = 0;
+                        }
                     }
                 }
             }
 
-            // Temporizador del power-up
             if (powerUpCollected)
             {
                 powerUpTimer -= gameTime.ElapsedGameTime.TotalSeconds;
@@ -582,20 +573,17 @@ namespace Project.States
 
                     if (currentPowerUpFrame >= powerUpTimerFrames.Length)
                     {
-                        currentPowerUpFrame = 0; // Reinicia la animación si llega al final
+                        currentPowerUpFrame = 0;
                     }
                 }
 
                 if (powerUpTimer <= 0)
                 {
                     powerUpCollected = false;
-                    currentPowerUpFrame = 0; // Resetea el frame al final del power-up
+                    currentPowerUpFrame = 0;
                 }
             }
 
-
-
-            // Comprobar colisiones con enemigos
             foreach (var enemy in enemies)
             {
                 if (!isInvincible && enemy.GetBounds().Intersects(GetPlayerBounds()))
@@ -604,7 +592,6 @@ namespace Project.States
                 }
             }
 
-            // Actualizar animaciones de puntos
             for (int i = pointsAnimations.Count - 1; i >= 0; i--)
             {
                 pointsAnimations[i].Update(gameTime);
@@ -614,12 +601,11 @@ namespace Project.States
                 }
             }
 
-            // Check for round completion
             if (enemies.Count == 0 && !roundCompleted)
             {
                 roundCompleted = true;
                 nextRoundStarting = true;
-                nextRoundTimer = 5.0; // 5 segundos para la próxima ronda
+                nextRoundTimer = 5.0;
                 nextRoundRemainingSeconds = (int)Math.Ceiling(nextRoundTimer);
             }
 
@@ -632,8 +618,8 @@ namespace Project.States
                 {
                     nextRoundStarting = false;
                     round++;
-                    roundCompleted = false; // Asegúrate de resetear esto para permitir nuevas rondas
-                    CreateEnemies(); // Llama a la función para crear enemigos para la nueva ronda
+                    roundCompleted = false;
+                    CreateEnemies();
                 }
             }
 
@@ -643,23 +629,20 @@ namespace Project.States
         {
             playerLives--;
             isInvincible = true;
-            invincibleTimer = 2.0; // 2 segundos de invencibilidad
+            invincibleTimer = 2.0;
 
-            // Verificar si el jugador está muerto
             if (playerLives <= 0)
             {
-                // Pasa el puntaje actual al cambiar al estado de Game Over
                 _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics, score));
             }
         }
 
-        // Clase para la animación de los 1000 puntos
         internal class PointsAnimation
         {
             private Texture2D[] frames;
             private int currentFrame;
             private double timer;
-            private double frameTime = 0.1; // Duración de cada frame
+            private double frameTime = 0.1;
             private Vector2 position;
             public bool IsFinished { get; private set; }
 
@@ -698,6 +681,5 @@ namespace Project.States
         }
 
     }
-
 
 }
