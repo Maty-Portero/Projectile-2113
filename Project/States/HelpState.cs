@@ -12,10 +12,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.States
 {
-    internal class HelpState : State
+    internal class HelpState : NavigableState
     {
         private GraphicsDeviceManager _graphics;
-        private List<Component> _components;
 
         public HelpState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
@@ -41,21 +40,9 @@ namespace Project.States
 
             backButton.Click += backButton_Click;
 
-            _components = new List<Component>()
-            {
-                explication,
-                backButton
-            };
-        }
-
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            spriteBatch.Begin();
-
-            foreach (var component in _components)
-                component.Draw(gameTime, spriteBatch);
-
-            spriteBatch.End();
+            _components.Add(backButton);
+            _components.Add(explication);
+            _limitIndex = 0;
         }
 
         private void backButton_Click(object sender, EventArgs e)

@@ -12,10 +12,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.States
 {
-    internal class LoadScreenLoggedInState : State
+    internal class LoadScreenLoggedInState : NavigableState
     {
         private GraphicsDeviceManager _graphics;
-        private List<Component> _components;
 
         public LoadScreenLoggedInState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
         {
@@ -26,13 +25,6 @@ namespace Project.States
             var titleTexture = _content.Load<Texture2D>("Controls/Title");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
             var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
-            
-
-            var gameby = new Title(titleTexture, buttonFont)
-            {
-                Position = new Vector2(1685, 950),
-                Text = "Game by Radio Paris",
-            };
 
             var explication = new Title(titleTexture, buttonFont)
             {
@@ -59,22 +51,9 @@ namespace Project.States
 
             acceptButton.Click += acceptButton_Click;
 
-            _components = new List<Component>()
-            {
-                acceptButton,
-                explication,
-                gameby
-            };
-        }
-
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            spriteBatch.Begin();
-
-            foreach (var component in _components)
-                component.Draw(gameTime, spriteBatch);
-
-            spriteBatch.End();
+            _components.Add(acceptButton);
+            _components.Add(explication);
+            _limitIndex = 0;
         }
 
         private void acceptButton_Click(Object sender, EventArgs e)

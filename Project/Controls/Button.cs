@@ -34,6 +34,7 @@ namespace Project.Controls
         public event EventHandler Click;
 
         public bool Clicked { get; private set; }
+        public Color colour { get; set; }
 
         public Color PenColour { get; set; }
 
@@ -61,10 +62,14 @@ namespace Project.Controls
 
             PenColour = Color.White;
         }
+        public void PerformClick()
+        {
+            Click?.Invoke(this, EventArgs.Empty);
+        }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            var colour = Color.White;
+            //colour = Color.White;
 
             if (_isHovering)
                 colour = Color.LightGray;

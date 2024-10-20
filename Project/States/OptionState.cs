@@ -7,21 +7,20 @@ using System.Collections.Generic;
 
 namespace Project.States
 {
-    internal class OptionState : State
+    internal class OptionState : NavigableState
     {
         private GraphicsDeviceManager _graphics;
-        private List<Component> _components;
 
-        public OptionState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
+        public OptionState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
+            : base(game, graphicsDevice, content)
         {
-
             _graphics = deviceManager;
 
             // Cargar texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
 
-           // Crear los botones de modo de pantalla
+            // Crear los botones de modo de pantalla
             var fullscreenButton = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(710, 400), // Ubicación central
@@ -42,56 +41,41 @@ namespace Project.States
                 Position = new Vector2(710, 925),
                 Text = "Back",
             };
-            backButton.Click += backButton_Click;
+            backButton.Click += BackButton_Click;
 
-            // Agregar los componentes a la lista
-            _components = new List<Component>()
-            {
-                fullscreenButton,
-                windowedButton,
-                backButton
-            };
+            // Agregar los botones a la lista de componentes
+            _components.Add(fullscreenButton);
+            _components.Add(windowedButton);
+            _components.Add(backButton);
+
+            _selectedIndex = 0; // Inicializar el índice seleccionado
         }
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        // Método que maneja el evento de clic en el botón de "Back"
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            spriteBatch.Begin();
-
-            foreach (var component in _components)
-                component.Draw(gameTime, spriteBatch);
-
-            spriteBatch.End();
+            _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
         }
 
+        // Cambiar entre pantalla completa y modo ventana
+        private void SetFullScreen(bool isFullScreen)
+        {
+            _graphics.IsFullScreen = isFullScreen;
+            _graphics.ApplyChanges();
+        }
+
+        // Cambiar la resolución del juego (no se usa en este ejemplo pero queda para futuras mejoras)
         private void ChangeResolution(int width, int height)
         {
-            // Cambiar la resolución del juego
             _graphics.PreferredBackBufferWidth = width;
             _graphics.PreferredBackBufferHeight = height;
             _graphics.ApplyChanges();
         }
 
-        private void SetFullScreen(bool isFullScreen)
-        {
-            // Cambiar entre pantalla completa y modo ventana
-            _graphics.IsFullScreen = isFullScreen;
-            _graphics.ApplyChanges();
-        }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
-        }
-
+        // Lógica post-actualización, opcional si quieres realizar acciones adicionales después de actualizar
         public override void PostUpdate(GameTime gameTime)
         {
-            //saca los sprites si no los necesita
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            foreach (var component in _components)
-                component.Update(gameTime);
+            // No es necesario hacer nada adicional aquí por ahora
         }
     }
 }

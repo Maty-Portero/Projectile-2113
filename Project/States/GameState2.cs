@@ -55,7 +55,7 @@ namespace Project.States
         private double powerUpDuration = 10.0;
         private double powerUpTimer = 0;
         private double powerUpSpawnChance = 0.005; // Probabilidad para el power-up ya existente
-        private double plusOneLifeSpawnChance = 0.03; // Probabilidad del nuevo power-up
+        private double plusOneLifeSpawnChance = 1; // Probabilidad del nuevo power-up
         private Texture2D[] powerUpTimerFrames;
         private int currentPowerUpFrame = 0;
         private double powerUpFrameTimer = 0;
