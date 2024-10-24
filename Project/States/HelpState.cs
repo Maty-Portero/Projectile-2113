@@ -16,10 +16,12 @@ namespace Project.States
     {
         private GraphicsDeviceManager _graphics;
 
-        public HelpState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
+        public HelpState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content, deviceManager)
         {
 
             _graphics = deviceManager;
+
+            _game.estado = 4;
             //cargamos texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var titleTexture = _content.Load<Texture2D>("Controls/Title");
@@ -34,7 +36,7 @@ namespace Project.States
             //creamos el boton de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 525),
+                Position = new Vector2(710, 600),
                 Text = "Back",
             };
 
@@ -55,10 +57,5 @@ namespace Project.States
             //saca los sprites si no los necesita
         }
 
-        public override void Update(GameTime gameTime)
-        {
-            foreach (var component in _components)
-                component.Update(gameTime);
-        }
     }
 }

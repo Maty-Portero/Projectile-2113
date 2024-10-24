@@ -11,9 +11,11 @@ namespace Project.States
         private GraphicsDeviceManager _graphics;
 
         public modeGameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
-            : base(game, graphicsDevice, content)
+            : base(game, graphicsDevice, content, deviceManager)
         {
             _graphics = deviceManager;
+
+            _game.estado = 1;
 
             // Cargar texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");

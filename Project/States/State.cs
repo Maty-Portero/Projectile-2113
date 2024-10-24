@@ -17,6 +17,8 @@ namespace Project.States
 
         protected Game1 _game;
 
+        private GraphicsDeviceManager _graphics;
+
         int lugar = 0;
 
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
@@ -24,11 +26,13 @@ namespace Project.States
         public abstract void Update(GameTime gameTime);        
         
 
-        public State(Game1 game, GraphicsDevice graphicsDevice, ContentManager content)
+        public State(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
         {
             _content = content;
             _graphicsDevice = graphicsDevice;
             _game = game;
+            _graphics = deviceManager;
+
         }
     }
 }

@@ -96,9 +96,9 @@ namespace Project.States
         float bgSpeed = 100f;
 
         public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
-            : base(game, graphicsDevice, content)
+            : base(game, graphicsDevice, content, deviceManager)
         {
-            _game.estado = 2;
+            _game.estado = 3;
 
             Instance = this;
             ContentManager = content;

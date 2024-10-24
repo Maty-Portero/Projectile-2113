@@ -94,9 +94,9 @@ namespace Project.States
         public ContentManager ContentManager { get; private set; }
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
-            : base(game, graphicsDevice, content)
+            : base(game, graphicsDevice, content, deviceManager)
         {
-            _game.estado = 1;
+            _game.estado = 2;
 
             _graphics = deviceManager;
             content.RootDirectory = "Content";

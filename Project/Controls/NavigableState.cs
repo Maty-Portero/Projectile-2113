@@ -15,10 +15,12 @@ namespace Project.Controls
         private bool _keyPressed; // Para controlar si una tecla de navegación está presionada
         private KeyboardState _currentKeyboardState; // Estado actual del teclado
         private KeyboardState _previousKeyboardState; // Estado previo del teclado
-
-        public NavigableState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content)
-            : base(game, graphicsDevice, content)
+        private GraphicsDeviceManager _graphics;
+        public NavigableState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
+            : base(game, graphicsDevice, content, deviceManager)
         {
+            _graphics = deviceManager;
+
             _components = new List<Component>();
             _selectedIndex = 0;
             _limitIndex = 0;
@@ -55,6 +57,15 @@ namespace Project.Controls
             {
                 var selectedButton = _components[_selectedIndex] as Button;
                 selectedButton?.PerformClick();
+            }
+
+            // Volver con B hacia atrás
+            if (_currentKeyboardState.IsKeyDown(Keys.B) && _previousKeyboardState.IsKeyUp(Keys.B))
+            {
+                if (_game.estado == 1 || _game.estado == 4 || _game.estado == 5)
+                {
+                    _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
+                }
             }
 
             // Actualizar el estado previo del teclado

@@ -13,7 +13,7 @@ namespace Project.States
         private SpriteFont _font; // Fuente para el puntaje
 
         public GameOverState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager, int finalScore)
-            : base(game, graphicsDevice, content)
+            : base(game, graphicsDevice, content, deviceManager)
         {
             _graphics = deviceManager;
             _finalScore = finalScore; // Asignar el puntaje final correctamente
@@ -74,9 +74,9 @@ namespace Project.States
 
         private void RestartButton_Click(object sender, EventArgs e)
         {
-            if (_game.estado == 1)
+            if (_game.estado == 2)
                 _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
-            else
+            else if (_game.estado == 3)
                 _game.ChangeState(new GameState2(_game, _graphicsDevice, _content, _graphics));
         }
 

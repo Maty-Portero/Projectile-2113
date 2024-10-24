@@ -14,6 +14,7 @@ namespace Project
         private int _currentFrame;
         private double _animationTimer;
         private const double AnimationSpeed = 0.1; // Velocidad de la animación
+        protected Game1 _game;
 
         public MiniCopter(ContentManager content, Vector2 position, Random random)
             : base(new Texture2D[0], new Texture2D[0], position, random, 2) // Vida de 2

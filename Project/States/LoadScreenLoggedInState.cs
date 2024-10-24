@@ -16,7 +16,7 @@ namespace Project.States
     {
         private GraphicsDeviceManager _graphics;
 
-        public LoadScreenLoggedInState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content)
+        public LoadScreenLoggedInState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager) : base(game, graphicsDevice, content, deviceManager)
         {
 
             _graphics = deviceManager;
@@ -64,12 +64,6 @@ namespace Project.States
         public override void PostUpdate(GameTime gameTime)
         {
             //saca los sprites si no los necesita
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            foreach (var component in _components)
-                component.Update(gameTime);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
