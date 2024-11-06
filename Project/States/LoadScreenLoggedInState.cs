@@ -28,7 +28,7 @@ namespace Project.States
 
             var explication = new Title(titleTexture, buttonFont)
             {
-                Position = new Vector2(800, 300),
+                Position = new Vector2(600, 300),
                 Text = "You've just logged in. You've gained accesed to aditional content: \n 'Infinite Mode' ",
             };
 
@@ -45,7 +45,7 @@ namespace Project.States
             //creamos el boton de exit
             var acceptButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 650),
+                Position = new Vector2(500, 650),
                 Text = "Accept",
             };
 

@@ -25,14 +25,14 @@ namespace Project.States
             // Crear los botones de modo de pantalla
             var fullscreenButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 400), // Ubicación central
+                Position = new Vector2(500, 400), // Ubicación central
                 Text = "Full Screen",
             };
             fullscreenButton.Click += (sender, e) => SetFullScreen(true);
 
             var windowedButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 500), // Justo debajo del botón de pantalla completa
+                Position = new Vector2(500, 500), // Justo debajo del botón de pantalla completa
                 Text = "Windowed",
             };
             windowedButton.Click += (sender, e) => SetFullScreen(false);
@@ -40,7 +40,7 @@ namespace Project.States
             // Crear el botón de volver
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 925),
+                Position = new Vector2(500, 925),
                 Text = "Back",
             };
             backButton.Click += BackButton_Click;

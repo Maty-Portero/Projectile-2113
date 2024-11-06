@@ -30,14 +30,14 @@ namespace Project.States
             // Crear el título de "Game Over"
             var title = new Title(titleTexture, titleFont)
             {
-                Position = new Vector2(820, 50),
+                Position = new Vector2(600, 50),
                 Text = "Game Over",
             };
 
             // Crear el botón de "Restart Level"
             var restartButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 400),
+                Position = new Vector2(500, 400),
                 Text = "Restart Level",
             };
             restartButton.Click += RestartButton_Click;
@@ -45,7 +45,7 @@ namespace Project.States
             // Crear el botón de "Back to Menu"
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 525),
+                Position = new Vector2(500, 525),
                 Text = "Back to Menu",
             };
             backButton.Click += BackButton_Click;
@@ -53,7 +53,7 @@ namespace Project.States
             // Dibujar el puntaje en la pantalla
             var scoreText = new Title(titleTexture, titleFont)
             {
-                Position = new Vector2(820, 150),
+                Position = new Vector2(600, 150),
                 Text = $"Score: {_finalScore}",
 
             };

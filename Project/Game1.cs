@@ -12,6 +12,10 @@ namespace Project
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        RenderTarget2D gameplayTarget;
+        int gameplayWidth = 1500; // Ancho del área de gameplay
+        int gameplayHeight = 1080; // Alto del área de gameplay
+
 
         Vector2 playerPosition;
 
@@ -79,6 +83,7 @@ namespace Project
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _currentState = new MenuState(this, _graphics.GraphicsDevice, Content, _graphics);
+            gameplayTarget = new RenderTarget2D(GraphicsDevice, gameplayWidth, gameplayHeight);
 
             // TODO: use this.Content to load your game content here
             myBackground = new ScrollingBackground();
@@ -127,8 +132,27 @@ namespace Project
 
         protected override void Draw(GameTime gameTime)
         {
+            GraphicsDevice.SetRenderTarget(gameplayTarget);
             _graphics.GraphicsDevice.Clear(Color.SkyBlue);
-            _currentState.Draw(gameTime, _spriteBatch);
+            _currentState.Draw(gameTime, _spriteBatch);          
+
+            // Cambiar de nuevo al Render Target predeterminado
+            GraphicsDevice.SetRenderTarget(null);
+
+            // Dibujar en la pantalla completa
+            GraphicsDevice.Clear(Color.CornflowerBlue); // Color de fondo de la pantalla completa
+
+            _spriteBatch.Begin();
+
+            // Dibuja el Render Target (gameplay) en una sección de la pantalla
+            _spriteBatch.Draw(gameplayTarget, new Rectangle(0, 0, gameplayWidth, gameplayHeight), Color.White);
+
+            // Dibuja la información de la UI en otra sección de la pantalla
+            // ejemplo: spriteBatch.DrawString(font, "Puntuación: 1000", new Vector2(850, 50), Color.White);
+
+            _spriteBatch.End();
+
+
             base.Draw(gameTime);
         }
     }

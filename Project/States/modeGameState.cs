@@ -24,7 +24,7 @@ namespace Project.States
             // Crear el botón de "Stage Mode"
             var mode1Button = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 275),
+                Position = new Vector2(500, 275),
                 Text = "Stage Mode",
             };
             mode1Button.Click += Mode1Button_Click;
@@ -32,7 +32,7 @@ namespace Project.States
             // Crear el botón de "Infinite Mode"
             var mode2Button = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 400),
+                Position = new Vector2(500, 400),
                 Text = "Infinite Mode",
             };
             mode2Button.Click += Mode2Button_Click;
@@ -40,7 +40,7 @@ namespace Project.States
             // Crear el botón de "Back"
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 525),
+                Position = new Vector2(500, 525),
                 Text = "Back",
             };
             backButton.Click += BackButton_Click;

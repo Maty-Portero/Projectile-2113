@@ -22,6 +22,7 @@ namespace Project.States
         int deadZone;
 
         private GraphicsDeviceManager _graphics;
+        private GraphicsDevice grafikitos;
         private SpriteBatch _spriteBatch;
 
         // Bullet variables
@@ -190,7 +191,7 @@ namespace Project.States
                 new Vector2(60, 30),
                 new Vector2(110, 30)
             };
-
+            
             // Set power-up spawn chance
             powerUpSpawnChance = 0.05; // 50% de probabilidad de aparición del power-up
 

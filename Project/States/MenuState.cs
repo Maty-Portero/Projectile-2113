@@ -28,7 +28,7 @@ namespace Project.States
             // Crear título
             var title = new Title(titleTexture, titleFont)
             {
-                Position = new Vector2(820, 50),
+                Position = new Vector2(600, 50),
                 Text = "Projectile 2113",
             };
 
@@ -54,28 +54,28 @@ namespace Project.States
             // Crear botones
             var playButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 275),
+                Position = new Vector2(500, 275),
                 Text = "Play",
             };
             playButton.Click += PlayButton_Click;
 
             var helpButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 400),
+                Position = new Vector2(500, 400),
                 Text = "How To Play",
             };
             helpButton.Click += HelpButton_Click;
 
             var optionsButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 525),
+                Position = new Vector2(500, 525),
                 Text = "Settings",
             };
             optionsButton.Click += OptionsButton_Click;
 
             var exitButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(710, 650),
+                Position = new Vector2(500, 650),
                 Text = "Exit",
             };
             exitButton.Click += ExitButton_Click;
