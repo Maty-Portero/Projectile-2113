@@ -92,9 +92,10 @@ namespace Project.States
 
         // Background variables
         Texture2D backgroundTexture;
-        Vector2 bgPosition1, bgPosition2;
+        Texture2D buildingsTexture;
+        Texture2D treesTexture;
+        Vector2 bgPosition1, bgPosition2, treesPosition2, buildingsPosition2;
         float bgSpeed = 100f;
-
         public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content, deviceManager)
         {
@@ -118,10 +119,15 @@ namespace Project.States
 
             random = new Random();
 
-            backgroundTexture = content.Load<Texture2D>("background");
+            backgroundTexture = content.Load<Texture2D>("bgStreets1");
+            treesTexture = content.Load<Texture2D>("bgTrees1");
+            buildingsTexture = content.Load<Texture2D>("bgBuildings1");
 
             bgPosition1 = Vector2.Zero;
             bgPosition2 = new Vector2(0, -backgroundTexture.Height);
+            treesPosition2 = new Vector2(0, -treesTexture.Height);
+            buildingsPosition2 = new Vector2(0, -buildingsTexture.Height);
+
 
             playerTexture = content.Load<Texture2D>("Player_Sprite");
             damagedPlayerTexture = content.Load<Texture2D>("Player_Sprite_Damaged");
@@ -205,7 +211,14 @@ namespace Project.States
         {
             spriteBatch.Begin();
             spriteBatch.Draw(backgroundTexture, bgPosition1, Color.White);
+ 
             spriteBatch.Draw(backgroundTexture, bgPosition2, Color.White);
+            spriteBatch.Draw(treesTexture, bgPosition1, Color.White);
+
+            spriteBatch.Draw(treesTexture, treesPosition2, Color.White);
+            spriteBatch.Draw(buildingsTexture, bgPosition1, Color.White);
+
+            spriteBatch.Draw(buildingsTexture, buildingsPosition2, Color.White);
             string roundText = $"Infinite Mode - Round {round}";
             spriteBatch.DrawString(font, roundText, new Vector2(20, 0), Color.White);
 

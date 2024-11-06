@@ -1254,3 +1254,6 @@ C:\xampp\htdocs\Portero 5°10°\Projectile-2113\Project\bin\Debug\net6.0\Content
 C:\xampp\htdocs\Portero 5°10°\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_099.xnb
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\miniCopterSprite_3.xnb
 D:\Data\Documents\GitHub\Projectile-2113\Project\bin\Debug\net6.0\Content\starfield.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\bgBuildings1.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\bgStreets1.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\bgTrees1.xnb
