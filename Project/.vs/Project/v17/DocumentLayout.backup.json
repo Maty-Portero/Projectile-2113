@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\states\\gamestate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\minicopter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:minicopter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\minicopter2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:minicopter2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\states\\gamefinishedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamefinishedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MiniCopter2.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\MiniCopter2.cs",
+              "RelativeDocumentMoniker": "MiniCopter2.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\MiniCopter2.cs",
+              "RelativeToolTip": "MiniCopter2.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAwwGEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T18:59:57.573Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -50,16 +83,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Enemy.cs",
+              "RelativeDocumentMoniker": "Enemy.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Enemy.cs",
+              "RelativeToolTip": "Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T18:52:58.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameState2.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState2.cs",
+              "RelativeDocumentMoniker": "States\\GameState2.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState2.cs",
+              "RelativeToolTip": "States\\GameState2.cs",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAowDwBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T18:52:55.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MiniCopter.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\MiniCopter.cs",
+              "RelativeDocumentMoniker": "MiniCopter.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\MiniCopter.cs",
+              "RelativeToolTip": "MiniCopter.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowGQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T18:48:28.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameFinishedState.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameFinishedState.cs",
+              "RelativeDocumentMoniker": "States\\GameFinishedState.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameFinishedState.cs",
+              "RelativeToolTip": "States\\GameFinishedState.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T18:42:52.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAmwI4AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T19:54:40.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T19:54:40.281Z"
             },
             {
               "$type": "Document",
@@ -69,7 +153,7 @@
               "RelativeDocumentMoniker": "States\\GameState.cs",
               "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState.cs",
               "RelativeToolTip": "States\\GameState.cs",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAwwMsAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAgwGcBAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T20:39:13.141Z",
               "EditorCaption": ""

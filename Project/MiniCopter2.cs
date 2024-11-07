@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Project
 {
-    public class MiniCopter : Enemy
+    public class MiniCopter2 : Enemy
     {
         private List<Texture2D> _sprites;
         private List<Texture2D> _damagedSprites;
@@ -16,7 +16,7 @@ namespace Project
         private const double AnimationSpeed = 0.1; // Velocidad de la animación
         protected Game1 _game;
 
-        public MiniCopter(ContentManager content, Vector2 position, Random random)
+        public MiniCopter2(ContentManager content, Vector2 position, Random random)
             : base(new Texture2D[0], new Texture2D[0], position, random, 2) // Vida de 2
         {
             // Cargar los sprites del MiniCopter
@@ -97,8 +97,8 @@ namespace Project
 
         public void FireProjectile()
         {
-            var projectile = new MiniCopterBullet(GameState.Instance.ContentManager, new Vector2(Position.X, Position.Y + 10));
-            GameState.Instance.AddEnemyBullet(projectile);
+            var projectile = new MiniCopterBullet(GameState2.Instance.ContentManager, new Vector2(Position.X, Position.Y + 10));
+            GameState2.Instance.AddEnemyBullet(projectile);
         }
 
     }

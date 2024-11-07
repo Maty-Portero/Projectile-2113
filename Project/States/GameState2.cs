@@ -314,7 +314,7 @@ namespace Project.States
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
-                enemies.Add(new MiniCopter(_content, new Vector2(xPosition, yPosition), random));
+                enemies.Add(new MiniCopter2(_content, new Vector2(xPosition, yPosition), random));
             }
         }
 

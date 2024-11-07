@@ -67,6 +67,8 @@ namespace Project.States
 
         // Score variables
         private int score;
+
+        public int Score { get { return score; } set { score = value; } }
         private SpriteFont font;
 
         // Points animation variables
@@ -84,8 +86,6 @@ namespace Project.States
 
         private bool stageCompleted;
         private double stageCompletionTimer;
-
-        private int currentScore = 0; // Define la variable para el puntaje
 
 
         // Singleton instance for GameState
@@ -203,13 +203,12 @@ namespace Project.States
         {
             spriteBatch.Begin();
 
-            // Draw stage and round
             string stageText = $"Stage {stage} - Round {round}";
-            spriteBatch.DrawString(font, stageText, new Vector2(20, 0), Color.White);
+            spriteBatch.DrawString(font, stageText, new Vector2(10, 10), Color.White);
 
             // Draw score
             string scoreText = $"SCORE: {score.ToString("D7")}";
-            spriteBatch.DrawString(font, scoreText, new Vector2(20, 20), Color.White);
+            spriteBatch.DrawString(font, scoreText, new Vector2(10, 30), Color.White);
 
             Texture2D currentTexture;
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))
@@ -291,6 +290,7 @@ namespace Project.States
                 Vector2 textSize = font.MeasureString(completionText);
                 Vector2 textPosition = new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
                 spriteBatch.DrawString(font, completionText, textPosition, Color.White);
+                _game.ChangeState(new GameFinishedState(_game, _graphicsDevice, _content, _graphics, score));
             }
 
             spriteBatch.End();

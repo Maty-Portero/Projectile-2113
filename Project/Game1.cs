@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using Project.States;
 using System.Reflection.Metadata;
+using Microsoft.Xna.Framework.Content;
 
 namespace Project
 {
@@ -15,7 +16,6 @@ namespace Project
         RenderTarget2D gameplayTarget;
         int gameplayWidth = 1500; // Ancho del área de gameplay
         int gameplayHeight = 1080; // Alto del área de gameplay
-
 
         Vector2 playerPosition;
 
@@ -29,6 +29,8 @@ namespace Project
         {
             _nextState = state;
         }
+
+        public ContentManager ContentManager { get; private set; }
 
         public Game1()
         {
@@ -149,7 +151,6 @@ namespace Project
 
             // Dibuja la información de la UI en otra sección de la pantalla
             // ejemplo: spriteBatch.DrawString(font, "Puntuación: 1000", new Vector2(850, 50), Color.White);
-
             _spriteBatch.End();
 
 
