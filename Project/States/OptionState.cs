@@ -16,7 +16,7 @@ namespace Project.States
         {
             _graphics = deviceManager;
 
-            _game.estado = 5;
+            _game.estado = 6;
 
             // Cargar texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");

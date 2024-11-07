@@ -37,20 +37,29 @@ namespace Project.States
             };
             mode2Button.Click += Mode2Button_Click;
 
+            // Crear el botón de "Infinite Mode"
+            var mode3Button = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(500, 525),
+                Text = "Versus Mode",
+            };
+            mode3Button.Click += Mode3Button_Click;
+
             // Crear el botón de "Back"
             var backButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(500, 525),
+                Position = new Vector2(500, 650),
                 Text = "Back",
             };
             backButton.Click += BackButton_Click;
 
             // Agregar los botones a la lista de componentes
             _components.Add(mode1Button);
-            // Si el jugador está logueado, agregar el botón "Infinite Mode"
+            // Si el jugador está logueado, agregar el botón "Infinite Mode" y el "Versus Mode"
             if (playerData.loggedIn)
             {
                 _components.Add(mode2Button);
+                _components.Add(mode3Button);
             }
             _components.Add(backButton);
 
@@ -69,6 +78,12 @@ namespace Project.States
         private void Mode2Button_Click(object sender, EventArgs e)
         {
             _game.ChangeState(new GameState2(_game, _graphicsDevice, _content, _graphics));
+        }
+
+        // Método que maneja el clic en el botón "Versus Mode"
+        private void Mode3Button_Click(object sender, EventArgs e)
+        {
+            _game.ChangeState(new GameState3(_game, _graphicsDevice, _content, _graphics));
         }
 
         // Método que maneja el clic en el botón "Back"

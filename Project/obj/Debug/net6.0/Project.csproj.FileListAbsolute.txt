@@ -1403,3 +1403,4 @@ C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprit
 C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_098.xnb
 C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\timerSprite_099.xnb
 F:\Projectile-2113\Project\bin\Debug\net6.0\Content\visualizer.xnb
+C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\visualizer.xnb

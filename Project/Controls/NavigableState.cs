@@ -62,7 +62,7 @@ namespace Project.Controls
             // Volver con B hacia atrás
             if (_currentKeyboardState.IsKeyDown(Keys.B) && _previousKeyboardState.IsKeyUp(Keys.B))
             {
-                if (_game.estado == 1 || _game.estado == 4 || _game.estado == 5)
+                if (_game.estado == 1 || _game.estado == 5 || _game.estado == 6)
                 {
                     _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
                 }
