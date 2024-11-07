@@ -1,3 +1,8 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+<<<<<<< Updated upstream
 "C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Player_Sprite.png","C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",510,4181,0,0856512
 "C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Player_Sprite.webp","C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",218,16469,0,0028279
+=======
+"F:/Projectile-2113/Project/Content/Player_Sprite.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",510,4181,0,0933443
+"F:/Projectile-2113/Project/Content/Player_Sprite.webp","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",218,16469,0,0032793
+>>>>>>> Stashed changes
