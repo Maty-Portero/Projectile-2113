@@ -24,6 +24,7 @@ namespace Project
         private State _currentState;
 
         private State _nextState;
+        SpriteFont font;
 
         public void ChangeState(State state)
         {
@@ -61,12 +62,15 @@ namespace Project
         private Vector2 screenpos, origin, texturesize;
         private Texture2D mytexture;
         private int screenheight;
+        private int screenwidth;
 
+        //visualizer
+        public Texture2D visualizer;
         public void Load(GraphicsDevice device, Texture2D backgroundTexture)
         {
             mytexture = backgroundTexture;
             screenheight = device.Viewport.Height;
-            int screenwidth = device.Viewport.Width;
+            screenwidth = device.Viewport.Width;
 
             // Set the origin so that we're drawing from the 
             // center of the top edge.
@@ -90,6 +94,8 @@ namespace Project
             // TODO: use this.Content to load your game content here
             myBackground = new ScrollingBackground();
             Texture2D background = Content.Load<Texture2D>("background");
+            visualizer = Content.Load<Texture2D>("visualizer");
+            font = Content.Load<SpriteFont>("Fonts/ArcadeFont");
             myBackground.Load(GraphicsDevice, background);
 
             GraphicsDevice.Clear(Color.SkyBlue);
@@ -142,7 +148,7 @@ namespace Project
             GraphicsDevice.SetRenderTarget(null);
 
             // Dibujar en la pantalla completa
-            GraphicsDevice.Clear(Color.CornflowerBlue); // Color de fondo de la pantalla completa
+            GraphicsDevice.Clear(Color.Black); // Color de fondo de la pantalla completa
 
             _spriteBatch.Begin();
 
@@ -150,7 +156,13 @@ namespace Project
             _spriteBatch.Draw(gameplayTarget, new Rectangle(0, 0, gameplayWidth, gameplayHeight), Color.White);
 
             // Dibuja la información de la UI en otra sección de la pantalla
+<<<<<<< Updated upstream
             // ejemplo: spriteBatch.DrawString(font, "Puntuación: 1000", new Vector2(850, 50), Color.White);
+=======
+            _spriteBatch.Draw(visualizer, new Rectangle(1500, 0, 500, 1080), Color.White);
+            _spriteBatch.DrawString(font, "Score: 1000", new Vector2(1500 + 50, 50), Color.White);
+
+>>>>>>> Stashed changes
             _spriteBatch.End();
 
 
