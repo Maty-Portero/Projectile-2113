@@ -17,7 +17,7 @@ namespace Project.States
         {
             _graphics = deviceManager;
             _finalScore = finalScore; // Asignar el puntaje final correctamente
-
+            playerData.highscore = _finalScore;
             // Cargar texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
             var titleTexture = _content.Load<Texture2D>("Controls/Title");

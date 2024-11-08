@@ -55,7 +55,7 @@ namespace Project.States
         private double powerUpDuration = 10.0;
         private double powerUpTimer = 0;
         private double powerUpSpawnChance = 0.005; // Probabilidad para el power-up ya existente
-        private double plusOneLifeSpawnChance = 1; // Probabilidad del nuevo power-up
+        private double plusOneLifeSpawnChance = 0.005; // Probabilidad del nuevo power-up
         private Texture2D[] powerUpTimerFrames;
         private int currentPowerUpFrame = 0;
         private double powerUpFrameTimer = 0;
@@ -184,7 +184,7 @@ namespace Project.States
 
             CreateEnemies();
 
-            playerPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
+            playerPosition = new Vector2(1500 / 2, _graphics.PreferredBackBufferHeight / 2);
 
             // Initialize score
             score = 0;
@@ -276,7 +276,7 @@ namespace Project.States
             {
                 string message = $"Next round in {nextRoundRemainingSeconds} seconds";
                 Vector2 messageSize = font.MeasureString(message);
-                Vector2 messagePosition = new Vector2((_graphics.PreferredBackBufferWidth - messageSize.X) / 2, _graphics.PreferredBackBufferHeight / 2);
+                Vector2 messagePosition = new Vector2((1500 - messageSize.X) / 2, _graphics.PreferredBackBufferHeight / 2);
                 spriteBatch.DrawString(font, message, messagePosition, Color.White);
             }
 
@@ -305,14 +305,14 @@ namespace Project.States
 
             for (int i = 0; i < numberOfEnemies; i++)
             {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int xPosition = random.Next(0, 1500 - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 5));
             }
 
             for (int i = 0; i < numberOfMiniCopters; i++)
             {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int xPosition = random.Next(0, 1500 - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
                 enemies.Add(new MiniCopter2(_content, new Vector2(xPosition, yPosition), random));
             }
@@ -443,9 +443,9 @@ namespace Project.States
 
             playerPosition += direction * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (playerPosition.X > _graphics.PreferredBackBufferWidth - playerTexture.Width / 2)
+            if (playerPosition.X > 1500 - playerTexture.Width / 2)
             {
-                playerPosition.X = _graphics.PreferredBackBufferWidth - playerTexture.Width / 2;
+                playerPosition.X = 1500 - playerTexture.Width / 2;
             }
             else if (playerPosition.X < playerTexture.Width / 2)
             {

@@ -13,7 +13,8 @@ namespace Project.Controls
         };
 
         private int currentIndex = 0;
-        public bool Success { get; private set; }
+        bool success = false;
+        public bool Success { get { return success; } set { success = value; } }
 
         private KeyboardState previousKeyState;
 

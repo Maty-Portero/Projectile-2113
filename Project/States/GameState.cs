@@ -171,7 +171,7 @@ namespace Project.States
 
             CreateEnemiesRound1();
 
-            playerPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
+            playerPosition = new Vector2(1050 / 2, _graphics.PreferredBackBufferHeight / 2);
 
             // Initialize score
             score = 0;
@@ -280,7 +280,7 @@ namespace Project.States
             {
                 string completionText = $"Round completed, next round starting in {remainingSeconds} seconds";
                 Vector2 textSize = font.MeasureString(completionText);
-                Vector2 textPosition = new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
+                Vector2 textPosition = new Vector2((1050 - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
                 spriteBatch.DrawString(font, completionText, textPosition, Color.White);
             }
 
@@ -288,7 +288,7 @@ namespace Project.States
             {
                 string completionText = "Stage completed!";
                 Vector2 textSize = font.MeasureString(completionText);
-                Vector2 textPosition = new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
+                Vector2 textPosition = new Vector2((1050 - textSize.X) / 2, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2);
                 spriteBatch.DrawString(font, completionText, textPosition, Color.White);
                 _game.ChangeState(new GameFinishedState(_game, _graphicsDevice, _content, _graphics, score));
             }
@@ -301,7 +301,7 @@ namespace Project.States
             // Create 3 enemies on the right side
             for (int i = 0; i < 3; i++)
             {
-                int xPosition = _graphics.PreferredBackBufferWidth - enemyTexture[0].Width;
+                int xPosition = 1050 - enemyTexture[0].Width;
                 int yPosition = i * (enemyTexture[0].Height + 10);
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 5)); // Cambiado a 5 golpes
             }
@@ -320,15 +320,15 @@ namespace Project.States
         {
             Vector2[] positions = new Vector2[]
             {
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, 0),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 + 5, enemyTexture[0].Height + 5),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 15, (enemyTexture[0].Height + 5) * 2), // Ajuste aquí para mover más a la derecha
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
-                new Vector2(_graphics.PreferredBackBufferWidth / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
+                new Vector2(1050 / 2 - enemyTexture[0].Width / 2, 0),
+                new Vector2(1050 / 2 - enemyTexture[0].Width - 5, enemyTexture[0].Height + 5),
+                new Vector2(1050 / 2 + 5, enemyTexture[0].Height + 5),
+                new Vector2(1050 / 2 - enemyTexture[0].Width * 1.5f - 10, (enemyTexture[0].Height + 5) * 2),
+                new Vector2(1050 / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 2),
+                new Vector2(1050 / 2 + enemyTexture[0].Width / 2 + 15, (enemyTexture[0].Height + 5) * 2), // Ajuste aquí para mover más a la derecha
+                new Vector2(1050 / 2 - enemyTexture[0].Width * 2 - 15, (enemyTexture[0].Height + 5) * 3),
+                new Vector2(1050 / 2 - enemyTexture[0].Width / 2, (enemyTexture[0].Height + 5) * 3),
+                new Vector2(1050 / 2 + enemyTexture[0].Width / 2 + 10, (enemyTexture[0].Height + 5) * 3),
             };
 
             foreach (var pos in positions)
@@ -341,7 +341,7 @@ namespace Project.States
         {
             for (int i = 0; i < 9; i++)
             {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int xPosition = random.Next(0, 1050 - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 5)); // Cambiado a 5 golpes
             }
@@ -352,7 +352,7 @@ namespace Project.States
             // Añadir 5 enemigos normales
             for (int i = 0; i < 5; i++)
             {
-                int xPosition = random.Next(100, _graphics.PreferredBackBufferWidth - 100);
+                int xPosition = random.Next(100, 1050 - 100);
                 int yPosition = random.Next(50, 150);
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 5)); // Cambiado a 5 golpes
             }
@@ -360,7 +360,7 @@ namespace Project.States
             // Añadir 6 MiniCopters
             for (int i = 0; i < 6; i++)
             {
-                int xPosition = random.Next(100, _graphics.PreferredBackBufferWidth - 100);
+                int xPosition = random.Next(100, 1050 - 100);
                 int yPosition = random.Next(50, 150);
                 enemies.Add(new MiniCopter(ContentManager, new Vector2(xPosition, yPosition), random));
             }
@@ -371,7 +371,7 @@ namespace Project.States
             // Crear 10 enemigos MiniCopter en posiciones aleatorias
             for (int i = 0; i < 10; i++)
             {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int xPosition = random.Next(0, 1050 - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
                 enemies.Add(new MiniCopter(ContentManager, new Vector2(xPosition, yPosition), random));
             }
@@ -379,7 +379,7 @@ namespace Project.States
             // Mantener los enemigos originales
             for (int i = 0; i < 10; i++)
             {
-                int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
+                int xPosition = random.Next(0, 1050 - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
                 enemies.Add(new Enemy(enemyTexture, enemyDamagedTexture, new Vector2(xPosition, yPosition), random, 5)); // Cambiado a 5 golpes
             }
@@ -390,7 +390,7 @@ namespace Project.States
         {
             for (int i = 0; i < 3; i++)
             {
-                int xPosition = random.Next(100, _graphics.PreferredBackBufferWidth - 100);
+                int xPosition = random.Next(100, 1050 - 100);
                 int yPosition = random.Next(50, 150);
                 enemies.Add(new MiniCopter(ContentManager, new Vector2(xPosition, yPosition), random));
             }
@@ -501,9 +501,9 @@ namespace Project.States
             playerPosition += direction * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // Mantén al jugador dentro de los límites de la pantalla
-            if (playerPosition.X > _graphics.PreferredBackBufferWidth - playerTexture.Width / 2)
+            if (playerPosition.X > 1500 - playerTexture.Width / 2)
             {
-                playerPosition.X = _graphics.PreferredBackBufferWidth - playerTexture.Width / 2;
+                playerPosition.X = 1500 - playerTexture.Width / 2;
             }
             else if (playerPosition.X < playerTexture.Width / 2)
             {
@@ -615,7 +615,7 @@ namespace Project.States
                 {
                     powerUpPositions[i] = new Vector2(powerUpPositions[i].X, powerUpPositions[i].Y + 100f * (float)gameTime.ElapsedGameTime.TotalSeconds); // Velocidad de caída del power-up
 
-                    if (powerUpPositions[i].Y > _graphics.PreferredBackBufferHeight)
+                    if (powerUpPositions[i].Y > 1050)
                     {
                         powerUpActiveList[i] = false;
                     }

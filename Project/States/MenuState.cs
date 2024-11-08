@@ -11,13 +11,23 @@ namespace Project.States
     internal class MenuState : NavigableState
     {
         private GraphicsDeviceManager _graphics;
+        // Variables de fondo
+        private Texture2D backgroundTexture;
+        private Vector2 bgPosition1, bgPosition2;
+        private float bgSpeed = 50f; // Ajusta la velocidad del desplazamiento
 
         public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content, deviceManager)
         {
             _graphics = deviceManager;
-
             _game.estado = 0;
+
+            // Cargar textura de fondo
+            backgroundTexture = content.Load<Texture2D>("bgStreets1");
+
+            // Inicializar posiciones para el scrolling
+            bgPosition1 = Vector2.Zero;
+            bgPosition2 = new Vector2(0, -backgroundTexture.Height);
 
             // Cargar texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
@@ -86,11 +96,11 @@ namespace Project.States
             _components.Add(optionsButton);
             _components.Add(exitButton);
             _components.Add(logInButton);
-            _components.Add(title);
+            //_components.Add(title);
             _components.Add(gameby);
 
             _selectedIndex = 0; // Inicializar el índice seleccionado
-            _limitIndex = 2;
+            _limitIndex = 1;
         }
 
         // Métodos que responden a los eventos de clic
@@ -118,7 +128,40 @@ namespace Project.States
         {
             _game.Exit(); // Salir del juego
         }
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+            // Actualizar la posición del fondo
+            bgPosition1.Y += bgSpeed * deltaTime;
+            bgPosition2.Y += bgSpeed * deltaTime;
+
+            // Reiniciar posiciones para el efecto de bucle
+            if (bgPosition1.Y >= backgroundTexture.Height)
+            {
+                bgPosition1.Y = bgPosition2.Y - backgroundTexture.Height;
+            }
+            if (bgPosition2.Y >= backgroundTexture.Height)
+            {
+                bgPosition2.Y = bgPosition1.Y - backgroundTexture.Height;
+            }
+        }
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            base.Draw(gameTime, spriteBatch);
+            spriteBatch.Begin();
+
+            // Dibujar el fondo desplazado
+            spriteBatch.Draw(backgroundTexture, bgPosition1, Color.White);
+            spriteBatch.Draw(backgroundTexture, bgPosition2, Color.White);
+
+            // Dibujar los demás elementos del menú
+            foreach (var component in _components)
+                component.Draw(gameTime, spriteBatch);
+
+            spriteBatch.End();
+        }
         // Este método es opcional, lo mantienes si necesitas hacer limpieza después de actualizar
         public override void PostUpdate(GameTime gameTime)
         {

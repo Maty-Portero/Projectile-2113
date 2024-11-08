@@ -96,6 +96,19 @@ namespace Project.States
         Texture2D treesTexture;
         Vector2 bgPosition1, bgPosition2, treesPosition2, buildingsPosition2;
         float bgSpeed = 100f;
+
+        // Player 2
+        Vector2 player2Position;
+        float player2Speed;
+        int player2Lives = 3;
+        List<PlayerBullet> player2Bullets;
+        float player2ShootTimer;
+        bool player2PowerUpCollected = false;
+        double player2PowerUpTimer;
+        List<Vector2> player2HeartPositions;
+        int score2 = 0;
+
+
         public GameState3(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content, deviceManager)
         {
@@ -205,6 +218,18 @@ namespace Project.States
             };
 
             powerUpSpawnChance = 0.05;
+            player2Position = new Vector2(_graphics.PreferredBackBufferWidth / 4, _graphics.PreferredBackBufferHeight / 2);
+            player2Speed = 400f;
+            player2Lives = 3;
+            player2Bullets = new List<PlayerBullet>();
+            player2ShootTimer = 0f;
+            player2HeartPositions = new List<Vector2>
+{
+    new Vector2(10, 100), // Ajusta las posiciones según el layout de pantalla
+    new Vector2(60, 100),
+    new Vector2(110, 100)
+};
+
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -225,6 +250,24 @@ namespace Project.States
             string scoreText = $"SCORE: {score.ToString("D7")}";
             spriteBatch.DrawString(font, scoreText, new Vector2(20, 20), Color.White);
 
+            // Dibuja corazones del jugador 2
+            for (int i = 0; i < player2HeartPositions.Count; i++)
+            {
+                Texture2D heartTexture = i < player2Lives ? heartFullTexture : heartEmptyTexture;
+                spriteBatch.Draw(heartTexture, player2HeartPositions[i], Color.White);
+            }
+
+            // Dibuja el puntaje del jugador 2
+            string scoreText2 = $"Player 2 SCORE: {score2.ToString("D7")}";
+            spriteBatch.DrawString(font, scoreText2, new Vector2(20, 40), Color.White);
+
+            // Dibuja las balas del jugador 2
+            foreach (var bullet in player2Bullets)
+            {
+                bullet.Draw(spriteBatch);
+            }
+
+
             Texture2D currentTexture;
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))
             {
@@ -241,6 +284,20 @@ namespace Project.States
             {
                 bullet.Draw(spriteBatch);
             }
+            spriteBatch.Draw(playerTexture, player2Position, Color.White);
+
+            foreach (var bullet in player2Bullets)
+            {
+                bullet.Draw(spriteBatch);
+            }
+
+            // Dibujar corazones del jugador 2
+            for (int i = 0; i < player2HeartPositions.Count; i++)
+            {
+                Texture2D heartTexture = i < player2Lives ? heartFullTexture : heartEmptyTexture;
+                spriteBatch.Draw(heartTexture, player2HeartPositions[i], Color.White);
+            }
+
 
             foreach (var bullet in enemyBullets)
             {
@@ -314,7 +371,7 @@ namespace Project.States
             {
                 int xPosition = random.Next(0, _graphics.PreferredBackBufferWidth - enemyTexture[0].Width);
                 int yPosition = random.Next(0, _graphics.PreferredBackBufferHeight / 4);
-                enemies.Add(new MiniCopter2(_content, new Vector2(xPosition, yPosition), random));
+                enemies.Add(new MiniCopter3(_content, new Vector2(xPosition, yPosition), random));
             }
         }
 
@@ -414,34 +471,36 @@ namespace Project.States
                 bgPosition2.Y = bgPosition1.Y - backgroundTexture.Height;
             }
 
-            Vector2 direction = Vector2.Zero;
-
-            if (kstate.IsKeyDown(Keys.Up) || kstate.IsKeyDown(Keys.W))
+            // En el método Update:
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter) && player2ShootTimer <= 0)
             {
-                direction.Y -= 1;
+                ShootPlayer2();
+                player2ShootTimer = shootCooldown;
             }
 
-            if (kstate.IsKeyDown(Keys.Down) || kstate.IsKeyDown(Keys.S))
-            {
-                direction.Y += 1;
-            }
+            // Actualiza el temporizador de disparo del jugador 2
+            player2ShootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (kstate.IsKeyDown(Keys.Left) || kstate.IsKeyDown(Keys.A))
-            {
-                direction.X -= 1;
-            }
 
-            if (kstate.IsKeyDown(Keys.Right) || kstate.IsKeyDown(Keys.D))
-            {
-                direction.X += 1;
-            }
 
-            if (direction != Vector2.Zero)
-            {
-                direction.Normalize();
-            }
+            Vector2 direction1 = Vector2.Zero;
+            // Controles para el jugador 1 (existente)
+            if (kstate.IsKeyDown(Keys.W)) direction1.Y -= 1;
+            if (kstate.IsKeyDown(Keys.S)) direction1.Y += 1;
+            if (kstate.IsKeyDown(Keys.A)) direction1.X -= 1;
+            if (kstate.IsKeyDown(Keys.D)) direction1.X += 1;
 
-            playerPosition += direction * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            // Controles para el jugador 2 (nuevo)
+            Vector2 direction2 = Vector2.Zero;
+            if (kstate.IsKeyDown(Keys.Up)) direction2.Y -= 1;
+            if (kstate.IsKeyDown(Keys.Down)) direction2.Y += 1;
+            if (kstate.IsKeyDown(Keys.Left)) direction2.X -= 1;
+            if (kstate.IsKeyDown(Keys.Right)) direction2.X += 1;
+
+            player2Position += direction2 * player2Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+
+            playerPosition += direction1 * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             if (playerPosition.X > _graphics.PreferredBackBufferWidth - playerTexture.Width / 2)
             {
@@ -459,6 +518,14 @@ namespace Project.States
             else if (playerPosition.Y < playerTexture.Height / 2)
             {
                 playerPosition.Y = playerTexture.Height / 2;
+            }
+
+            void ShootPlayer2()
+            {
+                Vector2 bulletPosition = new Vector2(player2Position.X, player2Position.Y - playerTexture.Height / 2 - 15);
+                PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
+                newBullet.Velocity = new Vector2(0, -1) * bulletSpeed;
+                player2Bullets.Add(newBullet);
             }
 
             shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -508,10 +575,32 @@ namespace Project.States
                             }
 
                             break;
+
+                            
                         }
+                        /*if (player2Bullets[i].GetBounds().Intersects(enemies[j].GetBounds()))
+                            {
+                            enemies[j].TakeDamage(1);
+                            if (enemies[j].IsDead())
+                            {
+                                enemies.RemoveAt(j);
+                                score2 += 1000; // Incrementa el puntaje del jugador 2
+                            }
+                        }*/
                     }
                 }
             }
+
+            foreach (var bullet in enemyBullets)
+            {
+                if (!isInvincible && bullet.GetBounds().Intersects(GetPlayer2Bounds()))
+                {
+                    Player2TakeDamage();
+                    enemyBullets.Remove(bullet);
+                    break;
+                }
+            }
+
 
             for (int i = enemyBullets.Count - 1; i >= 0; i--)
             {
@@ -637,6 +726,19 @@ namespace Project.States
             }
 
         }
+        private Rectangle GetPlayer2Bounds()
+        {
+            float scale = 0.05f; // Ajusta el factor de escala si es necesario
+            int hitboxWidth = (int)(playerTexture.Width * scale);
+            int hitboxHeight = (int)(playerTexture.Height * scale);
+
+            return new Rectangle(
+                (int)(player2Position.X - hitboxWidth / 2),
+                (int)(player2Position.Y - hitboxHeight / 2),
+                hitboxWidth,
+                hitboxHeight
+            );
+        }
 
         private void PlayerTakeDamage()
         {
@@ -647,6 +749,17 @@ namespace Project.States
             if (playerLives <= 0)
             {
                 _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics, score));
+            }
+        }
+        private void Player2TakeDamage()
+        {
+            player2Lives--;
+            isInvincible = true;
+            invincibleTimer = 2.0;
+
+            if (player2Lives <= 0)
+            {
+                // Lógica de game over o eliminación del jugador 2
             }
         }
 

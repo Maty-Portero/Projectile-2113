@@ -55,10 +55,10 @@ namespace Project
             Position += direction * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // Cambiar dirección al llegar a los bordes de la pantalla
-            if (Position.X < 0 || Position.X > 1920 - _sprites[0].Width) // Ajustar según el tamaño de la pantalla
+            if (Position.X < 0 || Position.X > 1500 - _sprites[0].Width) // Ajustar según el tamaño de la pantalla
             {
                 direction.X = -direction.X;
-                Position = new Vector2(MathHelper.Clamp(Position.X, 0, 1920 - _sprites[0].Width), Position.Y);
+                Position = new Vector2(MathHelper.Clamp(Position.X, 0, 1500 - _sprites[0].Width), Position.Y);
             }
 
             // Lógica adicional, como disparar

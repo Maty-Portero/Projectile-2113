@@ -10,7 +10,7 @@ namespace Project
 {
     internal class playerData
     {
-        
+        public static int highscore = 0;
         public static bool loggedIn = false;
     }
 }

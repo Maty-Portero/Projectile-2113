@@ -472,6 +472,14 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/FontTitle.spritefont
 
+#begin Fonts/orbitron.png
+/importer:TextureImporter
+/processor:FontTextureProcessor
+/processorParam:FirstCharacter= 
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Color
+/build:Fonts/orbitron.png
+
 #begin HeartEmpty.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -879,6 +887,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:rocketSprite_3.png
+
+#begin spacebg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:spacebg.png
 
 #begin splash.png
 /importer:TextureImporter
@@ -2151,4 +2171,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:visualizer.png
+
+#begin woodbg.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:woodbg.jpg
 

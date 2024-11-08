@@ -77,7 +77,7 @@ namespace Project
             Position += direction * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // Cambiar dirección al llegar a los bordes de la pantalla
-            if (textures.Length > 0 && (Position.X < 0 || Position.X > 1920 - textures[0].Width)) // Ajustar según el tamaño de la pantalla
+            if (textures.Length > 0 && (Position.X < 0 || Position.X > 1500 - textures[0].Width)) // Ajustar según el tamaño de la pantalla
             {
                 direction.X = -direction.X;
             }
