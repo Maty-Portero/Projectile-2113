@@ -20,6 +20,8 @@ namespace Project
         public int gameplayHeight = 1080; // Alto del área de gameplay
         Konami konami;
         Vector2 playerPosition;
+        Visualizer visualizer;
+        public Leaderboard Leaderboard { get; private set; }
 
         public int estado = 0;
 
@@ -57,7 +59,15 @@ namespace Project
         {
             IsMouseVisible = true;
             konami = new Konami();
+            visualizer = new Visualizer(Content.Load<Texture2D>("visualizer"), Content.Load<SpriteFont>("Fonts/orbitron"), new Vector2(1500, 0));
+            Leaderboard = new Leaderboard("leaderboard.json");
+           // LEADORBARD CLEAR! Leaderboard.Clear();
             base.Initialize();
+        }
+        // Método para agregar un puntaje desde cualquier lugar en el juego
+        public void AddScore(string playerName, int score, string mode)
+        {
+            Leaderboard.AddEntry(playerName, score, mode);
         }
 
         // class ScrollingBackground
@@ -66,8 +76,6 @@ namespace Project
         private int screenheight;
         private int screenwidth;
 
-        //visualizer
-        public Texture2D visualizer;
         //splash
         Texture2D splash;
         Texture2D splash2;
@@ -105,7 +113,6 @@ namespace Project
             splash2 = Content.Load<Texture2D>("splashtwo");
             splash1 = Content.Load<Texture2D>("splashone");
             splash3 = Content.Load<Texture2D>("splashthree");
-            visualizer = Content.Load<Texture2D>("visualizer");
             font = Content.Load<SpriteFont>("Fonts/orbitron");
             myBackground.Load(GraphicsDevice, background);
 
@@ -151,10 +158,10 @@ namespace Project
                     rainbow = Color.Lerp(rainbow, new Color(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256)), 1);
                     colorAux += 0.5;
                 }
-                if (estado == 1) konami.Success = false;
+                if (estado == 2 || estado == 3) konami.Success = false;
             }
-
-            _spriteBatch.Begin();
+           // visualizer.Update(gameTime, konami); // También actualiza el visualizer según el estado de Konami, si es necesario
+        _spriteBatch.Begin();
             _spriteBatch.End();
 
             base.Update(gameTime);
@@ -179,6 +186,7 @@ namespace Project
             
             _spriteBatch.Draw(gameplayTarget, new Rectangle(0, 0, gameplayWidth, gameplayHeight), Color.White);
             _spriteBatch.Draw(splash, new Rectangle(500+1010, 0, 500 - 100, 320 - 100), Color.White);
+
             if (konami.Success)
             {
                 _spriteBatch.Draw(splash2, new Rectangle(500+1000 + 100, 150, 65, 65), rainbow);
@@ -193,22 +201,8 @@ namespace Project
                 _spriteBatch.Draw(splash1, new Rectangle(500+1000 + 230, 150, 30, 75), Color.MediumPurple);
                 _spriteBatch.Draw(splash3, new Rectangle(500+1000 + 270, 150, 65, 65), Color.SkyBlue);
             }
-            // Dibuja la información de la UI en otra sección de la pantalla
-            _spriteBatch.Draw(visualizer, new Rectangle(1500, 0, 420, 1080), Color.White);
-            _spriteBatch.DrawString(font, "Versus solo prueba", new Vector2(1500 + 50, 900), Color.Red);
-            if (konami.Success)
-            {
-                _spriteBatch.DrawString(font, "Konami ON", new Vector2(1500 + 60, 800), Color.Green);
-            }
-            else
-            {
-                _spriteBatch.DrawString(font, "Konami OFF", new Vector2(1500 + 60, 800), Color.White);
-            }
             _spriteBatch.DrawString(font, "Beta ExpoSuiza", new Vector2(1500 + 60, 1000), Color.White);
-            if (estado == 2 )
-            _spriteBatch.DrawString(font, "Last Score: " + playerData.highscore, new Vector2(1500 + 50, 500), Color.White);
-            if (estado == 3)
-            _spriteBatch.DrawString(font, "Last Score: " + playerData.highscore, new Vector2(1500 + 50, 500), Color.White);
+            visualizer.Draw(estado, _spriteBatch, konami.Success, Leaderboard);  // Dibuja el visualizer con el contenido adecuado
             _spriteBatch.End();
 
 

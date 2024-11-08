@@ -15,6 +15,7 @@ namespace Project.Controls
         private bool _keyPressed; // Para controlar si una tecla de navegación está presionada
         private KeyboardState _currentKeyboardState; // Estado actual del teclado
         private KeyboardState _previousKeyboardState; // Estado previo del teclado
+        int aux = 5;
         private GraphicsDeviceManager _graphics;
         public NavigableState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content, deviceManager)
@@ -67,6 +68,29 @@ namespace Project.Controls
                     _game.ChangeState(new MenuState(_game, _graphicsDevice, _content, _graphics));
                 }
             }
+
+            /* DEBUG: INSERTAR LEADERBOARDS ASC
+            if (_currentKeyboardState.IsKeyDown(Keys.C) && _previousKeyboardState.IsKeyUp(Keys.C))
+            {
+                
+                if (_game.estado == 1 || _game.estado == 0)
+                {
+
+                    aux += 5;
+                    _game.Leaderboard.AddEntry("konami", aux, "stage");
+                }
+            }
+            // DEBUG: INSERTAR LEADERBOARDS DES
+            if (_currentKeyboardState.IsKeyDown(Keys.X) && _previousKeyboardState.IsKeyUp(Keys.X))
+            {
+
+                if (_game.estado == 1 || _game.estado == 0)
+                {
+                    aux -= 5;
+                    _game.Leaderboard.AddEntry("konami", aux, "stage");
+                    
+                }
+            }*/
 
             // Actualizar el estado previo del teclado
             _previousKeyboardState = _currentKeyboardState;

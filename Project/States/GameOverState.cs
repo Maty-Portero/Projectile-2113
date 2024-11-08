@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Project.Controls;
 using System;
+using System.Collections.Generic;
 
 namespace Project.States
 {
@@ -24,6 +25,8 @@ namespace Project.States
             var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
             var titleFont = _content.Load<SpriteFont>("Fonts/FontTitle");
 
+            if (_game.estado == 2) game.Leaderboard.AddEntry($"ID#{game.Leaderboard.GetAllEntries().Count}", _finalScore, "stage");
+            else if (_game.estado == 3) game.Leaderboard.AddEntry($"ID#{game.Leaderboard.GetAllEntries().Count}", _finalScore, "infinite");
             // Asignar la fuente para mostrar el puntaje
             _font = titleFont;
 
