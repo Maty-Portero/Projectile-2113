@@ -114,6 +114,7 @@ namespace Project
             splash1 = Content.Load<Texture2D>("splashone");
             splash3 = Content.Load<Texture2D>("splashthree");
             font = Content.Load<SpriteFont>("Fonts/orbitron");
+
             myBackground.Load(GraphicsDevice, background);
 
             GraphicsDevice.Clear(Color.SkyBlue);

@@ -58,13 +58,19 @@ namespace Project.States
         // Player lives variables
         private Texture2D heartFullTexture;
         private Texture2D heartEmptyTexture;
+        private Texture2D _currentTexture;
+        private Texture2D rocketTexture;
+        private Texture2D rocketEmptyTexture;
         private int playerLives = 3;
         private bool isInvincible = false;
         private double invincibleTimer = 0;
         private double invincibleFlashTimer = 0;
         private const double FlashDuration = 0.1; // Duración de cada flash
         private List<Vector2> heartPositions;
+        private List<Vector2> rocketPositions;
 
+
+        private int rocketRemaining = 1;
         // Score variables
         private int score;
 
@@ -187,11 +193,22 @@ namespace Project.States
             // Initialize heart positions
             heartPositions = new List<Vector2>
             {
-                new Vector2(10, 30),  // Adjusted position to leave space for score
-                new Vector2(60, 30),
-                new Vector2(110, 30)
+                new Vector2(10, 40),  // Adjusted position to leave space for score
+                new Vector2(60, 40),
+                new Vector2(110, 40)
             };
-            
+
+            // Load rocket textures
+            rocketTexture = content.Load<Texture2D>("RocketIcon");
+            rocketEmptyTexture = content.Load<Texture2D>("RocketEmpty");
+
+            _currentTexture = rocketTexture;
+            // Initialize rocket positions
+            rocketPositions = new List<Vector2>
+            {
+                new Vector2(10, 95)
+            };
+
             // Set power-up spawn chance
             powerUpSpawnChance = 0.05; // 50% de probabilidad de aparición del power-up
 
@@ -259,6 +276,18 @@ namespace Project.States
                 else
                 {
                     spriteBatch.Draw(heartEmptyTexture, heartPositions[i], Color.White);
+                }
+            }
+
+            for (int i = 0; i < rocketPositions.Count; i++)
+            {
+                if (i < rocketRemaining)
+                {
+                    spriteBatch.Draw(rocketTexture, rocketPositions[i], Color.White);
+                }
+                else
+                {
+                    spriteBatch.Draw(rocketEmptyTexture, rocketPositions[i], Color.White);
                 }
             }
 
@@ -519,6 +548,17 @@ namespace Project.States
                 playerPosition.Y = playerTexture.Height / 2;
             }
 
+            for (int i = enemies.Count - 1; i >= 0; i--)
+                if (rocketRemaining > 0)
+                {
+                    if (kstate.IsKeyDown(Keys.K) || kstate.IsKeyDown(Keys.G))
+                    {
+                        score += 1000 * enemies.Count;
+                        enemies.Clear();
+                        rocketRemaining--;
+                    }
+                }
+
             // Disparo del jugador
             shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             if ((kstate.IsKeyDown(Keys.Space) && shootTimer <= 0) || (kstate.IsKeyDown(Keys.LeftControl) && shootTimer <= 0))
@@ -562,7 +602,7 @@ namespace Project.States
                             {
                                 enemies.RemoveAt(j);
                                 SpawnPowerUp(enemyPosition); // Spawns a power-up at the position of the killed enemy with a probability
-
+                                
                                 // Incrementar puntaje
                                 score += 1000;
 
