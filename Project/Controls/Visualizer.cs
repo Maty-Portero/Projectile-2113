@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Project.Controls;
 using Project;
 using System;
+using System.Collections.Generic;
 
 public class Visualizer
 {
@@ -88,7 +89,8 @@ public class Visualizer
                 }
                 break;
             case 2:
-                _currentText = "Kills: 10\nScore: 500\nTime: 02:30";
+
+
                 break;
             default:
                 _currentText = "Default Info";

@@ -61,6 +61,7 @@ namespace Project.States
         private double powerUpFrameTimer = 0;
         private double powerUpFrameTime = 0.1;
 
+<<<<<<< HEAD
         // Player lives variables
         private Texture2D heartFullTexture;
         private Texture2D heartEmptyTexture;
@@ -68,13 +69,19 @@ namespace Project.States
         private Texture2D rocketTexture;
         private Texture2D rocketEmptyTexture;
         private int playerLives = 3;
+=======
+        public int playerLives = 3;
+>>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de
         private int maxLives = 5; // Límite de vidas a 5
         private bool isInvincible = false;
         private double invincibleTimer = 0;
         private double invincibleFlashTimer = 0;
         private const double FlashDuration = 0.1;
+<<<<<<< HEAD
         private List<Vector2> heartPositions;
         private List<Vector2> rocketPositions;
+=======
+>>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de
 
 
         private int rocketRemaining = 1;
@@ -98,9 +105,7 @@ namespace Project.States
 
         // Background variables
         Texture2D backgroundTexture;
-        Texture2D buildingsTexture;
-        Texture2D treesTexture;
-        Vector2 bgPosition1, bgPosition2, treesPosition2, buildingsPosition2;
+        Vector2 bgPosition1, bgPosition2;
         float bgSpeed = 100f;
         public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content, deviceManager)
@@ -125,14 +130,10 @@ namespace Project.States
 
             random = new Random();
 
-            backgroundTexture = content.Load<Texture2D>("bgStreets1");
-            treesTexture = content.Load<Texture2D>("bgTrees1");
-            buildingsTexture = content.Load<Texture2D>("bgBuildings1");
+            backgroundTexture = content.Load<Texture2D>("bubbles");
 
             bgPosition1 = Vector2.Zero;
             bgPosition2 = new Vector2(0, -backgroundTexture.Height);
-            treesPosition2 = new Vector2(0, -treesTexture.Height);
-            buildingsPosition2 = new Vector2(0, -buildingsTexture.Height);
 
 
             playerTexture = content.Load<Texture2D>("Player_Sprite");
@@ -198,6 +199,7 @@ namespace Project.States
             // Initialize round
             round = 1;
 
+<<<<<<< HEAD
             // Load heart textures
             heartFullTexture = content.Load<Texture2D>("HP_Icon");
             heartEmptyTexture = content.Load<Texture2D>("HP_Icon_Loss");
@@ -222,6 +224,8 @@ namespace Project.States
                 new Vector2(10, 95)
             };
 
+=======
+>>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de
             powerUpSpawnChance = 0.05;
         }
 
@@ -231,12 +235,6 @@ namespace Project.States
             spriteBatch.Draw(backgroundTexture, bgPosition1, Color.White);
  
             spriteBatch.Draw(backgroundTexture, bgPosition2, Color.White);
-            spriteBatch.Draw(treesTexture, bgPosition1, Color.White);
-
-            spriteBatch.Draw(treesTexture, treesPosition2, Color.White);
-            spriteBatch.Draw(buildingsTexture, bgPosition1, Color.White);
-
-            spriteBatch.Draw(buildingsTexture, buildingsPosition2, Color.White);
             string roundText = $"Infinite Mode - Round {round}";
             spriteBatch.DrawString(font, roundText, new Vector2(10, 1040), Color.White);
 
@@ -278,6 +276,7 @@ namespace Project.States
                 }
             }
 
+<<<<<<< HEAD
             for (int i = 0; i < heartPositions.Count; i++)
             {
                 if (i < playerLives)
@@ -302,6 +301,8 @@ namespace Project.States
                 }
             }
 
+=======
+>>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de
             if (nextRoundStarting)
             {
                 string message = $"Next round in {nextRoundRemainingSeconds} seconds";
@@ -602,7 +603,7 @@ namespace Project.States
                             if (playerLives < maxLives)
                             {
                                 playerLives++;
-                                heartPositions.Add(new Vector2(heartPositions[playerLives - 2].X + 50, heartPositions[playerLives - 2].Y)); // Agregar un corazón más a la derecha
+                                _game.lifepowerup();
                             }
                         }
                         else

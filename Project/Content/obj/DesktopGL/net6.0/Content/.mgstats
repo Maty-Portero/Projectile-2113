@@ -1,3 +1,9 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+<<<<<<< HEAD
 "C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Player_Sprite.png","C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",510,4181,0,081484
 "C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Player_Sprite.webp","C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",218,16469,0,0016989
+=======
+"F:/Projectile-2113/Project/Content/bubbles.webp","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/bubbles.xnb","TextureProcessor","Texture2DContent",912774,12960085,0,4056168
+"F:/Projectile-2113/Project/Content/Player_Sprite.png","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",510,4181,0,0010899
+"F:/Projectile-2113/Project/Content/Player_Sprite.webp","F:/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite.xnb","TextureProcessor","Texture2DContent",218,16469,0,001464
+>>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de

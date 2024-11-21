@@ -37,14 +37,6 @@ namespace Project.States
             };
             mode2Button.Click += Mode2Button_Click;
 
-            // Crear el botón de "Infinite Mode"
-            var mode3Button = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(500, 525),
-                Text = "Versus Mode",
-            };
-            mode3Button.Click += Mode3Button_Click;
-
             // Crear el botón de "Back"
             var backButton = new Button(buttonTexture, buttonFont)
             {
@@ -59,7 +51,6 @@ namespace Project.States
             if (playerData.loggedIn)
             {
                 _components.Add(mode2Button);
-                _components.Add(mode3Button);
             }
             _components.Add(backButton);
 

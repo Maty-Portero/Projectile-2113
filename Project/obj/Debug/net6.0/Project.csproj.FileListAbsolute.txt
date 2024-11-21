@@ -417,3 +417,5 @@ C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.pdb
 C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 C:\xampp\htdocs\Mati\Projectile-2113\Project\obj\Debug\net6.0\ref\Project.dll
 C:\xampp\htdocs\Mati\Projectile-2113\Project\bin\Debug\net6.0\Content\RocketEmpty.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\RocketEmpty.xnb
+F:\Projectile-2113\Project\bin\Debug\net6.0\Content\bubbles.xnb
