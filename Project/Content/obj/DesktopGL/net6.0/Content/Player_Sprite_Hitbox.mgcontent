@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/Player_Sprite_Hitbox.png</SourceFile>
-  <SourceTime>2024-11-07T23:19:23.1941767-03:00</SourceTime>
+  <SourceTime>2024-11-21T19:46:20.4753154-03:00</SourceTime>
   <DestFile>C:/xampp/htdocs/Mati/Projectile-2113/Project/Content/bin/DesktopGL/Content/Player_Sprite_Hitbox.xnb</DestFile>
-  <DestTime>2024-11-21T19:30:30.2675221-03:00</DestTime>
+  <DestTime>2024-11-21T19:47:46.0303031-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T08:44:56-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -77,7 +77,7 @@ namespace Project.States
         private List<Vector2> rocketPositions;
 
 
-        private int rocketRemaining = 1;
+        public int rocketRemaining = 1;
         // Score variables
         private int score;
         private SpriteFont font;
@@ -192,30 +192,6 @@ namespace Project.States
             // Initialize round
             round = 1;
 
-            // Load heart textures
-            heartFullTexture = content.Load<Texture2D>("HP_Icon");
-            heartEmptyTexture = content.Load<Texture2D>("HP_Icon_Loss");
-
-            // Initialize heart positions
-            heartPositions = new List<Vector2>
-            {
-                new Vector2(10, 60),
-                new Vector2(60, 60),
-                new Vector2(110, 60)
-            };
-
-
-            // Load rocket textures
-            rocketTexture = content.Load<Texture2D>("RocketIcon");
-            rocketEmptyTexture = content.Load<Texture2D>("RocketEmpty");
-
-            _currentTexture = rocketTexture;
-            // Initialize rocket positions
-            rocketPositions = new List<Vector2>
-            {
-                new Vector2(10, 95)
-            };
-
             powerUpSpawnChance = 0.05;
         }
 
@@ -263,30 +239,6 @@ namespace Project.States
                 if (powerUpActiveList[i])
                 {
                     spriteBatch.Draw(powerUpTexture, powerUpPositions[i], Color.White);
-                }
-            }
-
-            for (int i = 0; i < heartPositions.Count; i++)
-            {
-                if (i < playerLives)
-                {
-                    spriteBatch.Draw(heartFullTexture, heartPositions[i], Color.White);
-                }
-                else
-                {
-                    spriteBatch.Draw(heartEmptyTexture, heartPositions[i], Color.White);
-                }
-            }
-
-            for (int i = 0; i < rocketPositions.Count; i++)
-            {
-                if (i < rocketRemaining)
-                {
-                    spriteBatch.Draw(rocketTexture, rocketPositions[i], Color.White);
-                }
-                else
-                {
-                    spriteBatch.Draw(rocketEmptyTexture, rocketPositions[i], Color.White);
                 }
             }
 

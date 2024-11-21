@@ -298,6 +298,20 @@ namespace Project
                     {
                         Console.WriteLine("Las texturas o posiciones de los corazones no están inicializadas.");
                     }
+                    if (rocketTexture != null && rocketEmptyTexture != null && rocketPositions != null)
+                    {
+                        for (int i = 0; i < rocketPositions.Count; i++)
+                        {
+                            if (i < gameState.rocketRemaining)
+                            {
+                                _spriteBatch.Draw(rocketTexture, rocketPositions[i], Color.White);
+                            }
+                            else
+                            {
+                                _spriteBatch.Draw(rocketEmptyTexture, rocketPositions[i], Color.White);
+                            }
+                        }
+                    }
                 }
                 else
                 {
