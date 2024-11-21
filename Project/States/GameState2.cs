@@ -61,27 +61,20 @@ namespace Project.States
         private double powerUpFrameTimer = 0;
         private double powerUpFrameTime = 0.1;
 
-<<<<<<< HEAD
         // Player lives variables
         private Texture2D heartFullTexture;
         private Texture2D heartEmptyTexture;
         private Texture2D _currentTexture;
         private Texture2D rocketTexture;
         private Texture2D rocketEmptyTexture;
-        private int playerLives = 3;
-=======
         public int playerLives = 3;
->>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de
         private int maxLives = 5; // Límite de vidas a 5
         private bool isInvincible = false;
         private double invincibleTimer = 0;
         private double invincibleFlashTimer = 0;
         private const double FlashDuration = 0.1;
-<<<<<<< HEAD
         private List<Vector2> heartPositions;
         private List<Vector2> rocketPositions;
-=======
->>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de
 
 
         private int rocketRemaining = 1;
@@ -199,7 +192,6 @@ namespace Project.States
             // Initialize round
             round = 1;
 
-<<<<<<< HEAD
             // Load heart textures
             heartFullTexture = content.Load<Texture2D>("HP_Icon");
             heartEmptyTexture = content.Load<Texture2D>("HP_Icon_Loss");
@@ -224,8 +216,6 @@ namespace Project.States
                 new Vector2(10, 95)
             };
 
-=======
->>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de
             powerUpSpawnChance = 0.05;
         }
 
@@ -276,7 +266,6 @@ namespace Project.States
                 }
             }
 
-<<<<<<< HEAD
             for (int i = 0; i < heartPositions.Count; i++)
             {
                 if (i < playerLives)
@@ -301,8 +290,6 @@ namespace Project.States
                 }
             }
 
-=======
->>>>>>> ddba72a983383dee6ef2870f98887140cf0b40de
             if (nextRoundStarting)
             {
                 string message = $"Next round in {nextRoundRemainingSeconds} seconds";
