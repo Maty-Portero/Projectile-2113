@@ -221,11 +221,11 @@ namespace Project.States
             spriteBatch.Begin();
 
             string stageText = $"Stage {stage} - Round {round}";
-            spriteBatch.DrawString(font, stageText, new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(font, stageText, new Vector2(10, 1040), Color.White);
 
             // Draw score
             string scoreText = $"SCORE: {score.ToString("D7")}";
-            spriteBatch.DrawString(font, scoreText, new Vector2(10, 30), Color.White);
+            spriteBatch.DrawString(font, scoreText, new Vector2(1225, 1040), Color.White);
 
             Texture2D currentTexture;
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))

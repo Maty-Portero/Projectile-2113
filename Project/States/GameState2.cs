@@ -64,6 +64,9 @@ namespace Project.States
         // Player lives variables
         private Texture2D heartFullTexture;
         private Texture2D heartEmptyTexture;
+        private Texture2D _currentTexture;
+        private Texture2D rocketTexture;
+        private Texture2D rocketEmptyTexture;
         private int playerLives = 3;
         private int maxLives = 5; // Límite de vidas a 5
         private bool isInvincible = false;
@@ -71,7 +74,10 @@ namespace Project.States
         private double invincibleFlashTimer = 0;
         private const double FlashDuration = 0.1;
         private List<Vector2> heartPositions;
+        private List<Vector2> rocketPositions;
 
+
+        private int rocketRemaining = 1;
         // Score variables
         private int score;
         private SpriteFont font;
@@ -204,6 +210,18 @@ namespace Project.States
                 new Vector2(110, 60)
             };
 
+
+            // Load rocket textures
+            rocketTexture = content.Load<Texture2D>("RocketIcon");
+            rocketEmptyTexture = content.Load<Texture2D>("RocketEmpty");
+
+            _currentTexture = rocketTexture;
+            // Initialize rocket positions
+            rocketPositions = new List<Vector2>
+            {
+                new Vector2(10, 95)
+            };
+
             powerUpSpawnChance = 0.05;
         }
 
@@ -220,10 +238,10 @@ namespace Project.States
 
             spriteBatch.Draw(buildingsTexture, buildingsPosition2, Color.White);
             string roundText = $"Infinite Mode - Round {round}";
-            spriteBatch.DrawString(font, roundText, new Vector2(20, 0), Color.White);
+            spriteBatch.DrawString(font, roundText, new Vector2(10, 1040), Color.White);
 
             string scoreText = $"SCORE: {score.ToString("D7")}";
-            spriteBatch.DrawString(font, scoreText, new Vector2(20, 20), Color.White);
+            spriteBatch.DrawString(font, scoreText, new Vector2(1225, 1040), Color.White);
 
             Texture2D currentTexture;
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))
@@ -269,6 +287,18 @@ namespace Project.States
                 else
                 {
                     spriteBatch.Draw(heartEmptyTexture, heartPositions[i], Color.White);
+                }
+            }
+
+            for (int i = 0; i < rocketPositions.Count; i++)
+            {
+                if (i < rocketRemaining)
+                {
+                    spriteBatch.Draw(rocketTexture, rocketPositions[i], Color.White);
+                }
+                else
+                {
+                    spriteBatch.Draw(rocketEmptyTexture, rocketPositions[i], Color.White);
                 }
             }
 
@@ -460,6 +490,17 @@ namespace Project.States
             {
                 playerPosition.Y = playerTexture.Height / 2;
             }
+
+            for (int i = enemies.Count - 1; i >= 0; i--)
+                if (rocketRemaining > 0)
+                {
+                    if (kstate.IsKeyDown(Keys.K) || kstate.IsKeyDown(Keys.G))
+                    {
+                        score += 1000 * enemies.Count;
+                        enemies.Clear();
+                        rocketRemaining--;
+                    }
+                }
 
             shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             if ((kstate.IsKeyDown(Keys.Space) && shootTimer <= 0) || (kstate.IsKeyDown(Keys.LeftControl) && shootTimer <= 0))
