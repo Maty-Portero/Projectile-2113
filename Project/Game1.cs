@@ -81,6 +81,19 @@ namespace Project
         Texture2D splash2;
         Texture2D splash1;
         Texture2D splash3;
+        Texture2D heartEmptyTexture;
+        Texture2D heartFullTexture;
+        Texture2D rocketTexture;
+        Texture2D rocketEmptyTexture;
+        private List<Vector2> rocketPositions;
+
+        // Initialize heart positions
+        List<Vector2> heartPositions = new List<Vector2>
+                {
+                    new Vector2(1600, 400),  // Adjusted position to leave space for score
+                    new Vector2(1600+50, 400),
+                    new Vector2(1600+100, 400)
+                };
         public void Load(GraphicsDevice device, Texture2D backgroundTexture)
         {
             mytexture = backgroundTexture;
@@ -113,8 +126,20 @@ namespace Project
             splash2 = Content.Load<Texture2D>("splashtwo");
             splash1 = Content.Load<Texture2D>("splashone");
             splash3 = Content.Load<Texture2D>("splashthree");
+            // Load heart textures
+            heartFullTexture = Content.Load<Texture2D>("HP_Icon");
+            heartEmptyTexture = Content.Load<Texture2D>("HP_Icon_Loss");
             font = Content.Load<SpriteFont>("Fonts/orbitron");
 
+            // Load rocket textures
+            rocketTexture = Content.Load<Texture2D>("RocketIcon");
+            rocketEmptyTexture = Content.Load<Texture2D>("RocketEmpty");
+
+            // Initialize rocket positions
+            rocketPositions = new List<Vector2>
+            {
+                new Vector2(1600, 500)
+            };
             myBackground.Load(GraphicsDevice, background);
 
             GraphicsDevice.Clear(Color.SkyBlue);
@@ -167,7 +192,10 @@ namespace Project
 
             base.Update(gameTime);
         }
-
+        public void lifepowerup()
+        {
+            heartPositions.Add(new Vector2(heartPositions[(_currentState as GameState2).playerLives - 2].X + 50, heartPositions[(_currentState as GameState2).playerLives - 2].Y)); // Agregar un corazón más a la derecha
+        }
 
         protected override void Draw(GameTime gameTime)
         {
@@ -202,7 +230,82 @@ namespace Project
                 _spriteBatch.Draw(splash1, new Rectangle(500+1000 + 230, 150, 30, 75), Color.MediumPurple);
                 _spriteBatch.Draw(splash3, new Rectangle(500+1000 + 270, 150, 65, 65), Color.SkyBlue);
             }
-            _spriteBatch.DrawString(font, "Beta ExpoSuiza", new Vector2(1500 + 60, 1000), Color.White);
+            if (estado == 2) 
+            {
+                if (_currentState is GameState gameState)
+                {
+                    // Validar que las texturas y posiciones estén inicializadas
+                    if (heartFullTexture != null && heartEmptyTexture != null && heartPositions != null)
+                    {
+                        for (int i = 0; i < heartPositions.Count; i++)
+                        {
+                            if (i < gameState.playerLives)
+                            {
+                                _spriteBatch.Draw(heartFullTexture, heartPositions[i], Color.White);
+                            }
+                            else
+                            {
+                                _spriteBatch.Draw(heartEmptyTexture, heartPositions[i], Color.White);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Las texturas o posiciones de los corazones no están inicializadas.");
+                    }
+                    if (rocketTexture != null && rocketEmptyTexture != null && rocketPositions != null)
+                    {
+                        for (int i = 0; i < rocketPositions.Count; i++)
+                        {
+                            if (i < gameState.rocketRemaining)
+                            {
+                                _spriteBatch.Draw(rocketTexture, rocketPositions[i], Color.White);
+                            }
+                            else
+                            {
+                                _spriteBatch.Draw(rocketEmptyTexture, rocketPositions[i], Color.White);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("_currentState no es GameState o está null.");
+                }
+
+
+            }
+            else if (estado == 3)
+            {
+                if (_currentState is GameState2 gameState)
+                {
+                    // Validar que las texturas y posiciones estén inicializadas
+                    if (heartFullTexture != null && heartEmptyTexture != null && heartPositions != null)
+                    {
+                        for (int i = 0; i < heartPositions.Count; i++)
+                        {
+                            if (i < gameState.playerLives)
+                            {
+                                _spriteBatch.Draw(heartFullTexture, heartPositions[i], Color.White);
+                            }
+                            else
+                            {
+                                _spriteBatch.Draw(heartEmptyTexture, heartPositions[i], Color.White);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Las texturas o posiciones de los corazones no están inicializadas.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("_currentState no es GameState o está null.");
+                }
+            }
+            
+            _spriteBatch.DrawString(font, "v1.0", new Vector2(1500 + 60, 1000), Color.White);
             visualizer.Draw(estado, _spriteBatch, konami.Success, Leaderboard);  // Dibuja el visualizer con el contenido adecuado
             _spriteBatch.End();
 

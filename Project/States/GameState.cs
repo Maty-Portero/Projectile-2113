@@ -59,18 +59,15 @@ namespace Project.States
         private Texture2D heartFullTexture;
         private Texture2D heartEmptyTexture;
         private Texture2D _currentTexture;
-        private Texture2D rocketTexture;
-        private Texture2D rocketEmptyTexture;
-        private int playerLives = 3;
+        public int playerLives = 3;
         private bool isInvincible = false;
         private double invincibleTimer = 0;
         private double invincibleFlashTimer = 0;
         private const double FlashDuration = 0.1; // Duración de cada flash
-        private List<Vector2> heartPositions;
-        private List<Vector2> rocketPositions;
 
 
-        private int rocketRemaining = 1;
+
+        public int rocketRemaining = 1;
         // Score variables
         private int score;
 
@@ -99,6 +96,12 @@ namespace Project.States
 
         // Propiedad pública para acceder al ContentManager
         public ContentManager ContentManager { get; private set; }
+        // Background variables
+        Texture2D backgroundTexture;
+        Texture2D buildingsTexture;
+        Texture2D treesTexture;
+        Vector2 bgPosition1, bgPosition2, treesPosition2, buildingsPosition2;
+        float bgSpeed = 100f;
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content, deviceManager)
@@ -120,7 +123,14 @@ namespace Project.States
             shootTimer = 0;
 
             enemyBullets = new List<EnemyBullet>();
+            backgroundTexture = content.Load<Texture2D>("bgStreets1");
+            treesTexture = content.Load<Texture2D>("bgTrees1");
+            buildingsTexture = content.Load<Texture2D>("bgBuildings1");
 
+            bgPosition1 = Vector2.Zero;
+            bgPosition2 = new Vector2(0, -backgroundTexture.Height);
+            treesPosition2 = new Vector2(0, -treesTexture.Height);
+            buildingsPosition2 = new Vector2(0, -buildingsTexture.Height);
             random = new Random();
 
             playerTexture = content.Load<Texture2D>("Player_Sprite");
@@ -186,28 +196,10 @@ namespace Project.States
             stage = 1;
             round = 1;
 
-            // Load heart textures
-            heartFullTexture = content.Load<Texture2D>("HP_Icon");
-            heartEmptyTexture = content.Load<Texture2D>("HP_Icon_Loss");
 
-            // Initialize heart positions
-            heartPositions = new List<Vector2>
-            {
-                new Vector2(10, 40),  // Adjusted position to leave space for score
-                new Vector2(60, 40),
-                new Vector2(110, 40)
-            };
 
-            // Load rocket textures
-            rocketTexture = content.Load<Texture2D>("RocketIcon");
-            rocketEmptyTexture = content.Load<Texture2D>("RocketEmpty");
 
-            _currentTexture = rocketTexture;
-            // Initialize rocket positions
-            rocketPositions = new List<Vector2>
-            {
-                new Vector2(10, 95)
-            };
+
 
             // Set power-up spawn chance
             powerUpSpawnChance = 0.05; // 50% de probabilidad de aparición del power-up
@@ -219,7 +211,15 @@ namespace Project.States
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
+            spriteBatch.Draw(backgroundTexture, bgPosition1, Color.White);
 
+            spriteBatch.Draw(backgroundTexture, bgPosition2, Color.White);
+            spriteBatch.Draw(treesTexture, bgPosition1, Color.White);
+
+            spriteBatch.Draw(treesTexture, treesPosition2, Color.White);
+            spriteBatch.Draw(buildingsTexture, bgPosition1, Color.White);
+
+            spriteBatch.Draw(buildingsTexture, buildingsPosition2, Color.White);
             string stageText = $"Stage {stage} - Round {round}";
             spriteBatch.DrawString(font, stageText, new Vector2(10, 10), Color.White);
 
@@ -263,31 +263,6 @@ namespace Project.States
                 if (powerUpActiveList[i])
                 {
                     spriteBatch.Draw(powerUpTexture, powerUpPositions[i], Color.White);
-                }
-            }
-
-            // Draw hearts
-            for (int i = 0; i < heartPositions.Count; i++)
-            {
-                if (i < playerLives)
-                {
-                    spriteBatch.Draw(heartFullTexture, heartPositions[i], Color.White);
-                }
-                else
-                {
-                    spriteBatch.Draw(heartEmptyTexture, heartPositions[i], Color.White);
-                }
-            }
-
-            for (int i = 0; i < rocketPositions.Count; i++)
-            {
-                if (i < rocketRemaining)
-                {
-                    spriteBatch.Draw(rocketTexture, rocketPositions[i], Color.White);
-                }
-                else
-                {
-                    spriteBatch.Draw(rocketEmptyTexture, rocketPositions[i], Color.White);
                 }
             }
 
@@ -499,7 +474,18 @@ namespace Project.States
         {
             var kstate = Keyboard.GetState();
             float currentSpeed = kstate.IsKeyDown(Keys.LeftShift) || kstate.IsKeyDown(Keys.RightShift) ? slowSpeed : playerSpeed;
+            bgPosition1.Y += bgSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            bgPosition2.Y += bgSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+            if (bgPosition1.Y >= backgroundTexture.Height)
+            {
+                bgPosition1.Y = bgPosition2.Y - backgroundTexture.Height;
+            }
+
+            if (bgPosition2.Y >= backgroundTexture.Height)
+            {
+                bgPosition2.Y = bgPosition1.Y - backgroundTexture.Height;
+            }
             Vector2 direction = Vector2.Zero;
 
             if (kstate.IsKeyDown(Keys.Up) || kstate.IsKeyDown(Keys.W))
