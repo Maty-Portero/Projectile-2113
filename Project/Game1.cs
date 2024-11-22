@@ -94,6 +94,13 @@ namespace Project
                     new Vector2(1600+50, 400),
                     new Vector2(1600+100, 400)
                 };
+        // Initialize heart positions
+        List<Vector2> heartPositions2 = new List<Vector2>
+                {
+                    new Vector2(1600, 300),  // Adjusted position to leave space for score
+                    new Vector2(1600+50, 300),
+                    new Vector2(1600+100, 300)
+                };
         public void Load(GraphicsDevice device, Texture2D backgroundTexture)
         {
             mytexture = backgroundTexture;
@@ -192,10 +199,6 @@ namespace Project
 
             base.Update(gameTime);
         }
-        public void lifepowerup()
-        {
-            heartPositions.Add(new Vector2(heartPositions[(_currentState as GameState2).playerLives - 2].X + 50, heartPositions[(_currentState as GameState2).playerLives - 2].Y)); // Agregar un corazón más a la derecha
-        }
 
         protected override void Draw(GameTime gameTime)
         {
@@ -230,16 +233,16 @@ namespace Project
                 _spriteBatch.Draw(splash1, new Rectangle(500+1000 + 230, 150, 30, 75), Color.MediumPurple);
                 _spriteBatch.Draw(splash3, new Rectangle(500+1000 + 270, 150, 65, 65), Color.SkyBlue);
             }
-            if (estado == 2) 
+            if (estado == 2)
             {
                 if (_currentState is GameState gameState)
                 {
                     // Validar que las texturas y posiciones estén inicializadas
-                    if (heartFullTexture != null && heartEmptyTexture != null && heartPositions != null)
+                    if (heartFullTexture != null && heartEmptyTexture != null && heartPositions != null && gameState.player != null)
                     {
                         for (int i = 0; i < heartPositions.Count; i++)
                         {
-                            if (i < gameState.playerLives)
+                            if (i < gameState.player.playerLives)
                             {
                                 _spriteBatch.Draw(heartFullTexture, heartPositions[i], Color.White);
                             }
@@ -253,11 +256,11 @@ namespace Project
                     {
                         Console.WriteLine("Las texturas o posiciones de los corazones no están inicializadas.");
                     }
-                    if (rocketTexture != null && rocketEmptyTexture != null && rocketPositions != null)
+                    if (rocketTexture != null && rocketEmptyTexture != null && rocketPositions != null && gameState.player != null)
                     {
                         for (int i = 0; i < rocketPositions.Count; i++)
                         {
-                            if (i < gameState.rocketRemaining)
+                            if (i < gameState.player.rocketRemaining)
                             {
                                 _spriteBatch.Draw(rocketTexture, rocketPositions[i], Color.White);
                             }
@@ -280,11 +283,11 @@ namespace Project
                 if (_currentState is GameState2 gameState)
                 {
                     // Validar que las texturas y posiciones estén inicializadas
-                    if (heartFullTexture != null && heartEmptyTexture != null && heartPositions != null)
+                    if (heartFullTexture != null && heartEmptyTexture != null && heartPositions != null && gameState.player != null)
                     {
                         for (int i = 0; i < heartPositions.Count; i++)
                         {
-                            if (i < gameState.playerLives)
+                            if (i < gameState.player.playerLives)
                             {
                                 _spriteBatch.Draw(heartFullTexture, heartPositions[i], Color.White);
                             }
@@ -298,11 +301,11 @@ namespace Project
                     {
                         Console.WriteLine("Las texturas o posiciones de los corazones no están inicializadas.");
                     }
-                    if (rocketTexture != null && rocketEmptyTexture != null && rocketPositions != null)
+                    if (rocketTexture != null && rocketEmptyTexture != null && rocketPositions != null && gameState.player != null)
                     {
                         for (int i = 0; i < rocketPositions.Count; i++)
                         {
-                            if (i < gameState.rocketRemaining)
+                            if (i < gameState.player.rocketRemaining)
                             {
                                 _spriteBatch.Draw(rocketTexture, rocketPositions[i], Color.White);
                             }
@@ -316,6 +319,50 @@ namespace Project
                 else
                 {
                     Console.WriteLine("_currentState no es GameState o está null.");
+                }
+            }
+            else if (estado == 4)
+            {
+                if (_currentState is GameState3 gameState)
+                {
+                    // Validar que las texturas y posiciones estén inicializadas
+                    if (heartFullTexture != null && heartEmptyTexture != null && heartPositions != null && gameState.player1 != null)
+                    {
+                        for (int i = 0; i < heartPositions.Count; i++)
+                        {
+                            if (i < gameState.player1.playerLives)
+                            {
+                                _spriteBatch.Draw(heartFullTexture, heartPositions[i], Color.White);
+                            }
+                            else
+                            {
+                                _spriteBatch.Draw(heartEmptyTexture, heartPositions[i], Color.White);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Las texturas o posiciones de los corazones no están inicializadas.");
+                    }
+
+                    if (heartFullTexture != null && heartEmptyTexture != null && heartPositions != null && gameState.player2 != null)
+                    {
+                        for (int i = 0; i < heartPositions2.Count; i++)
+                        {
+                            if (i < gameState.player2.playerLives)
+                            {
+                                _spriteBatch.Draw(heartFullTexture, heartPositions2[i], Color.White);
+                            }
+                            else
+                            {
+                                _spriteBatch.Draw(heartEmptyTexture, heartPositions2[i], Color.White);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Las texturas o posiciones de los corazones no están inicializadas.");
+                    }
                 }
             }
             

@@ -12,25 +12,10 @@ namespace Project.States
         public static GameState2 Instance { get; private set; }
 
         public ContentManager ContentManager { get; private set; }
-        Texture2D playerTexture;
-        Texture2D damagedPlayerTexture;
-        Texture2D playerTextureWithHitbox;
-        Texture2D damagedPlayerTextureWithHitbox;
-        Vector2 playerPosition;
-        float playerSpeed;
-        float slowSpeed;
-
-        int deadZone;
 
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        // Bullet variables
-        Texture2D[] bulletTextures;
-        List<PlayerBullet> bullets;
-        float shootCooldown;
-        float shootTimer;
-        float bulletSpeed = 600f;
 
         // Enemy bullet variables
         Texture2D[] enemyBulletTextures;
@@ -41,45 +26,23 @@ namespace Project.States
         Texture2D[] enemyDamagedTexture;
         List<Enemy> enemies;
         Random random;
-
+        int score2;
         // Points animation variables
         private Texture2D[] pointsAnimationFrames;
         private List<PointsAnimation> pointsAnimations;
 
         // Power-up variables
         private Texture2D powerUpTexture;
-        private Texture2D plusOneLifePowerUpTexture; // Nuevo power-up de vida extra
         private List<Vector2> powerUpPositions;
         private List<bool> powerUpActiveList;
         private bool powerUpCollected = false;
         private double powerUpDuration = 10.0;
         private double powerUpTimer = 0;
         private double powerUpSpawnChance = 0.005; // Probabilidad para el power-up ya existente
-        private double plusOneLifeSpawnChance = 0.005; // Probabilidad del nuevo power-up
         private Texture2D[] powerUpTimerFrames;
         private int currentPowerUpFrame = 0;
         private double powerUpFrameTimer = 0;
         private double powerUpFrameTime = 0.1;
-
-        // Player lives variables
-        private Texture2D heartFullTexture;
-        private Texture2D heartEmptyTexture;
-        private Texture2D _currentTexture;
-        private Texture2D rocketTexture;
-        private Texture2D rocketEmptyTexture;
-        public int playerLives = 3;
-        private int maxLives = 5; // Límite de vidas a 5
-        private bool isInvincible = false;
-        private double invincibleTimer = 0;
-        private double invincibleFlashTimer = 0;
-        private const double FlashDuration = 0.1;
-        private List<Vector2> heartPositions;
-        private List<Vector2> rocketPositions;
-
-
-        public int rocketRemaining = 1;
-        // Score variables
-        private int score;
         private SpriteFont font;
 
         // Stage and round variables
@@ -94,12 +57,14 @@ namespace Project.States
         private double nextRoundTimer;
         private int nextRoundRemainingSeconds;
 
-        private int currentScore = 0;
-
         // Background variables
         Texture2D backgroundTexture;
         Vector2 bgPosition1, bgPosition2;
         float bgSpeed = 100f;
+
+        Texture2D[] bulletTextures;
+
+        public Player player;
         public GameState2(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager)
             : base(game, graphicsDevice, content, deviceManager)
         {
@@ -111,13 +76,7 @@ namespace Project.States
             _graphics = deviceManager;
             content.RootDirectory = "Content";
 
-            playerSpeed = 400f;
-            slowSpeed = 200f;
-            deadZone = 4096;
-
-            bullets = new List<PlayerBullet>();
-            shootCooldown = 0.2f;
-            shootTimer = 0;
+            player = new Player(content);
 
             enemyBullets = new List<EnemyBullet>();
 
@@ -128,16 +87,11 @@ namespace Project.States
             bgPosition1 = Vector2.Zero;
             bgPosition2 = new Vector2(0, -backgroundTexture.Height);
 
-
-            playerTexture = content.Load<Texture2D>("Player_Sprite");
-            damagedPlayerTexture = content.Load<Texture2D>("Player_Sprite_Damaged");
-            playerTextureWithHitbox = content.Load<Texture2D>("Player_Sprite_Hitbox");
-            damagedPlayerTextureWithHitbox = content.Load<Texture2D>("Player_Sprite_Damaged_Hitbox");
-
-            // Load bullet textures
+            player.Load();
             bulletTextures = new Texture2D[2];
             bulletTextures[0] = content.Load<Texture2D>("Player_Bullet (1)");
             bulletTextures[1] = content.Load<Texture2D>("Player_Bullet (2)");
+
 
             // Load enemy bullet textures
             enemyBulletTextures = new Texture2D[3];
@@ -158,7 +112,6 @@ namespace Project.States
 
             // Load power-up textures
             powerUpTexture = content.Load<Texture2D>("PowerUp_Sprite");
-            plusOneLifePowerUpTexture = content.Load<Texture2D>("plusOneLife"); // Nuevo power-up
 
             // Load font for score
             font = content.Load<SpriteFont>("Fonts/ArcadeFont");
@@ -184,10 +137,10 @@ namespace Project.States
 
             CreateEnemies();
 
-            playerPosition = new Vector2(1500 / 2, _graphics.PreferredBackBufferHeight / 2);
+            player.playerPosition = new Vector2(1500 / 2, _graphics.PreferredBackBufferHeight / 2);
 
             // Initialize score
-            score = 0;
+            player.score = 0;
 
             // Initialize round
             round = 1;
@@ -204,22 +157,21 @@ namespace Project.States
             string roundText = $"Infinite Mode - Round {round}";
             spriteBatch.DrawString(font, roundText, new Vector2(10, 1040), Color.White);
 
-            string scoreText = $"SCORE: {score.ToString("D7")}";
+            string scoreText = $"SCORE: {player.score.ToString("D7")}";
             spriteBatch.DrawString(font, scoreText, new Vector2(1225, 1040), Color.White);
 
-            Texture2D currentTexture;
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))
             {
-                currentTexture = isInvincible && invincibleFlashTimer < FlashDuration / 2 ? damagedPlayerTextureWithHitbox : playerTextureWithHitbox;
+                player.SlowSpeed();
             }
             else
             {
-                currentTexture = isInvincible && invincibleFlashTimer < FlashDuration / 2 ? damagedPlayerTexture : playerTexture;
+                player.NormalSpeed();
             }
 
-            spriteBatch.Draw(currentTexture, playerPosition, null, Color.White, 0f, new Vector2(currentTexture.Width / 2, currentTexture.Height / 2), Vector2.One, SpriteEffects.None, 0f);
+            player.Draw(spriteBatch);
 
-            foreach (var bullet in bullets)
+            foreach (var bullet in player.bullets)
             {
                 bullet.Draw(spriteBatch);
             }
@@ -288,32 +240,6 @@ namespace Project.States
             }
         }
 
-        private void Shoot()
-        {
-            Vector2 bulletPosition = new Vector2(playerPosition.X - bulletTextures[0].Width / 2, playerPosition.Y - playerTexture.Height / 2 - 15);
-            PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
-            newBullet.Velocity = new Vector2(0, -1) * bulletSpeed;
-            bullets.Add(newBullet);
-        }
-
-        private void ShootTriple()
-        {
-            Vector2 bulletPosition = new Vector2(playerPosition.X - bulletTextures[0].Width / 2, playerPosition.Y - playerTexture.Height / 2 - 15);
-            float angleOffset = MathHelper.ToRadians(20);
-
-            PlayerBullet newBullet = new PlayerBullet(bulletPosition, bulletTextures);
-            newBullet.Velocity = new Vector2(0, -1) * bulletSpeed;
-            bullets.Add(newBullet);
-
-            PlayerBullet leftBullet = new PlayerBullet(bulletPosition, bulletTextures);
-            leftBullet.Velocity = new Vector2((float)Math.Sin(angleOffset), -(float)Math.Cos(angleOffset)) * bulletSpeed;
-            bullets.Add(leftBullet);
-
-            PlayerBullet rightBullet = new PlayerBullet(bulletPosition, bulletTextures);
-            rightBullet.Velocity = new Vector2(-(float)Math.Sin(angleOffset), -(float)Math.Cos(angleOffset)) * bulletSpeed;
-            bullets.Add(rightBullet);
-        }
-
         private void ShootEnemy()
         {
             foreach (var enemy in enemies)
@@ -336,25 +262,6 @@ namespace Project.States
                 powerUpPositions.Add(position);
                 powerUpActiveList.Add(true);
             }
-            else if (chance <= plusOneLifeSpawnChance) // Nuevo power-up de vida extra
-            {
-                powerUpPositions.Add(position);
-                powerUpActiveList.Add(true);
-                powerUpTexture = plusOneLifePowerUpTexture;
-            }
-        }
-
-        private Rectangle GetPlayerBounds()
-        {
-            float scale = 0.05f;
-            int hitboxWidth = (int)(playerTexture.Width * scale);
-            int hitboxHeight = (int)(playerTexture.Height * scale);
-            return new Rectangle(
-                (int)(playerPosition.X - hitboxWidth / 2),
-                (int)(playerPosition.Y - hitboxHeight / 2),
-                hitboxWidth,
-                hitboxHeight
-            );
         }
 
         public void AddEnemyBullet(EnemyBullet bullet)
@@ -369,7 +276,7 @@ namespace Project.States
         public override void Update(GameTime gameTime)
         {
             var kstate = Keyboard.GetState();
-            float currentSpeed = kstate.IsKeyDown(Keys.LeftShift) || kstate.IsKeyDown(Keys.RightShift) ? slowSpeed : playerSpeed;
+            float currentSpeed = kstate.IsKeyDown(Keys.LeftShift) || kstate.IsKeyDown(Keys.RightShift) ? player.slowSpeed : player.playerSpeed;
 
             bgPosition1.Y += bgSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
             bgPosition2.Y += bgSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -411,49 +318,49 @@ namespace Project.States
                 direction.Normalize();
             }
 
-            playerPosition += direction * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            player.playerPosition += direction * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (playerPosition.X > 1500 - playerTexture.Width / 2)
+            if (player.playerPosition.X > 1500 - player.playerTexture.Width / 2)
             {
-                playerPosition.X = 1500 - playerTexture.Width / 2;
+                player.playerPosition.X = 1500 - player.playerTexture.Width / 2;
             }
-            else if (playerPosition.X < playerTexture.Width / 2)
+            else if (player.playerPosition.X < player.playerTexture.Width / 2)
             {
-                playerPosition.X = playerTexture.Width / 2;
+                player.playerPosition.X = player.playerTexture.Width / 2;
             }
 
-            if (playerPosition.Y > 1035)
+            if (player.playerPosition.Y > 1035)
             {
-                playerPosition.Y = 1035;
+                player.playerPosition.Y = 1035;
             }
-            else if (playerPosition.Y < playerTexture.Height / 2)
+            else if (player.playerPosition.Y < player.playerTexture.Height / 2)
             {
-                playerPosition.Y = playerTexture.Height / 2;
+                player.playerPosition.Y = player.playerTexture.Height / 2;
             }
 
             for (int i = enemies.Count - 1; i >= 0; i--)
-                if (rocketRemaining > 0)
+                if (player.rocketRemaining > 0)
                 {
                     if (kstate.IsKeyDown(Keys.K) || kstate.IsKeyDown(Keys.G))
                     {
-                        score += 1000 * enemies.Count;
+                        player.score += 1000 * enemies.Count;
                         enemies.Clear();
-                        rocketRemaining--;
+                        player.rocketRemaining--;
                     }
                 }
-
-            shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if ((kstate.IsKeyDown(Keys.Space) && shootTimer <= 0) || (kstate.IsKeyDown(Keys.LeftControl) && shootTimer <= 0))
+                
+            player.shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if ((kstate.IsKeyDown(Keys.Space) && player.shootTimer <= 0) || (kstate.IsKeyDown(Keys.LeftControl) && player.shootTimer <= 0))
             {
                 if (powerUpCollected)
                 {
-                    ShootTriple();
+                    player.ShootTriple(bulletTextures);
                 }
                 else
                 {
-                    Shoot();
+                    player.Shoot(bulletTextures);
                 }
-                shootTimer = shootCooldown;
+                player.shootTimer = player.shootCooldown;
             }
 
             foreach (var enemy in enemies)
@@ -462,28 +369,28 @@ namespace Project.States
             }
             ShootEnemy();
 
-            for (int i = bullets.Count - 1; i >= 0; i--)
+            for (int i = player.bullets.Count - 1; i >= 0; i--)
             {
-                bullets[i].Update(gameTime);
-                if (bullets[i].Position.Y < 0)
+                player.bullets[i].Update(gameTime);
+                if (player.bullets[i].Position.Y < 0)
                 {
-                    bullets.RemoveAt(i);
+                    player.bullets.RemoveAt(i);
                 }
                 else
                 {
                     for (int j = enemies.Count - 1; j >= 0; j--)
                     {
-                        if (bullets[i].GetBounds().Intersects(enemies[j].GetBounds()))
+                        if (player.bullets[i].GetBounds().Intersects(enemies[j].GetBounds()))
                         {
                             Vector2 enemyPosition = enemies[j].Position;
                             enemies[j].TakeDamage(1);
-                            bullets.RemoveAt(i);
+                            player.bullets.RemoveAt(i);
                             if (enemies[j].IsDead())
                             {
                                 enemies.RemoveAt(j);
                                 SpawnPowerUp(enemyPosition);
 
-                                score += 1000;
+                                player.score += 1000;
 
                                 pointsAnimations.Add(new PointsAnimation(pointsAnimationFrames, enemyPosition));
                             }
@@ -501,56 +408,46 @@ namespace Project.States
                 {
                     enemyBullets.RemoveAt(i);
                 }
-                else if (!isInvincible && enemyBullets[i].GetBounds().Intersects(GetPlayerBounds()))
+                else if (!player.isInvincible && enemyBullets[i].GetBounds().Intersects(player.GetPlayerBounds()))
                 {
                     enemyBullets.RemoveAt(i);
                     PlayerTakeDamage();
                 }
             }
 
-            if (isInvincible)
+            if (player.isInvincible)
             {
-                invincibleTimer -= gameTime.ElapsedGameTime.TotalSeconds;
-                invincibleFlashTimer += gameTime.ElapsedGameTime.TotalSeconds;
+                player.invincibleTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+                player.invincibleFlashTimer += gameTime.ElapsedGameTime.TotalSeconds;
 
-                if (invincibleFlashTimer >= FlashDuration)
+                if (player.invincibleFlashTimer >= player.FlashDuration)
                 {
-                    invincibleFlashTimer = 0;
+                    player.invincibleFlashTimer = 0;
                 }
 
-                if (invincibleTimer <= 0)
+                if (player.invincibleTimer <= 0)
                 {
-                    isInvincible = false;
+                    player.isInvincible = false;
                 }
             }
 
+            // Actualizar power-up
             for (int i = 0; i < powerUpPositions.Count; i++)
             {
                 if (powerUpActiveList[i])
                 {
-                    powerUpPositions[i] = new Vector2(powerUpPositions[i].X, powerUpPositions[i].Y + 100f * (float)gameTime.ElapsedGameTime.TotalSeconds);
+                    powerUpPositions[i] = new Vector2(powerUpPositions[i].X, powerUpPositions[i].Y + 100f * (float)gameTime.ElapsedGameTime.TotalSeconds); // Velocidad de caída del power-up
 
-                    if (powerUpPositions[i].Y > _graphics.PreferredBackBufferHeight)
+                    if (powerUpPositions[i].Y > 1050)
                     {
                         powerUpActiveList[i] = false;
                     }
-                    else if (GetPlayerBounds().Intersects(new Rectangle((int)powerUpPositions[i].X, (int)powerUpPositions[i].Y, powerUpTexture.Width, powerUpTexture.Height)))
+                    else if (player.GetPlayerBounds().Intersects(new Rectangle((int)powerUpPositions[i].X, (int)powerUpPositions[i].Y, powerUpTexture.Width, powerUpTexture.Height)))
                     {
                         powerUpActiveList[i] = false;
-                        if (powerUpTexture == plusOneLifePowerUpTexture) // Recolectar el power-up de vida
-                        {
-                            if (playerLives < maxLives)
-                            {
-                                playerLives++;
-                                _game.lifepowerup();
-                            }
-                        }
-                        else
-                        {
-                            powerUpCollected = true;
-                            powerUpTimer = powerUpDuration;
-                            currentPowerUpFrame = 0;
-                        }
+                        powerUpCollected = true;
+                        powerUpTimer = powerUpDuration;
+                        currentPowerUpFrame = 0; // Reinicia la animación del power-up
                     }
                 }
             }
@@ -580,7 +477,7 @@ namespace Project.States
 
             foreach (var enemy in enemies)
             {
-                if (!isInvincible && enemy.GetBounds().Intersects(GetPlayerBounds()))
+                if (!player.isInvincible && enemy.GetBounds().Intersects(player.GetPlayerBounds()))
                 {
                     PlayerTakeDamage();
                 }
@@ -621,13 +518,13 @@ namespace Project.States
 
         private void PlayerTakeDamage()
         {
-            playerLives--;
-            isInvincible = true;
-            invincibleTimer = 2.0;
+            player.playerLives--;
+            player.isInvincible = true;
+            player.invincibleTimer = 2.0;
 
-            if (playerLives <= 0)
+            if (player.playerLives <= 0)
             {
-                _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics, score));
+                _game.ChangeState(new GameOverState(_game, _graphicsDevice, _content, _graphics, player.score, score2));
             }
         }
 

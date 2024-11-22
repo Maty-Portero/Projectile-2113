@@ -11,13 +11,16 @@ namespace Project.States
     {
         private GraphicsDeviceManager _graphics;
         private int _finalScore; // Variable para almacenar el puntaje final
+        private int _finalScore2;
         private SpriteFont _font; // Fuente para el puntaje
 
-        public GameOverState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager, int finalScore)
+        public GameOverState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager deviceManager, int finalScore,
+            int finalScore2)
             : base(game, graphicsDevice, content, deviceManager)
         {
             _graphics = deviceManager;
             _finalScore = finalScore; // Asignar el puntaje final correctamente
+            _finalScore2 = finalScore2;
             playerData.highscore = _finalScore;
             // Cargar texturas y fuentes
             var buttonTexture = _content.Load<Texture2D>("Controls/Button");
@@ -60,12 +63,24 @@ namespace Project.States
                 Text = $"Score: {_finalScore}",
 
             };
+            // Dibujar el puntaje en la pantalla
+            var scoreText2 = new Title(titleTexture, titleFont)
+            {
+                Position = new Vector2(600, 200),
+                Text = $"Score 2: {_finalScore2}",
+
+            };
+
                 // Agregar los componentes a la lista
 
-            _components.Add(restartButton);
+                _components.Add(restartButton);
             _components.Add(backButton);
             _components.Add(title);
             _components.Add(scoreText);
+            if (_game.estado == 4)
+            {
+                _components.Add(scoreText2 );
+            }
             _selectedIndex = 0; // Inicializar el índice del botón seleccionado
             _limitIndex = 2;
         }
@@ -81,6 +96,8 @@ namespace Project.States
                 _game.ChangeState(new GameState(_game, _graphicsDevice, _content, _graphics));
             else if (_game.estado == 3)
                 _game.ChangeState(new GameState2(_game, _graphicsDevice, _content, _graphics));
+            else if (_game.estado == 4)
+                _game.ChangeState(new GameState3(_game, _graphicsDevice, _content, _graphics));
         }
 
         // Lógica post-actualización (opcional, si es necesario)
