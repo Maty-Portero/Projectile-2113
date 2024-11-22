@@ -44,16 +44,22 @@ if (isset($_SESSION['usuario'])) {
                     <img style="height: 180px; width: 180px; margin: 10px" src="fts/Projectile_2113_Logo_2.png">
                     <h1 class="fw-light">Projectile 2113</h1>
                     <h3 class="fw-light">¿Qué es?</h3><br>
-                    <p style="color: #ffffff; font-size: 20px; text-align: left;">“Project Projectile 2113” es un juego Bullet Hell al estilo Arkanoid donde el jugador controla una vehículo de guerra o un soldado cuya estadísticas varían según los niveles en donde se encuentra cada uno, el cual debe atravesar distintos niveles con grandes cantidades de enemigos que disparan proyectiles y el jugador debe esquivarlas y derribar a sus oponentes. <br><br>
+                    <p style="color: #ffffff; font-size: 20px; text-align: left;">“Project Projectile 2113” es un juego Bullet Hell al estilo Galaga donde el jugador controla una vehículo de guerra o un soldado cuya estadísticas varían según los niveles en donde se encuentra cada uno, el cual debe atravesar distintos niveles con grandes cantidades de enemigos que disparan proyectiles y el jugador debe esquivarlas y derribar a sus oponentes. <br><br>
 
-                        Será un juego single player. Donde habrá 5 escenarios con 5 stages cada uno, con un total de 25 niveles. Al final de cada escenario habrá un jefe que será de mayor dificultad.<br><br>
+                        En su actualidad, cuenta con mas de 3 modos de juego, 2 single player y 1 multijugador: <br>
+                        - Stage Mode: Son 5 rondas exhaustivas de mucha acción, en la que deberás matar a todos los enemigos que puedas!
+                        <br>
+                        - Infinite Mode: Sobrevive hasta más no poder, derriba enemigos para tener la mayor puntuación, y enfréntate a muchos enemigos a la vez!!
+                        <br>
+                        - Co-Op Mode: Juega con tus amigos para ver quién es el mejor y así obtener la mayor puntuación!
+                        <br><br>
 
-                        La temática de este videojuego estará basada en una Guerra Futurista en el año 2113.<br><br>
+                        La temática de este videojuego está basada en una Guerra Futurista en el año 2113.<br><br>
 
                         La metodología usada en nuestro grupo es la SCRUM. El juego está diseñado para todas las edades.
                     </p><br>
                     <h4>Ahora, te vas a preguntar, ¿A quién le vendemos este juego?</h4>
-                    <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="https://www.dotemu.com/">DOTEMU</a></button><br>
+                    <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="https://www.dotemu.com/">DOTEMU</a></button><br><br>
                     <h4>¿Queres saber más de Dotemu? clickeá acá</h4>
                     <button type="button" style="background-color: #007bff;"><a style="color: #ffffff; text-decoration:none;" href="https://www.dotemu.com/about/">Saber más</a></button><br><br><br>
 

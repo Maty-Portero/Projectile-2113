@@ -58,8 +58,8 @@ if (isset($_SESSION['usuario'])) {
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p>
                                         <b>Scrum Master y Analista de Sistemas</b> <br>
-                                        - Jugar F1.<br>
-                                        - Fanático Neo Pistea, Trueno, YSY A y el Duko. <br>
+                                        - Jugar F1 y LOL.<br>
+                                        - Fanático de Duki, Trueno, YSY A y Neo Pistea. <br>
                                         - Es el Smooth Operator.<br>
                                         - Le gusta el HTML, C#, PHP Y JS.
                                     </p>
