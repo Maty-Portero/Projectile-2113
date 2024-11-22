@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\states\\gamestate3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|c:\\xampp\\htdocs\\mati\\projectile-2113\\project\\states\\gamestate3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD7822D-2FB4-4EDD-8516-AF6700D2D357}|Project.csproj|solutionrelative:states\\gamestate3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAB8BAAAAAAAAAAAiwDABAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAABAAAAAAAAAAAAAAwBAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T22:46:46.733Z",
               "EditorCaption": ""
@@ -72,14 +72,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GameState3.cs",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState3.cs",
-              "RelativeDocumentMoniker": "States\\GameState3.cs",
-              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState3.cs",
-              "RelativeToolTip": "States\\GameState3.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState.cs",
+              "RelativeDocumentMoniker": "States\\GameState.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState.cs",
+              "RelativeToolTip": "States\\GameState.cs",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAuwBABAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T22:30:22.068Z",
+              "WhenOpened": "2024-11-21T22:21:25.428Z",
               "EditorCaption": ""
             },
             {
@@ -90,7 +90,7 @@
               "RelativeDocumentMoniker": "States\\GameState2.cs",
               "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState2.cs",
               "RelativeToolTip": "States\\GameState2.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAE8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T22:21:26.115Z",
               "EditorCaption": ""
@@ -98,14 +98,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GameState.cs",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState.cs",
-              "RelativeDocumentMoniker": "States\\GameState.cs",
-              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState.cs",
-              "RelativeToolTip": "States\\GameState.cs",
-              "ViewState": "AgIAABQBAAAAAAAAAAAgwC0CAAAcAAAAAAAAAA==",
+              "Title": "GameState3.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState3.cs",
+              "RelativeDocumentMoniker": "States\\GameState3.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\Mati\\Projectile-2113\\Project\\States\\GameState3.cs",
+              "RelativeToolTip": "States\\GameState3.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T22:21:25.428Z",
+              "WhenOpened": "2024-11-21T22:30:22.068Z",
               "EditorCaption": ""
             }
           ]
