@@ -53,7 +53,6 @@ public class Visualizer
         switch (mode)
         {
             case 0:
-                spritebatch.DrawString(_font, "Versus solo prueba", new Vector2(1500 + 50, 900), Color.Red);
                 if (konamiS)
                 {
                     spritebatch.DrawString(_font, "Konami ON", new Vector2(1500 + 60, 800), Color.Green);

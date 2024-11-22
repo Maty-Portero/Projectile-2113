@@ -155,10 +155,10 @@ namespace Project.States
  
             spriteBatch.Draw(backgroundTexture, bgPosition2, Color.White);
             string roundText = $"Infinite Mode - Round {round}";
-            spriteBatch.DrawString(font, roundText, new Vector2(10, 1040), Color.White);
+            spriteBatch.DrawString(font, roundText, new Vector2(10, 1020), Color.White);
 
             string scoreText = $"SCORE: {player.score.ToString("D7")}";
-            spriteBatch.DrawString(font, scoreText, new Vector2(1225, 1040), Color.White);
+            spriteBatch.DrawString(font, scoreText, new Vector2(1225, 1020), Color.White);
 
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))
             {

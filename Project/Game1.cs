@@ -366,7 +366,7 @@ namespace Project
                 }
             }
             
-            _spriteBatch.DrawString(font, "v1.0", new Vector2(1500 + 60, 1000), Color.White);
+            _spriteBatch.DrawString(font, "v1.1", new Vector2(1500 + 60, 1000), Color.White);
             visualizer.Draw(estado, _spriteBatch, konami.Success, Leaderboard);  // Dibuja el visualizer con el contenido adecuado
             _spriteBatch.End();
 

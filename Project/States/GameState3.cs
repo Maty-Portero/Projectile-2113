@@ -176,12 +176,12 @@ namespace Project.States
 
             spriteBatch.Draw(buildingsTexture, buildingsPosition2, Color.White);
             string roundText = $"COOP Mode - Round {round}";
-            spriteBatch.DrawString(font, roundText, new Vector2(10, 1040), Color.White);
+            spriteBatch.DrawString(font, roundText, new Vector2(10, 1020), Color.White);
 
             string scoreText1 = $"SCORE: {player1.score.ToString("D7")}";
             string scoreText2 = $"SCORE: {player2.score.ToString("D7")}";
-            spriteBatch.DrawString(font, scoreText1, new Vector2(1225, 1000), Color.White);
-            spriteBatch.DrawString(font, scoreText2, new Vector2(1225, 1040), Color.White);
+            spriteBatch.DrawString(font, scoreText1, new Vector2(1225, 980), Color.White);
+            spriteBatch.DrawString(font, scoreText2, new Vector2(1225, 1020), Color.White);
 
             // Dibuja las balas del jugador 2
             foreach (var bullet in player2.bullets)

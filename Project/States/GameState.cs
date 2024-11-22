@@ -180,11 +180,11 @@ namespace Project.States
 
             spriteBatch.Draw(buildingsTexture, buildingsPosition2, Color.White);
             string stageText = $"Stage {stage} - Round {round}";
-            spriteBatch.DrawString(font, stageText, new Vector2(10, 1040), Color.White);
+            spriteBatch.DrawString(font, stageText, new Vector2(10, 1020), Color.White);
 
             // Draw score
             string scoreText = $"SCORE: {player.score.ToString("D7")}";
-            spriteBatch.DrawString(font, scoreText, new Vector2(1225, 1040), Color.White);
+            spriteBatch.DrawString(font, scoreText, new Vector2(1225, 1020), Color.White);
 
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift))
             {
